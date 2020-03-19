@@ -1,0 +1,143 @@
+---
+title: "**Exploration des données des balises GPS des Courlis cendrés**"
+author: "Romain"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+    fig_height: 12
+    fig_width: 16
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: true
+      smooth_scroll: false
+    number_sections: true
+    code_folding: hide
+pdf_document:
+  toc: yes
+  toc_depth: '1'
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, cache=TRUE,eval=TRUE)
+```
+
+# Initialisation
+
+Installation des packages
+```{r install packages}
+vecPackage <- c("data.table","dplyr","ggplot2","kableExtra","knitr","reshape2","sf","readxl","openxlsx")
+
+ip <- installed.packages()[,1]
+
+for(p in vecPackage)
+    if (!(p %in% ip))
+        install.packages(pkgs=p,repos = "http://cran.univ-paris1.fr/",dependencies=TRUE)
+
+
+
+library(data.table)
+library(dplyr)
+library(ggplot2)
+library(kableExtra)
+library(knitr)
+require(reshape2)
+require(sf)
+library(readxl)
+library(openxlsx)
+library(lubridate)
+
+```
+
+
+Fonction locale
+
+```{r fun_loc}
+
+my_kable_print <- function(d,caption="",bootstrap_options = "hover",position="center" , font_size=11,full_width = FALSE,fixed_thead = TRUE,scroll=TRUE,scroll_height = "300px", scroll_width = "100%") {
+    
+    k <- kable_styling(kable(d,caption = caption),bootstrap_options = ,bootstrap_options, full_width = full_width,fixed_thead = fixed_thead, position=position,font_size=font_size)
+    if(scroll) 
+        k <- scroll_box(k,width = scroll_width, height = scroll_height)
+   
+    return(k)
+}
+
+```
+
+
+
+# Importation des données 
+
+```{r import}
+
+dev <- fread("library/devices.csv")
+if(!("flipflap" %in% colnames(dev))) {
+    dev$flipflap <- !(1:nrow(dev) %in% grep("E",dev$name))
+    write.csv(dev,"library/device.csv",row.names=FALSE)
+    }
+dev$device_id <- as.character(dev$device_id)
+
+
+d <- fread("data/Multiselect_20200319_143900.csv")
+
+d$UTC_datetime <- as.POSIXct(d$UTC_datetime)
+d$device_id <- as.character(d$device_id)
+d <- inner_join(d,dev)
+
+nbDate <- length(unique(as.Date(d$UTC_datetime)))
+
+
+
+
+my_kable_print(head(d,20),caption="Les données des balises GPS actives")
+
+
+```
+
+# La recharge des batteries
+
+## Variation temporelle des variables brute
+
+
+* _U\_bat\_mV_: charge de la batterie en mV
+* _bat\_soc\_pct_: charge de la batterie en %
+* _solar_I_mA_: activité de charge des panneaux solaires
+
+```{r preparation_plot_batt}
+
+
+
+d_U_bat_mV <- data.frame(var ="U_bat_mV",d[,c("UTC_datetime","flipflap","device_id","U_bat_mV")])
+d_bat_soc_pct <- data.frame(var ="bat_soc_pct",d[,c("UTC_datetime","flipflap","device_id","bat_soc_pct")])
+d_solar_I_mA <- data.frame(var ="solar_I_mA",d[,c("UTC_datetime","flipflap","device_id","solar_I_mA")])
+
+colnames(d_U_bat_mV)[ncol(d_U_bat_mV)] <- "value"
+colnames(d_bat_soc_pct)[ncol(d_bat_soc_pct)] <- "value"
+colnames(d_solar_I_mA)[ncol(d_solar_I_mA)] <- "value"
+
+dgg <- rbind(d_U_bat_mV,d_bat_soc_pct,d_solar_I_mA)
+
+nights <- as.POSIXct("2020-02-23") +(60*60*24) * (0:nbDate)
+
+```
+
+```{r plot_batt,fig.width=12,fig.height=10, fig.fullwidth=TRUE}
+
+
+gg <- ggplot(data=dgg, aes(x=UTC_datetime,y=value,colour=flipflap, group=device_id)) + facet_grid(var~.,scales="free_y")
+gg <- gg + geom_vline(xintercept=as.POSIXct("2020-02-23 00:00"),colour="red",size=1.5)
+gg <- gg + geom_vline(xintercept=nights,colour="gray",alpha=.5,size=4)
+gg <- gg + geom_line(alpha=0.7)
+gg <- gg + scale_x_datetime()
+gg <- gg + labs(title="",x="",y="",colour="GPS réhaussé\nartisanal")
+
+print(gg)
+
+
+```
+
+
+## Charge journalière des batteries
