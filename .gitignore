@@ -16,7 +16,7 @@ data_various/
 
 .Rproj.user
 .Rhistory
-*.html
+
 *.r~
 
 sig/
