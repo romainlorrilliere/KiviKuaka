@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, cache=TRUE,eval
 
 Installation des packages
 ```{r install packages}
-vecPackage <- c("data.table","dplyr","ggplot2","kableExtra","knitr","reshape2","sf","readxl","openxlsx")
+vecPackage <- c("data.table","dplyr","ggplot2","kableExtra","knitr","reshape2","sf","readxl","openxlsx","solaR","maptools","lubridate")
 
 ip <- installed.packages()[,1]
 
@@ -48,6 +48,8 @@ require(sf)
 library(readxl)
 library(openxlsx)
 library(lubridate)
+library(maptools)
+#library(solaR)
 
 ```
 
@@ -69,6 +71,7 @@ my_kable_print <- function(d,caption="",bootstrap_options = "hover",position="ce
 
 
 
+
 # Importation des données 
 
 ```{r import}
@@ -76,16 +79,17 @@ my_kable_print <- function(d,caption="",bootstrap_options = "hover",position="ce
 dev <- fread("library/devices.csv")
 if(!("flipflap" %in% colnames(dev))) {
     dev$flipflap <- !(1:nrow(dev) %in% grep("E",dev$name))
-    write.csv(dev,"library/device.csv",row.names=FALSE)
+    write.csv(dev,"library/devices.csv",row.names=FALSE)
     }
 dev$device_id <- as.character(dev$device_id)
 
 
-d <- fread("data/Multiselect_20200319_143900.csv")
+d <- fread("data/Multiselect_20200324_162000.csv")
 
 d$UTC_datetime <- as.POSIXct(d$UTC_datetime)
+d$UTC_date <- as.POSIXct(d$UTC_date)
 d$device_id <- as.character(d$device_id)
-d <- inner_join(d,dev)
+d <- data.table(inner_join(d,dev))
 
 nbDate <- length(unique(as.Date(d$UTC_datetime)))
 
@@ -96,6 +100,43 @@ my_kable_print(head(d,20),caption="Les données des balises GPS actives")
 
 
 ```
+
+
+## ajout de type de migration effectué par le piaf et des zones de repro
+
+```{r migr}
+
+projcrs <- "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"
+
+d.sf <- st_as_sf(d,coords = c("Longitude", "Latitude"), crs = projcrs)
+
+zone <- st_read("GIS/zones.shp")
+
+inter <- st_drop_geometry(st_intersection(d.sf,zone))
+unique_inter <- unique(inter[,c("device_id","nom")])
+unique_inter <- subset(unique_inter, nom != "Paris")
+head(unique_inter)
+unique_inter$presence <- 1
+unique_inter.w <- dcast(formula = device_id ~nom, data = unique_inter)
+unique_inter.w[is.na(unique_inter.w)] <- 0
+rownames(unique_inter.w) <- unique_inter.w[,1]
+unique_inter.w <- unique_inter.w[,-1]
+d_birds <- data.frame(device_id = row.names(unique_inter.w),sedentaire = (rowSums(unique_inter.w) == 1))
+d_birds$breed_area <- ifelse(d_birds$sedentaire,"Moeze",ifelse(unique_inter.w$Austria,"Austria",ifelse(unique_inter.w$German,"German","Belgium")))
+
+d_birds$sedentaire <- ifelse(d_birds$sedentaire,"sedentaire","migrateur")
+
+my_kable_print(d_birds,caption="Les zones de reproduction des oiseaux")
+
+
+d <- inner_join(d,d_birds)
+d.sf <- inner_join(d.sf,d_birds)
+
+``` 
+
+
+
+
 
 # La recharge des batteries
 
@@ -110,9 +151,9 @@ my_kable_print(head(d,20),caption="Les données des balises GPS actives")
 
 
 
-d_U_bat_mV <- data.frame(var ="U_bat_mV",d[,c("UTC_datetime","flipflap","device_id","U_bat_mV")])
-d_bat_soc_pct <- data.frame(var ="bat_soc_pct",d[,c("UTC_datetime","flipflap","device_id","bat_soc_pct")])
-d_solar_I_mA <- data.frame(var ="solar_I_mA",d[,c("UTC_datetime","flipflap","device_id","solar_I_mA")])
+d_U_bat_mV <- data.frame(var ="U_bat_mV",d[,c("UTC_datetime","flipflap","device_id","sedentaire","breed_area","U_bat_mV")])
+d_bat_soc_pct <- data.frame(var ="bat_soc_pct",d[,c("UTC_datetime","flipflap","device_id","sedentaire","breed_area","bat_soc_pct")])
+d_solar_I_mA <- data.frame(var ="solar_I_mA",d[,c("UTC_datetime","flipflap","device_id","sedentaire","breed_area","solar_I_mA")])
 
 colnames(d_U_bat_mV)[ncol(d_U_bat_mV)] <- "value"
 colnames(d_bat_soc_pct)[ncol(d_bat_soc_pct)] <- "value"
@@ -124,20 +165,110 @@ nights <- as.POSIXct("2020-02-23") +(60*60*24) * (0:nbDate)
 
 ```
 
-```{r plot_batt,fig.width=12,fig.height=10, fig.fullwidth=TRUE}
+```{r plot_batt,fig.cap = "Comportement des batteries",fig.width=14,fig.height=12, fig.fullwidth=TRUE}
 
 
-gg <- ggplot(data=dgg, aes(x=UTC_datetime,y=value,colour=flipflap, group=device_id)) + facet_grid(var~.,scales="free_y")
+gg <- ggplot(data=dgg, aes(x=UTC_datetime,y=value,colour=flipflap, group=device_id)) + facet_grid(var~sedentaire,scales="free_y")
 gg <- gg + geom_vline(xintercept=as.POSIXct("2020-02-23 00:00"),colour="red",size=1.5)
 gg <- gg + geom_vline(xintercept=nights,colour="gray",alpha=.5,size=4)
-gg <- gg + geom_line(alpha=0.7)
+gg <- gg + geom_line(size=1.05,alpha=0.7)
 gg <- gg + scale_x_datetime()
-gg <- gg + labs(title="",x="",y="",colour="GPS réhaussé\nartisanal")
+gg <- gg + labs(title="",x="",y="",colour="GPS avec\nréhausse")
 
 print(gg)
+
+```
+
+
+
+Ajout des période jour/nuit
+
+
+
+```{r journuit}
+
+
+lonlat <- st_coordinates(d.sf)
+
+## package maptools
+d.sf$sunrise <- sunriset(lonlat, d.sf$UTC_date, direction="sunrise", POSIXct=TRUE)$time
+d.sf$sunset <- sunriset(lonlat, d.sf$UTC_date, direction="sunset", POSIXct=TRUE)$time
+d.sf$duration_sun <- d.sf$sunset - d.sf$sunrise
+d.sf$dawn <- d.sf$sunrise - (30*60)
+d.sf$dusk <- d.sf$sunset + (30*60)
+d.sf$sun <- d.sf$UTC_datetime > d.sf$sunrise & d.sf$UTC_datetime < d.sf$sunset
+d.sf$sun_almost <- d.sf$UTC_datetime > d.sf$dawn & d.sf$UTC_datetime < d.sf$dusk
 
 
 ```
 
 
+
 ## Charge journalière des batteries
+
+
+```{r jour}
+
+dsun <- subset(d.sf,sun)
+
+dsun.max <- aggregate(cbind(U_bat_mV,bat_soc_pct)~device_id + name + flipflap + UTC_date + sedentaire + breed_area, dsun,max)
+colnames(dsun.max)[7:ncol(dsun.max)]<- paste0(colnames(dsun.max)[7:ncol(dsun.max)],"_max")
+
+dsun.min <- aggregate(cbind(U_bat_mV,bat_soc_pct)~device_id + name + flipflap + UTC_date + sedentaire + breed_area, dsun,min)
+colnames(dsun.min)[7:ncol(dsun.min)]<- paste0(colnames(dsun.min)[7:ncol(dsun.min)],"_min")
+
+dsun.mean <- aggregate(cbind(duration_sun,speed_km_h)~device_id + name + flipflap + UTC_date + sedentaire + breed_area, dsun,mean)
+colnames(dsun.mean)[7:ncol(dsun.mean)]<- paste0(colnames(dsun.mean)[7:ncol(dsun.mean)],"_mean")
+
+dsun.sum <- aggregate(cbind(solar_I_mA)~device_id + name + flipflap + UTC_date + sedentaire + breed_area, dsun,sum)
+colnames(dsun.sum)[7:ncol(dsun.sum)]<- paste0(colnames(dsun.sum)[7:ncol(dsun.sum)],"_sum")
+
+
+dsun.tot <- inner_join(inner_join(dsun.max,dsun.min),inner_join(dsun.mean,dsun.sum))
+
+
+dsun.tot$load <- dsun.tot$U_bat_mV_max - dsun.tot$U_bat_mV_min
+dsun.tot$load_pct <- dsun.tot$bat_soc_pct_max - dsun.tot$bat_soc_pct_min
+
+dsun.tot$bat_sup70 <- dsun.tot$bat_soc_pct_max > 70
+
+
+max_charge <- max(dsun.tot$U_bat_mV_max)
+
+
+                 
+
+
+
+my_kable_print(head(d,20),caption="Les données des balises GPS actives")
+
+```
+
+
+```{r plot_sun,fig.cap = "Reception solaire",fig.width=10,fig.height=8, fig.fullwidth=TRUE}
+
+
+
+
+gg <- ggplot(data=dsun.tot,aes(x=duration_sun_mean,y=solar_I_mA_sum,colour=flipflap, group=flipflap,fill=flipflap))
+gg <- gg + facet_wrap(.~sedentaire)
+gg <- gg + geom_smooth(aes(group=device_id),method="lm",se=FALSE,size=0.8,alpha=.7,linetype="dashed")
+gg <- gg + geom_point(size=2)  + geom_smooth(size=2,alpha=0.2)
+
+gg <- gg + labs(title="",colour="GPS avec\nréhausse",fill="GPS avec\nréhausse",x="Nombre d'heure de jour de la journée",y="Quantité d'energie lumineuse captée dans la journée")
+gg <- gg + scale_y_log10()
+ggsave("output/nrj_lum.png",gg,width=10,height=8)
+print(gg)
+
+
+
+
+#library(glmmTMB)
+
+
+
+                       
+```
+
+
+
