@@ -15,7 +15,7 @@ get_pw <- function(file)
 
 
 get_birds <- function(con,id_prog=1381110575,
-                      file_ind_raw = "C:/git/Kivikuaka/data/data_kivikuaka_ind_raw.csv",
+                      file_ind_raw = "C:/git/Kivikuaka/data/data_kivikuaka_ind.csv",
                       file_taxon = "C:/git/Kivikuaka/data/taxon.csv"){
 
 
