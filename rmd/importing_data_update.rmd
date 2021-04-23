@@ -1,8 +1,14 @@
 ---
 title: "**Importing Kivikuaka's data from movebank**"
 author: Romain Lorrilliere\thanks{\href{mailto:romain.lorrilliere@mnhn.fr}{\textit{romain.lorrilliere@mnhn.fr}}}
-date: "`r format(Sys.time(), '%d/%m/%Y')`"
+date: "`r format(Sys.time(), '%d/%m/%Y %H:%M')`"
 output:
+  github_document:
+    toc: true
+    toc_depth: 2
+    fig_width: 5
+    fig_height: 5
+    dev: jpeg    
   html_document:
     df_print: paged
     fig_height: 12
@@ -14,6 +20,7 @@ output:
       smooth_scroll: false
     number_sections: true
     code_folding: hide
+    keep_md: true
 pdf_document:
   toc: yes
   toc_depth: '1'
@@ -97,7 +104,7 @@ if(basename(file_data) %in% dir(paste0(rep,"data/"))) {
     difftime_last_import <- difftime(Sys.time(),last_import_date,units = "day")
     txt_last_import <- paste0("Date of the previous data update: ",last_import_date," (",difftime_last_import," day(s))\n")
   } 
-  file_save <- paste0(rep,"/",file_path_sans_ext(file_data),"_last",ifelse(is.null(last_import_date),"",paste0("_",last_import_date)),".csv")
+  file_save <- paste0(rep,file_path_sans_ext(file_data),"_last",ifelse(is.null(last_import_date),"",paste0("_",format(last_import_date,"%Y%m%d_%H%M"))),".csv")
   fwrite(dlast,file_save)
 }
 
