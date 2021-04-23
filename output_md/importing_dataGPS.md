@@ -1,7 +1,7 @@
 ---
 title: "**Importing Kivikuaka's data from movebank**"
 author: Romain Lorrilliere\thanks{\href{mailto:romain.lorrilliere@mnhn.fr}{\textit{romain.lorrilliere@mnhn.fr}}}
-date: "23/04/2021 14:40"
+date: "23/04/2021 22:17"
 output:
   github_document:
     toc: true
@@ -57,9 +57,8 @@ params:
 
 
 
+Date of the previous data update: 2021-04-23 20:13:16 (0.00277519067128499 day(s))
 
-
-This is the first data importing.
 
 
 
@@ -115,7 +114,7 @@ This is the first data importing.
    <td style="text-align:left;"> 2021-02-23 </td>
    <td style="text-align:left;"> 2021-04-17 </td>
    <td style="text-align:right;"> 89 </td>
-   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 7 </td>
    <td style="text-align:left;"> TRUE </td>
    <td style="text-align:left;"> 2021-04-23 </td>
   </tr>
@@ -325,7 +324,7 @@ This is the first data importing.
    <td style="text-align:left;"> 2021-03-25 </td>
    <td style="text-align:left;"> 2021-04-02 </td>
    <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 22 </td>
    <td style="text-align:left;"> TRUE </td>
    <td style="text-align:left;"> 2021-04-23 </td>
   </tr>
@@ -520,7 +519,7 @@ This is the first data importing.
    <td style="text-align:left;"> 2021-02-28 </td>
    <td style="text-align:left;"> 2021-04-09 </td>
    <td style="text-align:right;"> 72 </td>
-   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 15 </td>
    <td style="text-align:left;"> TRUE </td>
    <td style="text-align:left;"> 2021-04-23 </td>
   </tr>
@@ -565,7 +564,7 @@ This is the first data importing.
    <td style="text-align:left;"> 2021-02-27 </td>
    <td style="text-align:left;"> 2021-04-19 </td>
    <td style="text-align:right;"> 99 </td>
-   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
    <td style="text-align:left;"> 2021-04-23 </td>
   </tr>
@@ -610,7 +609,7 @@ This is the first data importing.
    <td style="text-align:left;"> 2021-02-22 </td>
    <td style="text-align:left;"> 2021-04-20 </td>
    <td style="text-align:right;"> 86 </td>
-   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> TRUE </td>
    <td style="text-align:left;"> 2021-04-23 </td>
   </tr>
@@ -775,7 +774,7 @@ This is the first data importing.
    <td style="text-align:left;"> 2021-02-28 </td>
    <td style="text-align:left;"> 2021-04-08 </td>
    <td style="text-align:right;"> 67 </td>
-   <td style="text-align:right;"> 15 </td>
+   <td style="text-align:right;"> 16 </td>
    <td style="text-align:left;"> TRUE </td>
    <td style="text-align:left;"> 2021-04-23 </td>
   </tr>
@@ -850,7 +849,7 @@ This is the first data importing.
    <td style="text-align:left;"> 2021-03-15 </td>
    <td style="text-align:left;"> 2021-04-08 </td>
    <td style="text-align:right;"> 47 </td>
-   <td style="text-align:right;"> 15 </td>
+   <td style="text-align:right;"> 16 </td>
    <td style="text-align:left;"> TRUE </td>
    <td style="text-align:left;"> 2021-04-23 </td>
   </tr>
@@ -880,7 +879,7 @@ This is the first data importing.
    <td style="text-align:left;"> 2021-03-07 </td>
    <td style="text-align:left;"> 2021-04-12 </td>
    <td style="text-align:right;"> 24 </td>
-   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 12 </td>
    <td style="text-align:left;"> TRUE </td>
    <td style="text-align:left;"> 2021-04-23 </td>
   </tr>
@@ -979,7 +978,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210224000800 </td>
@@ -999,7 +998,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 0.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210224220200 </td>
@@ -1019,7 +1018,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210225220100 </td>
@@ -1039,7 +1038,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210226000800 </td>
@@ -1059,7 +1058,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 0.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210226100100 </td>
@@ -1079,7 +1078,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 10.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210226220100 </td>
@@ -1099,7 +1098,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210226232000 </td>
@@ -1119,7 +1118,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 23.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210227091400 </td>
@@ -1139,7 +1138,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 9.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210228220100 </td>
@@ -1159,7 +1158,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210301220000 </td>
@@ -1179,7 +1178,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210302074800 </td>
@@ -1199,7 +1198,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 7.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210302211300 </td>
@@ -1219,7 +1218,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 21.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210303204900 </td>
@@ -1239,7 +1238,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 20.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210304202600 </td>
@@ -1259,7 +1258,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 20.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210305063700 </td>
@@ -1279,7 +1278,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 6.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210306061300 </td>
@@ -1299,7 +1298,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 6.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210307055000 </td>
@@ -1319,7 +1318,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 5.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210308052800 </td>
@@ -1339,7 +1338,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 5.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1427025072_20210308220100 </td>
@@ -1359,7 +1358,7 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-23 14:40:23 </td>
+   <td style="text-align:left;"> 2021-04-23 22:17:23 </td>
   </tr>
 </tbody>
 </table></div>
@@ -1451,7 +1450,7 @@ There are __$3001$__ data with location, that corresponds to $61\%$.
 
 
 
-There is __$0$__ new data since the last update . 
+There is __$0$__ new data since the last update NA. 
 
 
 
