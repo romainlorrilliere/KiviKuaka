@@ -1,0 +1,69 @@
+---
+title: "**Importing data from Kivikuakan**"
+author: Romain Lorrilliere\thanks{\href{mailto:romain.lorrilliere@mnhn.fr}{\textit{romain.lorrilliere@mnhn.fr}}}
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output:
+  html_document:
+    df_print: paged
+    fig_height: 12
+    fig_width: 16
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: true
+      smooth_scroll: false
+    number_sections: true
+    code_folding: hide
+pdf_document:
+  toc: yes
+  toc_depth: '1'
+params: 
+   set_rep: "C:/git/KiviKuaka/"
+   set_file_data: "data/data_kivikuaka_envent.csv"
+   set_save_fig: FALSE 
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo =FALSE, eval=TRUE, message = FALSE, warning = FALSE,cache=FALSE)
+
+```
+
+
+```{r param_test}
+
+rep <- params$set_rep
+file_data <- params$set_file_data
+save.fig <- params$set_save_fig
+
+```
+
+
+
+
+```{r changeRep}
+
+knitr::opts_knit$set(root.dir = rep)
+setwd("..")
+
+```
+
+
+```{r source}
+file_source <- paste0(rep,"/","functions/fun_exploration.r")
+source(file_source)
+
+```
+
+
+
+```{r import}
+file_full <- paste0(rep,"/",file_data)
+d <- fread(fill_ful)
+
+ 
+``` 
+
+
+
+
