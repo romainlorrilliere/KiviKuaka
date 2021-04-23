@@ -34,7 +34,7 @@ params:
 
 ```{r setup, include=FALSE}
 
-knitr::opts_chunk$set(echo =TRUE, eval=TRUE, message = FALSE, warning = FALSE,cache=FALSE)
+knitr::opts_chunk$set(echo =FALSE, eval=TRUE, message = FALSE, warning = FALSE,cache=FALSE)
 
 ```
 
@@ -134,7 +134,7 @@ my_kable_print( ind_select,caption="The birds",scroll_width = "600px")
 The events correspond to the whole bird's location get from movebank. 
 
 ```{r movebankdata_envents}
-my_kable_print(d[1:100,],caption="The event data",scroll_width = "600px")
+my_kable_print(d[1:20,],caption="The event data",scroll_width = "600px")
 ```
 
 
