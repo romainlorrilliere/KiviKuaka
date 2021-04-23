@@ -1,0 +1,212 @@
+---
+title: "**Importing Kivikuaka's data from movebank**"
+author: Romain Lorrilliere\thanks{\href{mailto:romain.lorrilliere@mnhn.fr}{\textit{romain.lorrilliere@mnhn.fr}}}
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output:
+  html_document:
+    df_print: paged
+    fig_height: 12
+    fig_width: 16
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: true
+      smooth_scroll: false
+    number_sections: true
+    code_folding: hide
+pdf_document:
+  toc: yes
+  toc_depth: '1'
+params: 
+   set_rep: "C:/git/KiviKuaka/"
+   set_file_data: "data/data_kivikuaka_events.csv"
+   set_mb_pw: "xxx"
+   set_mb_user: "romainlorrilliere"
+   set_save_fig: FALSE 
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo =TRUE, eval=TRUE, message = FALSE, warning = FALSE,cache=FALSE)
+
+```
+
+
+```{r param_test}
+
+rep <- params$set_rep
+file_data <- params$set_file_data
+pw <- params$set_mb_pw
+username <- params$set_mb_user
+save.fig <- params$set_save_fig
+
+```
+
+
+
+
+```{r changeRep}
+
+knitr::opts_knit$set(root.dir = rep)
+#setwd("..")
+
+```
+
+
+```{r source}
+
+file_source <- paste0(rep,"functions/fun_rmd_generic.r")
+source(file_source)
+file_source <- paste0(rep,"functions/fun_importation.r")
+source(file_source)
+
+
+
+```
+
+
+# Get data from movebank
+
+
+
+```{r movebank_log}
+
+if(pw == "xxx"){
+    file <- paste0(rep,"data/pw.txt")
+    pw <- get_pw(file)
+}
+log <- movebankLogin(username,pw)
+```
+
+
+```{r save_previous_db}
+
+``` 
+
+
+```{r last_date_import}
+
+last_import_date <- NULL
+difftime_last_import <- NULL
+txt_last_import <- "This is the first data importing."
+
+if(basename(file_data) %in% dir(paste0(rep,"data/"))) {
+  dlast <- fread(paste0(rep,file_data))
+  if("db_date" %in% colnames(dlast)) { 
+    last_import_date <- dlast[1,db_date] 
+    difftime_last_import <- difftime(Sys.time(),last_import_date,units = "day")
+    txt_last_import <- paste0("Date of the previous data update: ",last_import_date," (",difftime_last_import," day(s))\n")
+  } 
+  file_save <- paste0(rep,"/",file_path_sans_ext(file_data),"_last",ifelse(is.null(last_import_date),"",paste0("_",last_import_date)),".csv")
+  fwrite(dlast,file_save)
+}
+
+```
+
+
+`r txt_last_import`
+
+
+```{r movebank_import}
+ind <- get_birds(log)
+d <- get_events(log)
+```
+
+
+
+## The birds
+
+
+```{r movebankdata_ind}
+ind_select <- ind[,.(bird_id,nick_name,taxon,id,ring_id,taxon_eng,taxon_fr,date_start,date_end,number_of_events,nb_day_silence,new,import_date)]
+my_kable_print( ind_select,caption="The birds",scroll_width = "600px")
+```
+
+## The events
+
+The events correspond to the whole bird's location get from movebank. 
+
+```{r movebankdata_envents}
+my_kable_print(d[1:100,],caption="The event data",scroll_width = "600px")
+```
+
+
+# Summary of data
+
+## The birds
+
+
+In French Polynesia, we deployed Icarus GPS 5g beacon on 56 birds of four species, three shorebirds (13 Bristle-thighed Curlew, 8 Pacific Golden Plover, 23 Wandering Tattler), and 12 Sooty Tern. 
+
+
+
+```{r summary_ind}
+summary_ind <- summary_new_ind(ind)
+
+nb_birds <- sum(summary_ind$nb_birds)
+
+nb_birds_5days <- sum(summary_ind$nb_birds_5days)
+nb_birds_10days <- sum(summary_ind$nb_birds_10days)
+
+prop_5days <-  round(nb_birds_5days/nb_birds,2)
+prop_10days <- round(nb_birds_10days/nb_birds,2)
+
+my_kable_print(summary_ind,caption="The summary of number of birds",scroll_width = "600px",scroll=FALSE)
+
+```
+
+
+
+Among these 56 birds, __$`r nb_birds`$__ birds with Icarus GPS beacons sent to at least one location. In the last five days, __$`r nb_birds_10days`$__ beacons ($`r round(prop_10days*100)`\%$) sent data, and for the last five days, __$`r nb_birds_5days`$__ beacons ($`r round(prop_5days*100)`\%$).
+
+There would seem to be a species effect on the time since the last location. 
+
+
+```{r fig.silence, fig.width=7, fig.height=7,eval=TRUE,fig.align = 'center', out.width='70%',fig.cap="Distrubiton of the number of days before after location by species",fig.scap="number of days before after location"}
+ggplot_silence(ind)
+```
+
+
+## The new events
+
+
+```{r summary_events}
+nbline <- nrow(d)
+nbloc <- nrow(d[!(is.na(location_lat))])
+
+d_tax <- fread(paste0(rep,"data/taxon.csv"))
+vec_tax_eng <- d_tax[taxon %in% unique(d$taxon),taxon_eng]
+vec_tax<- d_tax[taxon %in% unique(d$taxon),taxon]
+
+```
+
+In the events database, there are $`r nbline`$ data, but some do not have a valid location. 
+There are __$`r nbloc`$__ data with location, that corresponds to $`r round(nbloc/nbline * 100)`\%$.
+
+
+```{r summary_new_events}
+  sne <- summary_new_events(d)
+if(is.null(sne)) nb_new <- 0 else nb_new <- sum(sne$nb_new_events)
+```
+
+There `r ifelse(nb_new<1,"is","are")` __$`r nb_new`$__ new data since the last update `r ifelse(is.null(difftime_last_import),"",paste0())`. 
+
+
+```{r summary_new_events_table,eval=FALSE, include=FALSE}
+if(!(is.null(sne)))
+  my_kable_print(sne,caption="The new events",scroll_width = "600px")
+```
+
+## The events by day
+
+```{r title_fig_bird_day}
+  cap_txt <- paste0("The bird locations by day for the ",vec_tax_eng)
+```
+
+
+```{r bird_day,fig.width=9, fig.height=12,eval=TRUE,fig.align = 'center', out.width='100%', fig.cap=cap_txt}
+data_by_day(d,ind,vec_tax)
+```
+
+
+
