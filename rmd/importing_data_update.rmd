@@ -86,10 +86,6 @@ log <- movebankLogin(username,pw)
 ```
 
 
-```{r save_previous_db}
-
-``` 
-
 
 ```{r last_date_import}
 
