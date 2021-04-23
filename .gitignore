@@ -10,22 +10,23 @@ data_csv-Copie/
 data_csv/
 DB_import/
 outputImport/
-output/
-*data_cache/
+data_cache/
 export/
 data_various/
 
 .Rproj.user
 .Rhistory
 
-*.r~
 
+rmd/#*.rmd#
+
+
+*.r~
 *.dbf
 *.prj
 *.qpj
 *.shp
 *.shx
-*.png
 *.pdf
 *.pjg
 *.zip
@@ -45,11 +46,9 @@ my*
 
 
 .#*
-*.md
+*.html
 
 
 *_cache/
-*_files/
 
-rmd/*.html
-rmd/#*
+
