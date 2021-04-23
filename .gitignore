@@ -2,7 +2,8 @@ output/
 data_raw/
 data_weather/
 data/
-
+sig/
+GIS/
 wc0.5/
 archive/
 data_csv-Copie/
@@ -19,7 +20,6 @@ data_various/
 
 *.r~
 
-sig/
 *.dbf
 *.prj
 *.qpj
@@ -43,14 +43,13 @@ _*.sql
 my*
 
 
-*.Rmd#
-.#my_exploration.r
-.#exploration.Rmd
+
+.#*
 *.md
 
 
 *_cache/
 *_files/
-GIS/birdman.qgs
-exploration_dataGPS.html
-exploration_dataGPS.html
+
+rmd/*.html
+rmd/#*
