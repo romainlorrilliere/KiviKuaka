@@ -11,7 +11,7 @@ for(p in vecPackage){
 
 
 
-output.move <- function(rep.out="output_md/",file.out,file.rmd) {
+output.move <- function(rep.out="documentations/",file.out,file.rmd) {
     from <- "rmd/"           #Current path of your folder
     to   <- rep.out            #Path you want to move it.
     rep_fig <- paste0(file.out,"_files")
@@ -48,7 +48,7 @@ output.move <- function(rep.out="output_md/",file.out,file.rmd) {
 }
 
 
-importing_rmd <- function(file.rmd="importing_data_update.rmd",file.out="importing_dataGPS",rep.out="output_html",format_output="html",file.data="data/data_kivikuaka_events.csv",mb_user = "romainlorrilliere",mb_pw = "xxx",save.fig=FALSE,render.clean=TRUE) {
+importing_rmd <- function(file.rmd="importing_data_update.rmd",file.out="importing_dataGPS",rep.out="documentations",format_output="html",file.data="data/data_kivikuaka_events.csv",mb_user = "romainlorrilliere",mb_pw = "xxx",nb_previous_day = 30,id_previous_import="xxx",save.fig=FALSE,render.clean=TRUE) {
 
     format <- paste0(format_output,"_document")
 ##    if(!is.null(rep.out)) file.out <- paste0(rep.out,"/",file.out)
@@ -60,11 +60,13 @@ importing_rmd <- function(file.rmd="importing_data_update.rmd",file.out="importi
     cat("file.data :",file.data,"\n")
     cat("rep:", rep,"\n")
     cat("mb_user:",mb_user,"\n")
-    cat("mb_pw:", mb_pw,'\n')
+    cat("mb_pw:", mb_pw,"\n")
+    cat("nb_previous_day:", nb_previous_day,"\n")
+    cat("id_previous_import:", id_previous_import,"\n")
     cat("output :",file.out,"\n")
     cat("format :",format,"\n")
 
-      rmarkdown::render(path.rmd,output_file=file.out,output_format = format,clean=render.clean,encoding="utf-8",params = list(set_rep = rep, set_file_data = file.data,set_mb_user=mb_user,set_mb_pw= mb_pw,set_save_fig = save.fig))
+      rmarkdown::render(path.rmd,output_file=file.out,output_format = format,clean=render.clean,encoding="utf-8",params = list(set_rep = rep, set_file_data = file.data,set_mb_user=mb_user,set_mb_pw= mb_pw,set_nb_day_before_fig = nb_previous_day,set_id_previous_import = id_previous_import, set_save_fig = save.fig))
 
     if(!(rep.out) %in% dir()) {
          cat("\n The output folder",rep.out,"misses\n")
