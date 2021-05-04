@@ -1,7 +1,7 @@
 ---
 title: "**Importing Kivikuaka's data from movebank**"
 author: Romain Lorrilliere\thanks{\href{mailto:romain.lorrilliere@mnhn.fr}{\textit{romain.lorrilliere@mnhn.fr}}}
-date: "03/05/2021 16:36"
+date: "04/05/2021 14:17"
 output:
   github_document:
     toc: true
@@ -57,12 +57,9 @@ params:
 
 
 
-```
-## [1] TRUE
-```
 
 
-Date of the previous data update: 2021-04-29 10:08:04 (4 day(s))
+Date of the previous data update: 2021-05-03 14:36:49 (0 day(s))
 
 
 
@@ -112,8 +109,8 @@ In French Polynesia, we deployed Icarus GPS 5g beacon on 56 birds of four specie
    <td style="text-align:left;"> Sooty tern </td>
    <td style="text-align:left;"> Sterne fuligineuse </td>
    <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 0.29 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.14 </td>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:right;"> 0.29 </td>
    <td style="text-align:right;"> 4 </td>
@@ -125,8 +122,8 @@ In French Polynesia, we deployed Icarus GPS 5g beacon on 56 birds of four specie
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 0.12 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 0.25 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.12 </td>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:right;"> 0.62 </td>
   </tr>
@@ -134,8 +131,8 @@ In French Polynesia, we deployed Icarus GPS 5g beacon on 56 birds of four specie
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:right;"> 21 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 0.19 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.14 </td>
    <td style="text-align:right;"> 15 </td>
    <td style="text-align:right;"> 0.71 </td>
    <td style="text-align:right;"> 17 </td>
@@ -146,7 +143,7 @@ In French Polynesia, we deployed Icarus GPS 5g beacon on 56 birds of four specie
 
 
 
-Among these 56 birds, __47__ birds with Icarus GPS beacons sent to at least one location. In the last fifteen days, __37__ beacons (79%) sent data, this number pass to __30__ beacons (64%) in the last ten days, and for the last five days, __8__ beacons (17%).
+Among these 56 birds, __47__ birds with Icarus GPS beacons sent to at least one location. In the last fifteen days, __37__ beacons (79%) sent data, this number pass to __29__ beacons (62%) in the last ten days, and for the last five days, __6__ beacons (13%).
 
 
 
@@ -168,7 +165,7 @@ There are __3312__ data with location, that corresponds to 60\%.
 
 
 
-There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)). 
+There is __0__ new data since the last update 2021-05-03 14:36:49 (0 day(s)). 
 
 
 
@@ -1143,7 +1140,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C01_red </td>
@@ -1156,9 +1153,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-23 </td>
    <td style="text-align:left;"> 2021-05-02 </td>
    <td style="text-align:right;"> 116 </td>
-   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C02_red </td>
@@ -1171,9 +1168,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-24 </td>
    <td style="text-align:left;"> 2021-04-24 </td>
    <td style="text-align:right;"> 51 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C03_red </td>
@@ -1186,9 +1183,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-24 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 114 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C04_red </td>
@@ -1201,9 +1198,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-27 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 77 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C05_red </td>
@@ -1216,9 +1213,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-14 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 87 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C06_red </td>
@@ -1231,9 +1228,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-26 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 82 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C07_red </td>
@@ -1246,9 +1243,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-01 </td>
    <td style="text-align:left;"> 2021-04-24 </td>
    <td style="text-align:right;"> 97 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C08_red </td>
@@ -1261,9 +1258,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-27 </td>
    <td style="text-align:left;"> 2021-04-24 </td>
    <td style="text-align:right;"> 99 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C09_red </td>
@@ -1276,9 +1273,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-25 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 111 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C10_red </td>
@@ -1293,7 +1290,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C11_red </td>
@@ -1306,9 +1303,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-25 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 47 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C12_red </td>
@@ -1321,9 +1318,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-01 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 79 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S01_red </td>
@@ -1338,7 +1335,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S02_red </td>
@@ -1353,7 +1350,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S03_red </td>
@@ -1366,9 +1363,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-25 </td>
    <td style="text-align:left;"> 2021-04-02 </td>
    <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 31 </td>
+   <td style="text-align:right;"> 32 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S04_red </td>
@@ -1381,9 +1378,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-11 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:right;"> 56 </td>
-   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 12 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S05_red </td>
@@ -1398,7 +1395,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S06_red </td>
@@ -1411,9 +1408,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-12 </td>
    <td style="text-align:left;"> 2021-04-12 </td>
    <td style="text-align:right;"> 35 </td>
-   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 22 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S07_red </td>
@@ -1428,7 +1425,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S08_red </td>
@@ -1441,9 +1438,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-05 </td>
    <td style="text-align:left;"> 2021-04-29 </td>
    <td style="text-align:right;"> 52 </td>
-   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S09_red </td>
@@ -1456,9 +1453,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-01-29 </td>
    <td style="text-align:left;"> 2021-04-28 </td>
    <td style="text-align:right;"> 34 </td>
-   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S10_red </td>
@@ -1473,7 +1470,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S11_red </td>
@@ -1486,9 +1483,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-01-27 </td>
    <td style="text-align:left;"> 2021-04-16 </td>
    <td style="text-align:right;"> 40 </td>
-   <td style="text-align:right;"> 17 </td>
+   <td style="text-align:right;"> 18 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S12_red </td>
@@ -1501,9 +1498,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-21 </td>
    <td style="text-align:left;"> 2021-04-20 </td>
    <td style="text-align:right;"> 53 </td>
-   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 15 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P00_red </td>
@@ -1516,9 +1513,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-01 </td>
    <td style="text-align:left;"> 2021-04-30 </td>
    <td style="text-align:right;"> 107 </td>
-   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P01_red </td>
@@ -1531,9 +1528,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-11 </td>
    <td style="text-align:left;"> 2021-04-23 </td>
    <td style="text-align:right;"> 71 </td>
-   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 11 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P03_red </td>
@@ -1546,9 +1543,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-08 </td>
    <td style="text-align:left;"> 2021-03-31 </td>
    <td style="text-align:right;"> 40 </td>
-   <td style="text-align:right;"> 33 </td>
+   <td style="text-align:right;"> 34 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P04_red </td>
@@ -1561,9 +1558,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-28 </td>
    <td style="text-align:left;"> 2021-04-09 </td>
    <td style="text-align:right;"> 72 </td>
-   <td style="text-align:right;"> 24 </td>
+   <td style="text-align:right;"> 25 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P05_red </td>
@@ -1576,9 +1573,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-07 </td>
    <td style="text-align:left;"> 2021-04-23 </td>
    <td style="text-align:right;"> 77 </td>
-   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 12 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P06_red </td>
@@ -1593,7 +1590,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 94 </td>
    <td style="text-align:right;"> 12 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P07_red </td>
@@ -1608,7 +1605,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 99 </td>
    <td style="text-align:right;"> 15 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P08_red </td>
@@ -1621,9 +1618,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-26 </td>
    <td style="text-align:left;"> 2021-04-14 </td>
    <td style="text-align:right;"> 80 </td>
-   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 20 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T00_red </td>
@@ -1638,7 +1635,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T02_red </td>
@@ -1651,9 +1648,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-22 </td>
    <td style="text-align:left;"> 2021-04-26 </td>
    <td style="text-align:right;"> 96 </td>
-   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 8 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T03_red </td>
@@ -1666,9 +1663,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-09 </td>
    <td style="text-align:left;"> 2021-03-28 </td>
    <td style="text-align:right;"> 38 </td>
-   <td style="text-align:right;"> 36 </td>
+   <td style="text-align:right;"> 37 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T04_red </td>
@@ -1681,9 +1678,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-26 </td>
    <td style="text-align:left;"> 2021-05-02 </td>
    <td style="text-align:right;"> 83 </td>
-   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T05_red </td>
@@ -1696,9 +1693,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-15 </td>
    <td style="text-align:left;"> 2021-05-02 </td>
    <td style="text-align:right;"> 60 </td>
-   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T06_red </td>
@@ -1711,9 +1708,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-09 </td>
    <td style="text-align:left;"> 2021-04-24 </td>
    <td style="text-align:right;"> 35 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T08_red </td>
@@ -1726,9 +1723,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-02 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 86 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T09_red </td>
@@ -1741,9 +1738,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-26 </td>
    <td style="text-align:left;"> 2021-04-07 </td>
    <td style="text-align:right;"> 60 </td>
-   <td style="text-align:right;"> 26 </td>
+   <td style="text-align:right;"> 27 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T10_red </td>
@@ -1756,9 +1753,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-27 </td>
    <td style="text-align:left;"> 2021-04-24 </td>
    <td style="text-align:right;"> 93 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T11_red </td>
@@ -1771,9 +1768,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-24 </td>
    <td style="text-align:left;"> 2021-04-20 </td>
    <td style="text-align:right;"> 69 </td>
-   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 14 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T12_red </td>
@@ -1788,7 +1785,7 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T13_red </td>
@@ -1801,9 +1798,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-27 </td>
    <td style="text-align:left;"> 2021-04-24 </td>
    <td style="text-align:right;"> 86 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T14_red </td>
@@ -1816,9 +1813,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-28 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 81 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T15_red </td>
@@ -1831,9 +1828,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-06 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 90 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T16_red </td>
@@ -1846,9 +1843,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-09 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 75 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T18_red </td>
@@ -1861,9 +1858,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-16 </td>
    <td style="text-align:left;"> 2021-04-20 </td>
    <td style="text-align:right;"> 51 </td>
-   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 14 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T19_red </td>
@@ -1876,9 +1873,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-19 </td>
    <td style="text-align:left;"> 2021-04-03 </td>
    <td style="text-align:right;"> 20 </td>
-   <td style="text-align:right;"> 30 </td>
+   <td style="text-align:right;"> 31 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T20_red </td>
@@ -1891,9 +1888,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-15 </td>
    <td style="text-align:left;"> 2021-04-08 </td>
    <td style="text-align:right;"> 47 </td>
-   <td style="text-align:right;"> 25 </td>
+   <td style="text-align:right;"> 26 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T21_red </td>
@@ -1906,9 +1903,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-23 </td>
    <td style="text-align:left;"> 2021-04-28 </td>
    <td style="text-align:right;"> 62 </td>
-   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T22_red </td>
@@ -1921,9 +1918,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-07 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 38 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T23_red </td>
@@ -1936,9 +1933,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-26 </td>
    <td style="text-align:left;"> 2021-05-01 </td>
    <td style="text-align:right;"> 89 </td>
-   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T24_red </td>
@@ -1951,9 +1948,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-03-03 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 92 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T25_red </td>
@@ -1966,9 +1963,9 @@ There are __57__ new data since the last update 2021-04-29 10:08:04 (4 day(s)).
    <td style="text-align:left;"> 2021-02-22 </td>
    <td style="text-align:left;"> 2021-04-24 </td>
    <td style="text-align:right;"> 84 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-03 </td>
+   <td style="text-align:left;"> 2021-05-04 </td>
   </tr>
 </tbody>
 </table></div>
@@ -2022,8 +2019,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 22:02:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 22:02:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2044,8 +2041,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 0.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 00:08:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 00:08:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
   <tr>
@@ -2066,8 +2063,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 22:02:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 22:02:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
   <tr>
@@ -2088,8 +2085,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 22:01:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 22:01:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2110,8 +2107,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 0.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 00:08:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 00:08:00 </td>
    <td style="text-align:right;"> 4 </td>
   </tr>
   <tr>
@@ -2132,8 +2129,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 10.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 10:01:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 10:01:00 </td>
    <td style="text-align:right;"> 4 </td>
   </tr>
   <tr>
@@ -2154,8 +2151,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 22:01:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 22:01:00 </td>
    <td style="text-align:right;"> 4 </td>
   </tr>
   <tr>
@@ -2176,8 +2173,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 23.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 23:20:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 23:20:00 </td>
    <td style="text-align:right;"> 4 </td>
   </tr>
   <tr>
@@ -2198,8 +2195,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 9.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 09:14:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 09:14:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2220,8 +2217,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 22:01:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 22:01:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2242,8 +2239,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 22:00:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 22:00:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2264,8 +2261,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 7.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 07:48:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 07:48:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
   <tr>
@@ -2286,8 +2283,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 21.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 21:13:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 21:13:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
   <tr>
@@ -2308,8 +2305,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 20.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 20:49:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 20:49:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2330,8 +2327,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 20.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 20:26:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 20:26:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2352,8 +2349,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 6.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 06:37:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 06:37:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2374,8 +2371,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 6.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 06:13:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 06:13:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2396,8 +2393,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 5.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 05:50:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 05:50:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2418,8 +2415,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 5.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 05:28:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 05:28:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
   <tr>
@@ -2440,8 +2437,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-03 16:36:49 </td>
-   <td style="text-align:left;"> 2021-05-03 22:01:00 </td>
+   <td style="text-align:left;"> 2021-05-04 14:17:27 </td>
+   <td style="text-align:left;"> 2021-05-04 22:01:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
 </tbody>
