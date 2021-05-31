@@ -130,18 +130,24 @@ summary_new_ind <- function(ind) {
 
     t_birds <- ind[number_of_events > 0,list(nb_birds = .N),by=list(taxon_eng)]
     t_birds_5days <- ind[nb_day_silence <= 5 ,list(nb_birds_5days = .N),by=list(taxon_eng)]
-    t_birds_10days <- ind[nb_day_silence <= 10 ,list(nb_birds_10days = .N),by=list(taxon_eng)]
     t_birds_15days <- ind[nb_day_silence <= 15 ,list(nb_birds_15days = .N),by=list(taxon_eng)]
+    t_birds_30days <- ind[nb_day_silence <= 30 ,list(nb_birds_30days = .N),by=list(taxon_eng)]
 
 
     t_sum  <- unique(ind[,.(taxon_eng,taxon_fr)])
     t_sum[t_birds,on = "taxon_eng", nb_birds := nb_birds]
+
     t_sum[t_birds_5days,on = "taxon_eng", nb_birds_5days := nb_birds_5days]
+    t_sum[is.na(nb_birds_5days),nb_birds_5days := 0]
     t_sum[,prop_5days := round(nb_birds_5days/nb_birds,2)]
-    t_sum[t_birds_10days,on = "taxon_eng", nb_birds_10days := nb_birds_10days]
-    t_sum[,prop_10days := round(nb_birds_10days/nb_birds,2)]
+
     t_sum[t_birds_15days,on = "taxon_eng", nb_birds_15days := nb_birds_15days]
+    t_sum[is.na(nb_birds_15days),nb_birds_15days := 0]
     t_sum[,prop_15days := round(nb_birds_15days/nb_birds,2)]
+
+    t_sum[t_birds_30days,on = "taxon_eng", nb_birds_30days := nb_birds_30days]
+    t_sum[is.na(nb_birds_30days),nb_birds_30days := 0]
+    t_sum[,prop_30days := round(nb_birds_30days/nb_birds,2)]
 
 
     return(t_sum)
@@ -184,7 +190,7 @@ summary_new_events <- function(d) {
 
 
 
-data_by_day <- function(d,ind,vec_tax=c("Numenius tahitiensis","Onychoprion fuscatus","Pluvialis fulva","Tringa incana"),nb_last_day=30,point_size=2,last_update_date=NULL) {
+data_by_day <- function(d,ind,vec_tax=c("Numenius tahitiensis","Onychoprion fuscatus","Pluvialis fulva","Tringa incana"),nb_last_day=60,point_size=2,last_update_date=NULL) {
 
     ind_taxon <- ind[,.(id,bird_id,taxon,taxon_fr,taxon_eng,nick_name)]
     setnames(ind_taxon,"id","individual_id")
@@ -427,23 +433,25 @@ bird_tracks_pacific <- function(dind,gg_title="",gg_sub="",ratio_ref = 4/3,fixe_
   ##  b0 = st_polygon(list(t(as.matrix(corner.m[,2:3]))))
 
 
-    island.sf <- st_read("c:/GIT/Kivikuaka/GIS/pacific_cost.shp")
-    island.sf <- st_transform(island.sf,crs=3832)
-  ##  island.box <- as.vector(st_bbox(island.sf))
+  ###  island.sf <- st_read("c:/GIT/Kivikuaka/GIS/pacific_cost.shp")
+  ###  island.sf <- st_transform(island.sf,crs=3832)
+
+    ##  island.box <- as.vector(st_bbox(island.sf))
  ##   box <- data.frame(rbind(corner.box,island.box))
   ##  island.sf <- st_crop(island.sf,xmin = max(box$xmin),ymin=max(box$ymin),xmax=min(box$xmax),ymax=max(box$ymax))
 
-    water.sf <- st_read("c:/GIT/Kivikuaka/GIS/pacific_water.shp")
-    water.sf <- st_transform(water.sf,crs=3832)
-  ##  water.box <- as.vector(st_bbox(water.sf))
+   ### water.sf <- st_read("c:/GIT/Kivikuaka/GIS/pacific_water.shp")
+   ### water.sf <- st_transform(water.sf,crs=3832)
+
+    ##  water.box <- as.vector(st_bbox(water.sf))
   ##  box <- data.frame(rbind(corner.box,water.box))
   ##  water.sf <- st_crop(water.sf,xmin = max(box$xmin),ymin=max(box$ymin),xmax=min(box$xmax),ymax=max(box$ymax))
     ## water.sf <- st_crop(water.sf,xmin = xlim[1],ymin=ylim[1],xmax=xlim[2],ymax=ylim[2])
 
 
     gg <- ggplot() + geom_sf(data = world.pacific,fill="white", colour="#7f7f7f", size=0.2)
-    gg <- gg + geom_sf(data = water.sf, fill = "#a6bddb",color = NA)
-    gg <- gg + geom_sf(data = island.sf,fill="white")
+ ###   gg <- gg + geom_sf(data = water.sf, fill = "#a6bddb",color = NA)
+ ###   gg <- gg + geom_sf(data = island.sf,fill="white")
     gg <- gg + geom_path(data = path,aes(x=X,y=Y))
     gg <- gg + geom_sf(data= point.sf, aes(colour=as.Date(date)) ,size=2)
     gg <- gg + labs(x="",y="",colour="Date",title=gg_title,subtitle = gg_sub)

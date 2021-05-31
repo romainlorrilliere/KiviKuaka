@@ -1,7 +1,7 @@
 ---
 title: "**Importing Kivikuaka's data from movebank**"
 author: Romain Lorrilliere\thanks{\href{mailto:romain.lorrilliere@mnhn.fr}{\textit{romain.lorrilliere@mnhn.fr}}}
-date: "10/05/2021 21:41"
+date: "31/05/2021 09:49"
 output:
   github_document:
     toc: true
@@ -57,9 +57,12 @@ params:
 
 
 
+```
+## [1] TRUE
+```
 
 
-Date of the previous data update: 2021-05-04 12:17:27 (6 day(s))
+Date of the previous data update: 2021-05-10 19:41:33 (20 day(s))
 
 
 
@@ -87,10 +90,10 @@ In French Polynesia, we deployed Icarus GPS 5g beacon on 56 birds of four specie
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> nb_birds </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> nb_birds_5days </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> prop_5days </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> nb_birds_10days </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> prop_10days </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> nb_birds_15days </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> prop_15days </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> nb_birds_30days </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> prop_30days </th>
   </tr>
  </thead>
 <tbody>
@@ -98,21 +101,21 @@ In French Polynesia, we deployed Icarus GPS 5g beacon on 56 birds of four specie
    <td style="text-align:left;"> Bristle-thighed curlew </td>
    <td style="text-align:left;"> Courlis d'Alaska </td>
    <td style="text-align:right;"> 11 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 0.64 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 0.64 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 0.64 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 0.73 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 0.82 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 0.82 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Sooty tern </td>
    <td style="text-align:left;"> Sterne fuligineuse </td>
    <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 0.14 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 0.29 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0.00 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0.00 </td>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:right;"> 0.29 </td>
   </tr>
@@ -122,28 +125,28 @@ In French Polynesia, we deployed Icarus GPS 5g beacon on 56 birds of four specie
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 0.12 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 0.25 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 0.25 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.12 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.12 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:right;"> 21 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 0.19 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 0.24 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 0.29 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 0.38 </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:right;"> 0.57 </td>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 0.67 </td>
   </tr>
 </tbody>
 </table>
 
 
 
-Among these 56 birds, __47__ birds with Icarus GPS beacons sent to at least one location. In the last fifteen days, __17__ beacons (36%) sent data, this number pass to __16__ beacons (34%) in the last ten days, and for the last five days, __13__ beacons (28%).
+Among these 56 birds, __47__ birds with Icarus GPS beacons sent to at least one location. In the last fifteen days, __22__ beacons (47%) sent data, this number pass to __0__ beacons (0%) in the last ten days, and for the last five days, __17__ beacons (36%).
 
 
 
@@ -159,13 +162,13 @@ Among these 56 birds, __47__ birds with Icarus GPS beacons sent to at least one 
 
 
 
-In the events database, there are 5867 data, but some do not have a valid location. 
-There are __3550__ data with location, that corresponds to 61\%.
+In the events database, there are 7260 data, but some do not have a valid location. 
+There are __4376__ data with location, that corresponds to 60\%.
 
 
 
 
-There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)). 
+There are __826__ new data since the last update 2021-05-10 19:41:33 (20 day(s)). 
 
 
 
@@ -176,17 +179,17 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
 
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/bird_day-1.png" alt="The bird locations by day for the Wandering tattler during the last 30 days" width="100%" />
-<p class="caption">The bird locations by day for the Wandering tattler during the last 30 days</p>
+<img src="importing_dataGPS_files/figure-html/bird_day-1.png" alt="The bird locations by day for the Wandering tattler during the last 60 days" width="100%" />
+<p class="caption">The bird locations by day for the Wandering tattler during the last 60 days</p>
 </div><div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/bird_day-2.png" alt="The bird locations by day for the Bristle-thighed curlew during the last 30 days" width="100%" />
-<p class="caption">The bird locations by day for the Bristle-thighed curlew during the last 30 days</p>
+<img src="importing_dataGPS_files/figure-html/bird_day-2.png" alt="The bird locations by day for the Bristle-thighed curlew during the last 60 days" width="100%" />
+<p class="caption">The bird locations by day for the Bristle-thighed curlew during the last 60 days</p>
 </div><div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/bird_day-3.png" alt="The bird locations by day for the Pacific golden plover during the last 30 days" width="100%" />
-<p class="caption">The bird locations by day for the Pacific golden plover during the last 30 days</p>
+<img src="importing_dataGPS_files/figure-html/bird_day-3.png" alt="The bird locations by day for the Pacific golden plover during the last 60 days" width="100%" />
+<p class="caption">The bird locations by day for the Pacific golden plover during the last 60 days</p>
 </div><div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/bird_day-4.png" alt="The bird locations by day for the Sooty tern during the last 30 days" width="100%" />
-<p class="caption">The bird locations by day for the Sooty tern during the last 30 days</p>
+<img src="importing_dataGPS_files/figure-html/bird_day-4.png" alt="The bird locations by day for the Sooty tern during the last 60 days" width="100%" />
+<p class="caption">The bird locations by day for the Sooty tern during the last 60 days</p>
 </div>
 
 # The recent moves
@@ -200,35 +203,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
 
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_C01_red.png
 ```
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_C02_red.png
+## figure c:/GIT/kivikuaka/output/map_new_C03_red.png
 ```
 
 <div class="figure" style="text-align: center">
@@ -237,804 +216,222 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_C03_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-2.png" alt="The last ten days moves of the Bristle-thighed curlew C02_red named Temanu. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Bristle-thighed curlew C02_red named Temanu. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_C04_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-3.png" alt="The last ten days moves of the Bristle-thighed curlew C03_red named Manurere. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-2.png" alt="The last ten days moves of the Bristle-thighed curlew C03_red named Manurere. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Bristle-thighed curlew C03_red named Manurere. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_C05_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-4.png" alt="The last ten days moves of the Bristle-thighed curlew C04_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-3.png" alt="The last ten days moves of the Bristle-thighed curlew C04_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Bristle-thighed curlew C04_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_C06_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-5.png" alt="The last ten days moves of the Bristle-thighed curlew C05_red named Heirua. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-4.png" alt="The last ten days moves of the Bristle-thighed curlew C05_red named Heirua. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Bristle-thighed curlew C05_red named Heirua. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_C07_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-6.png" alt="The last ten days moves of the Bristle-thighed curlew C06_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-5.png" alt="The last ten days moves of the Bristle-thighed curlew C06_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Bristle-thighed curlew C06_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_C08_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-7.png" alt="The last ten days moves of the Bristle-thighed curlew C07_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-6.png" alt="The last ten days moves of the Bristle-thighed curlew C07_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Bristle-thighed curlew C07_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_C09_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-8.png" alt="The last ten days moves of the Bristle-thighed curlew C08_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Bristle-thighed curlew C08_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_C11_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-9.png" alt="The last ten days moves of the Bristle-thighed curlew C09_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Bristle-thighed curlew C09_red. Yellow dots for the new locations</p>
+<img src="importing_dataGPS_files/figure-html/tracks_birds-7.png" alt="The last ten days moves of the Bristle-thighed curlew C08_red. Yellow dots for the new locations" width="100%" />
+<p class="caption">The last ten days moves of the Bristle-thighed curlew C08_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_C12_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-10.png" alt="The last ten days moves of the Bristle-thighed curlew C11_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-8.png" alt="The last ten days moves of the Bristle-thighed curlew C11_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Bristle-thighed curlew C11_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_P00_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-11.png" alt="The last ten days moves of the Bristle-thighed curlew C12_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Bristle-thighed curlew C12_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_P01_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-12.png" alt="The last ten days moves of the Pacific golden plover P00_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Pacific golden plover P00_red. Yellow dots for the new locations</p>
+<img src="importing_dataGPS_files/figure-html/tracks_birds-9.png" alt="The last ten days moves of the Bristle-thighed curlew C12_red. Yellow dots for the new locations" width="100%" />
+<p class="caption">The last ten days moves of the Bristle-thighed curlew C12_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_P05_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-13.png" alt="The last ten days moves of the Pacific golden plover P01_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Pacific golden plover P01_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_P06_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-14.png" alt="The last ten days moves of the Pacific golden plover P05_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Pacific golden plover P05_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_P07_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-15.png" alt="The last ten days moves of the Pacific golden plover P06_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Pacific golden plover P06_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_P08_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-16.png" alt="The last ten days moves of the Pacific golden plover P07_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Pacific golden plover P07_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_S04_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-17.png" alt="The last ten days moves of the Pacific golden plover P08_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Pacific golden plover P08_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_S06_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-18.png" alt="The last ten days moves of the Sooty tern S04_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Sooty tern S04_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_S08_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-19.png" alt="The last ten days moves of the Sooty tern S06_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Sooty tern S06_red. Yellow dots for the new locations</p>
+<img src="importing_dataGPS_files/figure-html/tracks_birds-10.png" alt="The last ten days moves of the Pacific golden plover P01_red. Yellow dots for the new locations" width="100%" />
+<p class="caption">The last ten days moves of the Pacific golden plover P01_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_S09_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-20.png" alt="The last ten days moves of the Sooty tern S08_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-11.png" alt="The last ten days moves of the Sooty tern S08_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Sooty tern S08_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_S11_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-21.png" alt="The last ten days moves of the Sooty tern S09_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Sooty tern S09_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_S12_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-22.png" alt="The last ten days moves of the Sooty tern S11_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Sooty tern S11_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T02_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-23.png" alt="The last ten days moves of the Sooty tern S12_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Sooty tern S12_red. Yellow dots for the new locations</p>
+<img src="importing_dataGPS_files/figure-html/tracks_birds-12.png" alt="The last ten days moves of the Sooty tern S09_red. Yellow dots for the new locations" width="100%" />
+<p class="caption">The last ten days moves of the Sooty tern S09_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T04_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-24.png" alt="The last ten days moves of the Wandering tattler T02_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-13.png" alt="The last ten days moves of the Wandering tattler T02_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T02_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T05_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-25.png" alt="The last ten days moves of the Wandering tattler T04_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-14.png" alt="The last ten days moves of the Wandering tattler T04_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T04_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_T06_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-26.png" alt="The last ten days moves of the Wandering tattler T05_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Wandering tattler T05_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T08_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-27.png" alt="The last ten days moves of the Wandering tattler T06_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Wandering tattler T06_red. Yellow dots for the new locations</p>
+<img src="importing_dataGPS_files/figure-html/tracks_birds-15.png" alt="The last ten days moves of the Wandering tattler T05_red. Yellow dots for the new locations" width="100%" />
+<p class="caption">The last ten days moves of the Wandering tattler T05_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T10_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-28.png" alt="The last ten days moves of the Wandering tattler T08_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-16.png" alt="The last ten days moves of the Wandering tattler T08_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T08_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T11_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-29.png" alt="The last ten days moves of the Wandering tattler T10_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-17.png" alt="The last ten days moves of the Wandering tattler T10_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T10_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T13_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-30.png" alt="The last ten days moves of the Wandering tattler T11_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-18.png" alt="The last ten days moves of the Wandering tattler T11_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T11_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T14_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-31.png" alt="The last ten days moves of the Wandering tattler T13_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-19.png" alt="The last ten days moves of the Wandering tattler T13_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T13_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T15_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-32.png" alt="The last ten days moves of the Wandering tattler T14_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-20.png" alt="The last ten days moves of the Wandering tattler T14_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T14_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T16_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-33.png" alt="The last ten days moves of the Wandering tattler T15_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-21.png" alt="The last ten days moves of the Wandering tattler T15_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T15_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T18_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-34.png" alt="The last ten days moves of the Wandering tattler T16_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-22.png" alt="The last ten days moves of the Wandering tattler T16_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T16_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T21_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-35.png" alt="The last ten days moves of the Wandering tattler T18_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-23.png" alt="The last ten days moves of the Wandering tattler T18_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T18_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_T22_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-36.png" alt="The last ten days moves of the Wandering tattler T21_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Wandering tattler T21_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T23_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-37.png" alt="The last ten days moves of the Wandering tattler T22_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Wandering tattler T22_red. Yellow dots for the new locations</p>
+<img src="importing_dataGPS_files/figure-html/tracks_birds-24.png" alt="The last ten days moves of the Wandering tattler T21_red. Yellow dots for the new locations" width="100%" />
+<p class="caption">The last ten days moves of the Wandering tattler T21_red. Yellow dots for the new locations</p>
 </div>
 
 ```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
 ## figure c:/GIT/kivikuaka/output/map_new_T24_red.png
 ```
 
 <div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-38.png" alt="The last ten days moves of the Wandering tattler T23_red. Yellow dots for the new locations" width="100%" />
+<img src="importing_dataGPS_files/figure-html/tracks_birds-25.png" alt="The last ten days moves of the Wandering tattler T23_red. Yellow dots for the new locations" width="100%" />
 <p class="caption">The last ten days moves of the Wandering tattler T23_red. Yellow dots for the new locations</p>
-</div>
-
-```
-## Reading layer `pacific_cost' from data source `C:\git\KiviKuaka\GIS\pacific_cost.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 13785 features and 1 field
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -179.9988 ymin: -27.90018 xmax: 180 ymax: 20.55373
-## geographic CRS: WGS 84
-## Reading layer `pacific_water' from data source `C:\git\KiviKuaka\GIS\pacific_water.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 21 features and 2 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -180 ymin: -31.24447 xmax: 180 ymax: 23.89565
-## geographic CRS: WGS 84
-## figure c:/GIT/kivikuaka/output/map_new_T25_red.png
-```
-
-<div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-39.png" alt="The last ten days moves of the Wandering tattler T24_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Wandering tattler T24_red. Yellow dots for the new locations</p>
 </div><div class="figure" style="text-align: center">
-<img src="importing_dataGPS_files/figure-html/tracks_birds-40.png" alt="The last ten days moves of the Wandering tattler T25_red. Yellow dots for the new locations" width="100%" />
-<p class="caption">The last ten days moves of the Wandering tattler T25_red. Yellow dots for the new locations</p>
+<img src="importing_dataGPS_files/figure-html/tracks_birds-26.png" alt="The last ten days moves of the Wandering tattler T24_red. Yellow dots for the new locations" width="100%" />
+<p class="caption">The last ten days moves of the Wandering tattler T24_red. Yellow dots for the new locations</p>
 </div>
 
 
@@ -1077,7 +474,7 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C01_red </td>
@@ -1088,11 +485,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Bristle-thighed curlew </td>
    <td style="text-align:left;"> Courlis d'Alaska </td>
    <td style="text-align:left;"> 2021-02-23 </td>
-   <td style="text-align:left;"> 2021-05-08 </td>
-   <td style="text-align:right;"> 127 </td>
-   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:left;"> 2021-05-28 </td>
+   <td style="text-align:right;"> 166 </td>
+   <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C02_red </td>
@@ -1105,9 +502,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-03-24 </td>
    <td style="text-align:left;"> 2021-04-24 </td>
    <td style="text-align:right;"> 51 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 37 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C03_red </td>
@@ -1118,11 +515,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Bristle-thighed curlew </td>
    <td style="text-align:left;"> Courlis d'Alaska </td>
    <td style="text-align:left;"> 2021-02-24 </td>
-   <td style="text-align:left;"> 2021-05-09 </td>
-   <td style="text-align:right;"> 138 </td>
+   <td style="text-align:left;"> 2021-05-28 </td>
+   <td style="text-align:right;"> 173 </td>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C04_red </td>
@@ -1133,11 +530,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Bristle-thighed curlew </td>
    <td style="text-align:left;"> Courlis d'Alaska </td>
    <td style="text-align:left;"> 2021-02-27 </td>
-   <td style="text-align:left;"> 2021-05-08 </td>
-   <td style="text-align:right;"> 100 </td>
-   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:left;"> 2021-05-25 </td>
+   <td style="text-align:right;"> 137 </td>
+   <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C05_red </td>
@@ -1148,11 +545,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Bristle-thighed curlew </td>
    <td style="text-align:left;"> Courlis d'Alaska </td>
    <td style="text-align:left;"> 2021-02-14 </td>
-   <td style="text-align:left;"> 2021-05-09 </td>
-   <td style="text-align:right;"> 106 </td>
-   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:left;"> 2021-05-26 </td>
+   <td style="text-align:right;"> 132 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C06_red </td>
@@ -1163,11 +560,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Bristle-thighed curlew </td>
    <td style="text-align:left;"> Courlis d'Alaska </td>
    <td style="text-align:left;"> 2021-02-26 </td>
-   <td style="text-align:left;"> 2021-05-08 </td>
-   <td style="text-align:right;"> 106 </td>
+   <td style="text-align:left;"> 2021-05-28 </td>
+   <td style="text-align:right;"> 136 </td>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C07_red </td>
@@ -1178,11 +575,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Bristle-thighed curlew </td>
    <td style="text-align:left;"> Courlis d'Alaska </td>
    <td style="text-align:left;"> 2021-03-01 </td>
-   <td style="text-align:left;"> 2021-05-09 </td>
-   <td style="text-align:right;"> 121 </td>
+   <td style="text-align:left;"> 2021-05-28 </td>
+   <td style="text-align:right;"> 154 </td>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C08_red </td>
@@ -1193,11 +590,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Bristle-thighed curlew </td>
    <td style="text-align:left;"> Courlis d'Alaska </td>
    <td style="text-align:left;"> 2021-02-27 </td>
-   <td style="text-align:left;"> 2021-04-24 </td>
-   <td style="text-align:right;"> 99 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:left;"> 2021-05-27 </td>
+   <td style="text-align:right;"> 132 </td>
+   <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C09_red </td>
@@ -1210,9 +607,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-25 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 111 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 36 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C10_red </td>
@@ -1227,7 +624,7 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C11_red </td>
@@ -1238,11 +635,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Bristle-thighed curlew </td>
    <td style="text-align:left;"> Courlis d'Alaska </td>
    <td style="text-align:left;"> 2021-03-25 </td>
-   <td style="text-align:left;"> 2021-04-25 </td>
-   <td style="text-align:right;"> 47 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:left;"> 2021-05-28 </td>
+   <td style="text-align:right;"> 91 </td>
+   <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> C12_red </td>
@@ -1253,11 +650,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Bristle-thighed curlew </td>
    <td style="text-align:left;"> Courlis d'Alaska </td>
    <td style="text-align:left;"> 2021-03-01 </td>
-   <td style="text-align:left;"> 2021-05-09 </td>
-   <td style="text-align:right;"> 105 </td>
-   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:left;"> 2021-05-26 </td>
+   <td style="text-align:right;"> 137 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S01_red </td>
@@ -1272,7 +669,7 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S02_red </td>
@@ -1287,7 +684,7 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S03_red </td>
@@ -1300,9 +697,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-03-25 </td>
    <td style="text-align:left;"> 2021-04-02 </td>
    <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 39 </td>
+   <td style="text-align:right;"> 59 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S04_red </td>
@@ -1315,9 +712,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-11 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:right;"> 56 </td>
-   <td style="text-align:right;"> 18 </td>
+   <td style="text-align:right;"> 39 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S05_red </td>
@@ -1332,7 +729,7 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S06_red </td>
@@ -1345,9 +742,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-12 </td>
    <td style="text-align:left;"> 2021-04-12 </td>
    <td style="text-align:right;"> 35 </td>
-   <td style="text-align:right;"> 28 </td>
+   <td style="text-align:right;"> 49 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S07_red </td>
@@ -1362,7 +759,7 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S08_red </td>
@@ -1375,9 +772,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-05 </td>
    <td style="text-align:left;"> 2021-05-07 </td>
    <td style="text-align:right;"> 59 </td>
-   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 24 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S09_red </td>
@@ -1390,9 +787,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-01-29 </td>
    <td style="text-align:left;"> 2021-05-02 </td>
    <td style="text-align:right;"> 36 </td>
-   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 29 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S10_red </td>
@@ -1407,7 +804,7 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S11_red </td>
@@ -1420,9 +817,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-01-27 </td>
    <td style="text-align:left;"> 2021-04-16 </td>
    <td style="text-align:right;"> 40 </td>
-   <td style="text-align:right;"> 24 </td>
+   <td style="text-align:right;"> 45 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> S12_red </td>
@@ -1435,9 +832,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-21 </td>
    <td style="text-align:left;"> 2021-04-20 </td>
    <td style="text-align:right;"> 53 </td>
-   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 41 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P00_red </td>
@@ -1450,9 +847,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-03-01 </td>
    <td style="text-align:left;"> 2021-04-30 </td>
    <td style="text-align:right;"> 107 </td>
-   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 31 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P01_red </td>
@@ -1463,11 +860,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Pacific golden plover </td>
    <td style="text-align:left;"> Pluvier fauve </td>
    <td style="text-align:left;"> 2021-02-11 </td>
-   <td style="text-align:left;"> 2021-05-09 </td>
-   <td style="text-align:right;"> 95 </td>
-   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:left;"> 2021-05-26 </td>
+   <td style="text-align:right;"> 127 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P03_red </td>
@@ -1480,9 +877,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-03-08 </td>
    <td style="text-align:left;"> 2021-03-31 </td>
    <td style="text-align:right;"> 40 </td>
-   <td style="text-align:right;"> 40 </td>
+   <td style="text-align:right;"> 60 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P04_red </td>
@@ -1495,9 +892,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-28 </td>
    <td style="text-align:left;"> 2021-04-09 </td>
    <td style="text-align:right;"> 72 </td>
-   <td style="text-align:right;"> 32 </td>
+   <td style="text-align:right;"> 52 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P05_red </td>
@@ -1510,9 +907,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-03-07 </td>
    <td style="text-align:left;"> 2021-04-23 </td>
    <td style="text-align:right;"> 77 </td>
-   <td style="text-align:right;"> 18 </td>
+   <td style="text-align:right;"> 38 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P06_red </td>
@@ -1525,9 +922,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-03-06 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:right;"> 94 </td>
-   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 39 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P07_red </td>
@@ -1540,9 +937,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-27 </td>
    <td style="text-align:left;"> 2021-04-19 </td>
    <td style="text-align:right;"> 99 </td>
-   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:right;"> 42 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> P08_red </td>
@@ -1555,9 +952,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-26 </td>
    <td style="text-align:left;"> 2021-04-14 </td>
    <td style="text-align:right;"> 80 </td>
-   <td style="text-align:right;"> 26 </td>
+   <td style="text-align:right;"> 46 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T00_red </td>
@@ -1572,7 +969,7 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T02_red </td>
@@ -1585,9 +982,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-22 </td>
    <td style="text-align:left;"> 2021-05-08 </td>
    <td style="text-align:right;"> 113 </td>
-   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 23 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T03_red </td>
@@ -1600,9 +997,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-03-09 </td>
    <td style="text-align:left;"> 2021-03-28 </td>
    <td style="text-align:right;"> 38 </td>
-   <td style="text-align:right;"> 43 </td>
+   <td style="text-align:right;"> 64 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T04_red </td>
@@ -1613,11 +1010,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-02-26 </td>
-   <td style="text-align:left;"> 2021-05-06 </td>
-   <td style="text-align:right;"> 93 </td>
-   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:left;"> 2021-05-26 </td>
+   <td style="text-align:right;"> 120 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T05_red </td>
@@ -1628,11 +1025,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-03-15 </td>
-   <td style="text-align:left;"> 2021-05-02 </td>
-   <td style="text-align:right;"> 60 </td>
-   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:left;"> 2021-05-26 </td>
+   <td style="text-align:right;"> 102 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T06_red </td>
@@ -1645,9 +1042,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-03-09 </td>
    <td style="text-align:left;"> 2021-04-24 </td>
    <td style="text-align:right;"> 35 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 37 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T08_red </td>
@@ -1658,11 +1055,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-03-02 </td>
-   <td style="text-align:left;"> 2021-04-25 </td>
-   <td style="text-align:right;"> 86 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:left;"> 2021-05-26 </td>
+   <td style="text-align:right;"> 141 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T09_red </td>
@@ -1675,9 +1072,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-26 </td>
    <td style="text-align:left;"> 2021-04-07 </td>
    <td style="text-align:right;"> 60 </td>
-   <td style="text-align:right;"> 33 </td>
+   <td style="text-align:right;"> 54 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T10_red </td>
@@ -1688,11 +1085,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-02-27 </td>
-   <td style="text-align:left;"> 2021-04-24 </td>
-   <td style="text-align:right;"> 93 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:left;"> 2021-05-18 </td>
+   <td style="text-align:right;"> 130 </td>
+   <td style="text-align:right;"> 13 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T11_red </td>
@@ -1703,11 +1100,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-02-24 </td>
-   <td style="text-align:left;"> 2021-04-20 </td>
-   <td style="text-align:right;"> 69 </td>
-   <td style="text-align:right;"> 20 </td>
+   <td style="text-align:left;"> 2021-05-13 </td>
+   <td style="text-align:right;"> 87 </td>
+   <td style="text-align:right;"> 18 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T12_red </td>
@@ -1722,7 +1119,7 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> NA </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T13_red </td>
@@ -1733,11 +1130,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-02-27 </td>
-   <td style="text-align:left;"> 2021-04-24 </td>
-   <td style="text-align:right;"> 86 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:left;"> 2021-05-25 </td>
+   <td style="text-align:right;"> 126 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T14_red </td>
@@ -1748,11 +1145,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-02-28 </td>
-   <td style="text-align:left;"> 2021-04-25 </td>
-   <td style="text-align:right;"> 81 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:left;"> 2021-05-25 </td>
+   <td style="text-align:right;"> 129 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T15_red </td>
@@ -1763,11 +1160,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-03-06 </td>
-   <td style="text-align:left;"> 2021-04-25 </td>
-   <td style="text-align:right;"> 90 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:left;"> 2021-05-25 </td>
+   <td style="text-align:right;"> 145 </td>
+   <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T16_red </td>
@@ -1778,11 +1175,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-03-09 </td>
-   <td style="text-align:left;"> 2021-04-25 </td>
-   <td style="text-align:right;"> 75 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:left;"> 2021-05-25 </td>
+   <td style="text-align:right;"> 132 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T18_red </td>
@@ -1793,11 +1190,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-03-16 </td>
-   <td style="text-align:left;"> 2021-04-20 </td>
-   <td style="text-align:right;"> 51 </td>
-   <td style="text-align:right;"> 20 </td>
+   <td style="text-align:left;"> 2021-05-25 </td>
+   <td style="text-align:right;"> 80 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T19_red </td>
@@ -1810,9 +1207,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-19 </td>
    <td style="text-align:left;"> 2021-04-03 </td>
    <td style="text-align:right;"> 20 </td>
-   <td style="text-align:right;"> 37 </td>
+   <td style="text-align:right;"> 58 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T20_red </td>
@@ -1825,9 +1222,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-03-15 </td>
    <td style="text-align:left;"> 2021-04-08 </td>
    <td style="text-align:right;"> 47 </td>
-   <td style="text-align:right;"> 33 </td>
+   <td style="text-align:right;"> 53 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T21_red </td>
@@ -1838,11 +1235,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-03-23 </td>
-   <td style="text-align:left;"> 2021-04-28 </td>
-   <td style="text-align:right;"> 62 </td>
-   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:left;"> 2021-05-22 </td>
+   <td style="text-align:right;"> 98 </td>
+   <td style="text-align:right;"> 9 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T22_red </td>
@@ -1855,9 +1252,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-03-07 </td>
    <td style="text-align:left;"> 2021-04-25 </td>
    <td style="text-align:right;"> 38 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 36 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T23_red </td>
@@ -1868,11 +1265,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-02-26 </td>
-   <td style="text-align:left;"> 2021-05-08 </td>
-   <td style="text-align:right;"> 95 </td>
-   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:left;"> 2021-05-24 </td>
+   <td style="text-align:right;"> 110 </td>
+   <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T24_red </td>
@@ -1883,11 +1280,11 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> Wandering tattler </td>
    <td style="text-align:left;"> Chevalier errant </td>
    <td style="text-align:left;"> 2021-03-03 </td>
-   <td style="text-align:left;"> 2021-05-08 </td>
-   <td style="text-align:right;"> 113 </td>
-   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:left;"> 2021-05-26 </td>
+   <td style="text-align:right;"> 139 </td>
+   <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> T25_red </td>
@@ -1900,9 +1297,9 @@ There are __238__ new data since the last update 2021-05-04 12:17:27 (6 day(s)).
    <td style="text-align:left;"> 2021-02-22 </td>
    <td style="text-align:left;"> 2021-04-24 </td>
    <td style="text-align:right;"> 84 </td>
-   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 37 </td>
    <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> 2021-05-10 </td>
+   <td style="text-align:left;"> 2021-05-31 </td>
   </tr>
 </tbody>
 </table></div>
@@ -1956,8 +1353,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 22:02:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 22:02:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -1978,8 +1375,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 0.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 00:08:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 00:08:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
   <tr>
@@ -2000,8 +1397,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 22:02:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 22:02:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
   <tr>
@@ -2022,8 +1419,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 22:01:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 22:01:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2044,8 +1441,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 0.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 00:08:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 00:08:00 </td>
    <td style="text-align:right;"> 4 </td>
   </tr>
   <tr>
@@ -2066,8 +1463,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 10.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 10:01:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 10:01:00 </td>
    <td style="text-align:right;"> 4 </td>
   </tr>
   <tr>
@@ -2088,8 +1485,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 22:01:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 22:01:00 </td>
    <td style="text-align:right;"> 4 </td>
   </tr>
   <tr>
@@ -2110,8 +1507,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 23.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 23:20:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 23:20:00 </td>
    <td style="text-align:right;"> 4 </td>
   </tr>
   <tr>
@@ -2132,8 +1529,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 9.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 09:14:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 09:14:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2154,8 +1551,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.03 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 22:01:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 22:01:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2176,8 +1573,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 22:00:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 22:00:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2198,8 +1595,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 7.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 07:48:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 07:48:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
   <tr>
@@ -2220,8 +1617,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 21.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 21:13:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 21:13:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
   <tr>
@@ -2242,8 +1639,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 20.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 20:49:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 20:49:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2264,8 +1661,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 20.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 20:26:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 20:26:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2286,8 +1683,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 6.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 06:37:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 06:37:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2308,8 +1705,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 6.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 06:13:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 06:13:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2330,8 +1727,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 5.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 05:50:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 05:50:00 </td>
    <td style="text-align:right;"> 1 </td>
   </tr>
   <tr>
@@ -2352,8 +1749,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 5.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 05:28:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 05:28:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
   <tr>
@@ -2374,8 +1771,8 @@ The events correspond to the whole bird's location get from movebank.
    <td style="text-align:right;"> 22.05 </td>
    <td style="text-align:left;"> 2021-04-22 </td>
    <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-05-10 21:41:33 </td>
-   <td style="text-align:left;"> 2021-05-10 22:01:00 </td>
+   <td style="text-align:left;"> 2021-05-31 09:49:38 </td>
+   <td style="text-align:left;"> 2021-05-31 22:01:00 </td>
    <td style="text-align:right;"> 2 </td>
   </tr>
 </tbody>
