@@ -190,7 +190,8 @@ summary_new_events <- function(d) {
 
 
 
-data_by_day <- function(d,ind,vec_tax=c("Numenius tahitiensis","Onychoprion fuscatus","Pluvialis fulva","Tringa incana"),nb_last_day=60,point_size=2,last_update_date=NULL) {
+data_by_day <- function(d,ind,vec_tax=c("Numenius tahitiensis","Onychoprion fuscatus","Pluvialis fulva","Tringa incana"),nb_last_day=60,point_size=2,last_update_date=NULL,save=FALSE) {
+  ##  vec_tax=vec_tax;nb_last_day=60;last_update_date = as.Date(last_import_date);save=TRUE
 
     ind_taxon <- ind[,.(id,bird_id,taxon,taxon_fr,taxon_eng,nick_name)]
     setnames(ind_taxon,"id","individual_id")
@@ -236,7 +237,7 @@ data_by_day <- function(d,ind,vec_tax=c("Numenius tahitiensis","Onychoprion fusc
         date_today <- as.Date(Sys.time())
 
         setnames(d_first,c("julian","date"),c("julian_date","bird_date_first"))
-        d_first[,julian := ifelse(julian_date < julian_first, julian_first,julian)]
+        d_first[,julian := ifelse(julian_date < julian_first, julian_first,julian_date)]
         d_first[,date := as.Date(as.character(julian),"%j")]
 
 
@@ -283,10 +284,11 @@ data_by_day <- function(d,ind,vec_tax=c("Numenius tahitiensis","Onychoprion fusc
 
         print(gg)
 
-        ##  ggfile <- paste0("output/",tax,"_loc_per_day.png")
-        ##  cat(ggfile)
-        ##  ggsave(ggfile,gg,width=8,height=8.5)
-
+        if(save) {
+          ggfile <- paste0("c:/GIT/kivikuaka/output/",gsub(" ","_",tax),"_loc_per_day.png")
+          cat(ggfile,"\n")
+          ggsave(ggfile,gg,width=8,height=8.5)
+        }
 
         ## cat("   DONE !\n")
     }
@@ -649,4 +651,117 @@ bird_tracks <- function(dind,gg_title="",gg_sub="",ratio_ref = 4/3,fixe_orientat
 
 }
 
+
+
+
+
+
+
+
+nb_data_by_day <- function(d,ind,vec_tax=c("Numenius tahitiensis","Onychoprion fuscatus","Pluvialis fulva","Tringa incana"),nb_last_day=60,point_size=2,last_update_date=NULL,save=FALSE) {
+  ##  vec_tax=vec_tax;nb_last_day=60;last_update_date = as.Date(last_import_date);save=TRUE
+
+    ind_taxon <- ind[,.(id,bird_id,taxon,taxon_fr,taxon_eng,nick_name)]
+    setnames(ind_taxon,"id","individual_id")
+
+    d[,hms := as.POSIXct(format(as.POSIXlt(timestamp),"%H:%M:%S"), format = "%H:%M:%S")]
+
+
+    d[,nb_data_by_day := .N,by = list(julian,bird_id)]
+
+    d_nbLocByDay <- d[!(is.na(location_lat)),list(nb_loc_by_day = .N),by = list(julian,bird_id)]
+    d <- merge(d,d_nbLocByDay,by = c("bird_id","julian"),all.x=TRUE)
+
+    d[,prop_loc_by_day := ifelse(is.na(nb_loc_by_day),0,nb_loc_by_day) / nb_data_by_day]
+
+
+
+    d_first <- d[!(is.na(location_lat)),list(date = as.Date(min(date))),by = list(bird_id)]
+    d_first[,`:=` (date_short = format(date,"%d-%b"),julian =as.numeric(format(date,"%j"))-2) ]
+    d_first <- merge(ind_taxon,d_first,by="bird_id")
+
+
+    d_last <- d[!(is.na(location_lat)),list(date = as.Date(max(date))),by = list(bird_id)]
+    d_last[,`:=` (date_short = format(date,"%d-%b"),julian =as.numeric(format(date,"%j"))+2) ]
+    d_last <-merge(ind_taxon,d_last,by="bird_id")
+
+
+    vec_date <- as.Date(paste0(rep("2021",24),"-",rep(1:12,each=2),"-",rep(c(1,15),12)),"%Y-%m-%d")
+    t_date <- data.table(date = vec_date, date_short=format(vec_date,"%d-%b"),julian = as.numeric(format(vec_date,"%j")))
+
+    t_date_gg <- t_date[julian >= min(d$julian) & julian <= max(d$julian),]
+
+    julian_export <- as.numeric(format(Sys.time(),"%j"))
+    date_export <- as.Date(Sys.time())
+
+
+
+    if(nb_last_day >= 0) {
+
+        julian_first  <- as.numeric(format(Sys.time(),"%j")) - nb_last_day
+        julian_today <- as.numeric(format(Sys.time(),"%j"))
+
+        date_first  <- as.Date(Sys.time()) - nb_last_day
+        date_today <- as.Date(Sys.time())
+
+        setnames(d_first,c("julian","date"),c("julian_date","bird_date_first"))
+        d_first[,julian := ifelse(julian_date < julian_first, julian_first,julian_date)]
+        d_first[,date := as.Date(as.character(julian),"%j")]
+
+
+        setnames(d_last,c("date"),c("bird_last_first"))
+        d_last[,date := as.Date(as.character(julian),"%j")]
+        d_last <- d_last[julian > julian_first,]
+        d_first <- d_first[bird_id %in% d_last[,bird_id]]
+        d <- d[bird_id %in% d_last[,bird_id]]
+
+    }
+
+    vec_tax <- vec_tax[vec_tax %in% d[,taxon]]
+
+
+    vec_hour <- as.POSIXct(format(as.POSIXlt(paste(as.Date(Sys.time()),c("06:00:00","12:00:00","18:00:00"))),"%H:%M:%S"), format = "%H:%M:%S")
+
+    Sys.setlocale("LC_TIME", "English")
+
+    for(tax in vec_tax) {
+
+        ## cat("\n",tax,":\n")
+
+        dgg  <-  d[taxon == tax & !(is.na(location_lat)),]
+        dgg[,date := as.Date(date)]
+        gg <- ggplot(data = dgg,aes(x=date,y=hms,colour=nb_loc_by_day)) + facet_grid(bird_id~.)
+        if(! is.null(last_update_date)) {
+            gg <- gg + geom_rect(xmin=as.Date(last_update_date), xmax=date_export, ymin=-Inf, ymax=Inf, fill="white", alpha=0.05,colour=NA)
+        }
+        gg <- gg + geom_vline(xintercept= date_export,colour="white",size=1.5)
+        gg <- gg + geom_vline(xintercept= date_export,colour="darkgray",size=.5)
+        gg <- gg + geom_text(data=d_first[taxon == tax,],aes(label=date_short),y=vec_hour[2],colour="black",size=3)
+        gg <- gg + geom_text(data=d_last[taxon == tax,],aes(label=date_short),y=vec_hour[2],colour="black",size=3)
+        gg <- gg  + geom_line(colour="black")+ geom_point(size=point_size)
+        gg <- gg + geom_point(data = dgg[new == TRUE,],colour ="white",size = .3 * point_size)
+        gg <- gg + labs(title = tax,y="Time of day", x="Date",colour="Number\nof loc\nper day" )
+        gg <- gg +  theme(panel.grid.minor=element_blank(),panel.grid.minor.y=element_blank())
+        gg <- gg + scale_colour_continuous(type = "viridis")
+        if(nb_last_day > 0) {
+            gg <- gg + scale_x_date(date_breaks = "1 week",labels = function(x) format(x, "%d-%b"),limits = c(as.Date(Sys.Date()) - nb_last_day, date_export))
+        } else {
+            gg <- gg + scale_x_date(date_breaks = "1 week",labels = function(x) format(x, "%d-%b"),limits = c(NA, date_export))
+        }
+        gg <- gg + scale_y_datetime(breaks=vec_hour,labels = function(y) format(y,"%H:%M"))
+
+        print(gg)
+
+        if(save) {
+          ggfile <- paste0("c:/GIT/kivikuaka/output/",gsub(" ","_",tax),"_loc_per_day.png")
+          cat(ggfile,"\n")
+          ggsave(ggfile,gg,width=8,height=8.5)
+        }
+
+        ## cat("   DONE !\n")
+    }
+
+
+
+}
 
