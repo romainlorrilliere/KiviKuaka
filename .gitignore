@@ -52,8 +52,8 @@ my*
 *_cache/
 
 
-*.png
-*.png
+
 *.gif
-*.png
 library/pw.txt
+rmd/importing_data_update_files/*
+documentations/importing_dataGPS_files/*/*
