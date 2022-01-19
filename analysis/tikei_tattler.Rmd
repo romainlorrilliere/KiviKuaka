@@ -1,0 +1,341 @@
+---
+title: "Overlaping territories in a small wintering population of wandering tattler in French polinesia"
+author: "Romain Lorrilliere"
+date: "2022-01-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval=TRUE, warning=FALSE, message=FALSE,comment = FALSE)
+Sys.setlocale("LC_ALL", "English")
+```
+
+# Introduction
+
+## individual interaction and territoriality
+## shorebird and wandering tattler
+## miniaturization of GPS technology and innovative Icarus initiative. 
+
+
+# Material and methods
+
+## The site 
+Tikei is a tiny island (coordinates -14.95, -144.55) with a coral reef in the Tuamotu archipelago in French Polynesia. This island is 3.9 km long and 1.6 km wide, with a maximum altitude of 3m and the nearest atoll more than 70 km away.
+
+On Tikei, there are four primary habitats distributed concentrically from the center to the periphery, forest (3.2 ha), scrubland (0.3 ha), beach (0.28 ha), and reef (0.73 ha).
+
+![Tikei habitats](C:/git/KiviKuaka/GIS/Tikei_3.png)
+
+## The species
+The Wandering tattler (Tringa incana) is a small coastal shorebird (around 110g) that frequents the rocks along the coastline throughout the year. It breeds in western North America and winters broadly on the Pacific Islands. It appears to be territorial even in winter. 
+
+## Bird capture 
+
+During the night of 27-28 January, we captured and fitted 17 wandering tattlers with GPS beacons. To catch birds, we used two methods. First, several mist nets (Bonardi 12 meters and Ecotone 18 meters) were set up for the night and checked every hour. Then, we prospected all around the tiny island, and we tried to catch all the birds we could get close enough to when we shone a strong torch on them did not fly away. Thus, we could catch them quietly with a bell-shaped net. We estimated the tattler population to be 25 birds during our journey on the island.  
+
+![Tikei capture sites](C:/git/KiviKuaka/GIS/Tikei.png)
+
+## GPS beacons
+We installed a GPS Icarus 5g beacon on the bird's synsacrum using the leg-loop harness (Thaxter et al., 2014) method with surgical silicone tubes of 1.6mm diameter and a surgical knot. 
+The leg-loop method allows to leave the wings free, and the GPS modifies less the aerodynamic of the birds. Furthermore, the silicone tubes are very resistant, particularly elastic, thus adapting to the birds' morphology when they accumulate fat reserves to migrate or lose these reserves and lose weight, as recommended by Barron et al. (2010).
+   
+The 5g transmitter's combined mass, attachment silicone tube,  and the colored flag were approximately 5.2 g. 
+
+This ICARUS tag is a miniaturized data logger with terrestrial and satellite communication capabilities. It weighs less than 5 grams for a dimension of 26 x 15 x 9 mm³, with an external antenna of 15cm. It can record position and velocity, 3D acceleration, magnetic field vector, temperature, and humidity. A solar panel recharges the battery, and the beacon has a 512 MB internal memory for data storage. This tag is light because it communicates the location recorded through the international spatial station that orbits at a low altitude.
+
+All the equipped birds' location data will be automatically uploaded on the specialized internet platform Movebank (https://www.movebank.org/), accessible in open access.
+
+# Data exploration 
+
+## Importation 
+
+Data are in open access on the Movebank web platform. 
+We get them directly from R thanks "move" package version 4.1.6. (Kranstauber et al. 2021).
+
+```{r packages,  include=FALSE}
+
+vecPackage=c("move","lubridate","ggplot2","ggmap","sf","ggspatial","data.table")#,"moveVis",suncalc","HelpersMG","adehabitatHR","rtide")
+ip <- installed.packages()[,1]
+
+for(p in vecPackage){
+    if (!(p %in% ip))
+        install.packages(pkgs=p,repos = "https://pbil.univ-lyon1.fr/CRAN/",dependencies=TRUE)
+    library(p,character.only = TRUE)
+
+}
+
+
+saveData <- TRUE
+get_data <- TRUE
+shp_processing <- FALSE
+get_tide <- FALSE
+make_fig_simple <- FALSE
+do_kernel <- FALSE
+do_proximity_moving_windows <- TRUE
+
+source("../functions/fun_importation.r")
+source("../functions/fun_generic.r")
+source("../functions/fun_analysis_tikei.r")
+source("../functions/fun_rmd_generic.r")
+
+
+vec_colour <- c("ocean"="#1f78b4","reef"="#a6cee3","beach"="#fdbf6f","scrub"="#b2df8a","forest"="#33a02c")
+          
+
+
+```
+
+
+
+```{r importation, include=FALSE}
+ dd <- f_get_data(get_data,saveData)
+ my_kable_print(head(dd),caption="The data")
+
+    dsf <- st_as_sf(dd,coords=c("location_long","location_lat"))
+    dsf <- st_set_crs(dsf, 4326)
+    st_crs(dsf)
+    dsf <- st_transform(dsf,crs=3832)
+```
+
+```{r get_tikei_crop, include=FALSE}
+  tikei_crop <- f_shp_tikei(shp_processing)
+
+```
+
+
+## Exploration
+
+### Spatial distribution of locations of birds
+
+```{r fig_tikei_tattler}
+
+gg <- ggplot() + theme_bw()
+gg <- gg + geom_sf(data =tikei_crop,aes(fill=habitat), colour=NA, size=0.2, alpha=.5)
+gg <- gg + coord_sf(xlim = c(7284148,7288089), ylim = c( -1673693, -1671352))
+
+gg <- gg + geom_sf(data = dsf,aes(group=bird_id,colour= bird_id)) + geom_path(data=dd,aes(x=X,y=Y,group=bird_id,colour= bird_id),alpha=0.5,size=0.8)
+
+gg <- gg + geom_sf(data = dsf[dsf$day == "day",],colour="white",size=0.5,alpha=.8) + geom_sf(data = dsf[dsf$day == "night",],colour="black",size=0.5,alpha=0.8)
+gg <- gg + scale_fill_manual(values=vec_colour)
+gg <- gg + annotation_scale()
+gg <- gg + labs(x="",y="",colour="birds")
+gg <- gg + coord_sf(xlim = c(7284148,7288089), ylim = c( -1673693, -1671352))
+
+# ggsave("output/tikei_tattler.png",gg,width=10,height=8)
+
+
+gg
+
+```
+
+
+
+```{r fig_tikei_tattler_bird}
+gg <- ggplot() + theme_bw() + facet_wrap(bird_id ~.)
+gg <- gg + geom_sf(data = tikei_crop,aes(fill=habitat), colour=NA, size=0.2, alpha=.5)
+gg <- gg + geom_sf(data = dsf,aes(group=bird_id,colour= bird_id),size=1.2) + geom_path(data=dd,aes(x=X,y=Y,group=bird_id,colour= bird_id),alpha=0.7,size=1)
+gg <- gg + geom_sf(data = dsf[dsf$day=="day",],colour="white",size=0.7,alpha=.8) + geom_sf(data = dsf[dsf$day == "night",],colour="black",size=0.7,alpha=0.8)
+gg <- gg + scale_fill_manual(values=vec_colour)
+gg <- gg + theme(legend.position = "none")       
+gg <- gg + labs(x="",y="",colour="birds")
+gg <- gg + coord_sf(xlim = c(7284148,7288089), ylim = c( -1673693, -1671352))
+gg
+## ggsave("output/tikei_tattler_bird.png",gg)
+```
+
+
+The bird locations during a year seem to be spatially structured. 
+Each bird used a part of the island, and it seems that they are more organized with territories each than in one flock.
+
+
+```{r bird_habitat}
+dsf_2 <- st_intersection(dsf,tikei_crop)
+setDT(dsf_2)
+t_bird_habitat <- as.data.frame(table(dsf_2[,.(bird_id,habitat)]))
+setDT(t_bird_habitat)
+
+t_n <- dd[,.(n = .N),by =bird_id]
+t_bird_habitat <- merge(t_bird_habitat,t_n,by="bird_id")
+t_bird_habitat[,bird_id := paste0(bird_id," (",n,")")]
+
+vec_surf_ha <- data.frame(bird_id = "habitat_ha", habitat = c("forest", "scrub", "beach", "reef"), Freq = c(3.2, 0.3, 0.28, 0.73),n=NA)
+
+t_bird_habitat <- rbind(t_bird_habitat,vec_surf_ha)                          
+
+t_bird_habitat[,tot := sum(Freq),by =bird_id]
+t_bird_habitat[, prop := round(Freq/tot,3)]
+
+
+t_bird_habitat[,habitat := factor(habitat,levels = c("forest", "scrub", "beach", "reef", "ocean"))]
+
+ my_kable_print(t_bird_habitat,caption="The distribution of location in each habitat")
+
+
+``` 
+
+
+```{r gg_bird_habitat}
+
+gg <- ggplot(data = t_bird_habitat, aes(x=bird_id,y=prop,fill=habitat)) + geom_bar(position= "stack", stat='identity')
+gg <- gg + scale_fill_manual(values=vec_colour) +  coord_flip()
+gg <- gg + labs(x="",y="Proportion")
+gg
+
+``` 
+
+Furthermore, a comparison of the relative distribution of bird locations within habitats and their relative area suggests that, except for one bird (T06_red), all birds appear to use the reef preferentially and, to a lesser extent, the beach and then the scrubland Thus, except for T06-red, the birds seem to avoid the forest largely. 
+
+### Circadian distribution of locations of birds
+
+It does not appear to have a circadian distribution pattern in the habitat using. I will not dig this question. 
+
+
+```{r fig_tikei_tattler_day_night}
+gg <- ggplot() + theme_bw() + facet_wrap(day~.,nrow=2)
+gg <- gg + geom_sf(data =tikei_crop,aes(fill=habitat), colour=NA, size=0.2, alpha=.5)
+gg <- gg + geom_sf(data = dsf,aes(group=bird_id,colour= bird_id)) + geom_path(data=dd,aes(x=X,y=Y,group=bird_id,colour= bird_id),alpha=0.5,size=0.8)
+##gg <- gg + geom_sf(data = dsf[dsf$day,],colour="white",size=0.5,alpha=.8) + geom_sf(data = dsf[dsf$day == FALSE,],colour="black",size=0.5,alpha=0.8)
+gg <- gg + scale_fill_manual(values=vec_colour)
+gg <- gg + theme(legend.position = "none")       
+gg <- gg + labs(x="",y="",colour="birds")
+gg <- gg + coord_sf(xlim = c(7284148,7288089), ylim = c( -1673693, -1671352))
+gg
+## ggsave("output/tikei_tattler_day_night.png",width=8,height=8)
+```
+
+### Temporal data gathering
+
+```{r limit_time}
+start <- as.Date("2021-02-22")
+end <- as.Date("2021-09-19")
+startPOSIX <- as.POSIXct(start)
+endPOSIX <- as.POSIXct(end)
+
+duration <- as.numeric(difftime(end,start,units="days"))
+
+```
+
+
+However, data gathering has been inconsistent over the year. 
+In February 2021, there were problems at the ISS when we deployed the GPS beacons. For example, the GPS beacons had difficulty connecting to the ISS antenna, and by the week of 22 February, fewer than six birds had sent data. Then we gradually lost connection with the birds, and after the week of 13 September, less than four birds per week sent data. 
+We will limit the analysis to 22 February 2021 to 19 September 2021, i.e.,`r duration` days. 
+
+
+```{r nb_data_week_bird}
+d_week<- dd[,.(count = .N),by = .(bird_id,week,day)]
+#head(d_week)
+
+d_week[,week := as.Date(week)]
+
+first_date <- min(d_week[,week])
+last_date <- max(d_week[,week])
+
+ddays <- expand.grid(bird_id = unique(d_week$bird_id),week = seq(first_date, last_date, by="week"),day=c("day","night"),stringsAsFactors=FALSE)
+
+
+d_week <- merge(d_week,ddays,by=c("bird_id","week","day"),all=TRUE)
+d_week[is.na(count),count := 0]
+
+
+gg <- ggplot(data = d_week, aes(x=as.Date(week), y = count, colour=day, group=day)) + facet_grid(bird_id~.)
+gg  <- gg + geom_line(size = 1.2,alpha=.5) + geom_point(alpha=.5,size=2) + geom_point(data=d_week[count == 0,],colour ="white",alpha=.5,size=1)
+gg <- gg + geom_vline(xintercept = start,colour="blue")
+gg <- gg+ geom_vline(xintercept = end,colour="red")
+gg <-  gg + labs(y="Number of location per week",x="week",colour="")
+gg
+##ggsave("output/tikei_tattler_nb_data_week.png",gg,width=10,height= 10.5)
+
+```
+
+However, despite these communication problems, the location data seems to be synchronous enough to study the birds' use of space and the phenomena of aggregation or exclusion. 
+
+```{r nb_data_week}
+
+
+d_sum_week <- d_week[,.(sum = sum(as.numeric(count>0))),by = .(week,day)]
+
+
+d_day <- dd[,.(nb=.N),by=.(date,bird_id,day)]
+d_sum_day <- d_day[,.(sum = .N),by = .(date,day)]
+d_sum_day[,date := as.Date(date)]
+
+
+first_date <- min(d_sum_day[,date])
+last_date <- max(d_sum_day[,date])
+
+ddays <- expand.grid(date = seq(first_date, last_date, by="day"),day=c("day","night"),stringsAsFactors=FALSE)
+
+
+d_sum_day <- merge(d_sum_day,ddays,by=c("date","day"),all=TRUE)
+d_sum_day[is.na(sum),sum := 0]
+
+
+   vec_date_hour <- as.POSIXlt(paste0(format(dd[,local_timestamp],"%Y-%m-%d %H"),":00:00"),tz="Pacific/Tahiti")
+    vec_date_hour_txt <- as.character(vec_date_hour)
+    dd[,local_date_hour := vec_date_hour_txt]
+    dd[,local_date_hour := as.POSIXct(local_date_hour,tz="Pacific/Tahiti")]
+
+
+d_hour <- dd[,.(nb=.N),by=.(local_date_hour,bird_id,day)]
+d_sum_hour <- d_hour[,.(sum = .N),by = .(local_date_hour,day)]
+d_sum_hour[,local_date_hour := as.POSIXct(local_date_hour,tz="Pacific/Tahiti")]
+
+
+    d_sum_week[,panel := "week"]
+    setnames(d_sum_week,"week","date")
+    d_sum_week[,date := as.POSIXct(date,tz="Pacific/Tahiti")]
+    d_sum_week[,group := day]
+
+    d_sum_day[,panel := "day"]
+      d_sum_day[,date := as.POSIXct(date,tz="Pacific/Tahiti")]
+    d_sum_day[,group := day]
+
+    d_sum_hour[,panel := "hour"]
+        setnames(d_sum_hour,"local_date_hour","date")
+    d_sum_hour[,group := ""]
+
+dd_sum <- rbind(d_sum_week,rbind(d_sum_day,d_sum_hour))
+
+dd_sum[,panel := factor(panel, levels = c("week","day","hour"))]
+
+gg <- ggplot(data = dd_sum, aes(x=date, y = sum,group=group))+facet_grid(panel~.)
+ gg <- gg + geom_vline(xintercept = startPOSIX,colour="blue")
+gg <- gg+ geom_vline(xintercept = endPOSIX,colour="red")
+gg <- gg + geom_hline(yintercept=2,colour="red")
+
+    gg  <- gg + geom_line(size = 0.5,alpha=1) + geom_point(aes( colour=day),alpha=1,size=1)# + geom_point(data=d_sum_hour[sum < 2,],colour ="white",alpha=.5,size=0.5)
+    gg <-  gg + labs(y="Number of bird with data",x="Date",colour="")
+    gg <- gg + scale_y_continuous(breaks=seq(from = 0,to = 12,by = 2))
+    
+    
+gg
+
+dd[, valide := local_timestamp > startPOSIX & local_timestamp < endPOSIX]
+dsf$valide <- dsf$local_timestamp > startPOSIX & dsf$local_timestamp < endPOSIX
+dsf2 <- subset(dsf, valide  ==TRUE)
+
+```
+
+
+### Temporal distribution of locations of birds
+
+Here are the bird locations per week.
+
+
+
+
+```{r fig_tikei_tattler_week}
+gg <- ggplot() + theme_bw() + facet_wrap(week~.)
+gg <- gg + geom_sf(data =tikei_crop,aes(fill=habitat), colour=NA, size=0.2, alpha=.5)
+gg <- gg + geom_sf(data = dsf2,aes(group=bird_id,colour= bird_id),size=1.2) + geom_path(data=dd[valide == TRUE,],aes(x=X,y=Y,group=bird_id,colour= bird_id),alpha=0.7,size=1)
+gg <- gg + geom_sf(data = dsf2[dsf2$day=="day",],colour="white",size=0.7,alpha=.8) + geom_sf(data = dsf2[dsf2$day == "night",],colour="black",size=0.7,alpha=0.8)
+gg <- gg + scale_fill_manual(values=vec_colour)
+gg <- gg +theme(legend.position = "none")       
+gg <- gg + labs(x="",y="",colour="birds")
+gg <- gg + coord_sf(xlim = c(7284148,7288089), ylim = c( -1673693, -1671352))
+gg
+##ggsave("output/tikei_tattler_week.png",gg)
+```
+
+
+
