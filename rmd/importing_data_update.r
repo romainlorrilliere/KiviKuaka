@@ -7,7 +7,7 @@ pw <-"xxx"
 username <-"romainlorrilliere"
 save.fig <- FALSE
 nb_day_before_fig   <- 30
-id_previous_import <- "20210423_2017"
+id_previous_import <- "20210716_1419"
 if(id_previous_import == "xxx") id_previous_import <- NULL
 
 #study_id=1381110575
@@ -154,7 +154,7 @@ print(cap_txt)
 
 ###{r bird_day,echo=FALSE,warning=FALSE, message=FALSE,fig.width=9, fig.height=12,eval=TRUE,fig.align = 'center', out.width='100%', fig.cap=cap_txt}
 
-data_by_day(d=d,ind=ind,vec_tax=vec_tax,nb_last_day=30,last_update_date = as.Date(last_import_date))
+data_by_day(d=d,ind=ind,vec_tax=vec_tax,nb_last_day=60,last_update_date = as.Date(last_import_date),save=TRUE)
 
 ###
 
