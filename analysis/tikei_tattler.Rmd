@@ -337,5 +337,5 @@ gg
 ##ggsave("output/tikei_tattler_week.png",gg)
 ```
 
-
+### Kernel and intercation
 
