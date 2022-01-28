@@ -218,7 +218,7 @@ duration <- as.numeric(difftime(end,start,units="days"))
 
 However, data gathering has been inconsistent over the year. 
 In February 2021, there were problems at the ISS when we deployed the GPS beacons. For example, the GPS beacons had difficulty connecting to the ISS antenna, and by the week of 22 February, fewer than six birds had sent data. Then we gradually lost connection with the birds, and after the week of 13 September, less than four birds per week sent data. 
-We will limit the analysis to 22 February 2021 to 19 September 2021, i.e.,`r duration` days. 
+We will limit the analysis to `r start` to `r end`, i.e.,`r duration` days. 
 
 
 ```{r nb_data_week_bird}
@@ -247,7 +247,7 @@ gg
 
 ```
 
-However, despite these communication problems, the location data seems to be synchronous enough to study the birds' use of space and the phenomena of aggregation or exclusion. 
+However, despite these communication problems, the location data seems to be synchronous enough to study the birds' use of space and the behavior of aggregation or exclusion. 
 
 ```{r nb_data_week}
 
@@ -319,7 +319,7 @@ dsf2 <- subset(dsf, valide  ==TRUE)
 
 ### Temporal distribution of locations of birds
 
-Here are the bird locations per week.
+Here are the bird locations per week. White dots for the location during days and black ones for those during the nights. 
 
 
 
