@@ -57,3 +57,5 @@ my*
 library/pw.txt
 rmd/importing_data_update_files/*
 documentations/importing_dataGPS_files/*/*
+analysis/movebank_data_tikei.csv
+analysis/movebank_ind.csv
