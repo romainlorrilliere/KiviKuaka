@@ -339,3 +339,117 @@ gg
 
 ### Kernel and intercation
 
+
+```{r kernel}
+
+
+library(adehabitatHR)
+dsf_ud  <- dsf[,c("bird_id")]
+dsf_ud <- st_crop(dsf_ud,st_bbox(tikei_crop))
+
+dsf_ud <- as(dsf_ud,'Spatial')
+
+
+
+
+shp_file <- "../GIS/tikei_platier.shp"
+habitat <- "reef"
+shp_reef <- st_read(shp_file)
+shp_reef$habitat <- habitat
+shp_reef <- st_transform(shp_reef,crs=3832)
+
+border <- st_cast(st_crop(shp_reef,st_bbox(tikei_crop)),"MULTILINESTRING")
+plot(border)
+
+border_sp <- as(border,'Spatial')
+
+
+kd <- kernelUD(dsf_ud,h=50, grid=500,extent=2)
+image(kd)
+
+                                        # creating SpatialPolygonsDataFrame
+kd_names <- names(kd)
+ud_95 <- lapply(kd, function(x) try(getverticeshr(x, 95)))
+                                        # changing each polygons id to the species name for rbind call
+sapply(1:length(ud_95), function(i) {
+    row.names(ud_95[[i]]) <<- kd_names[i]
+})
+sdf_poly_95 <- Reduce(rbind, ud_95)
+df_95 <- fortify(sdf_poly_95)
+df_95$bird_id <- df_95$id
+
+ud_75 <- lapply(kd, function(x) try(getverticeshr(x, 75)))
+                                        # changing each polygons id to the species name for rbind call
+sapply(1:length(ud_75), function(i) {
+    row.names(ud_75[[i]]) <<- kd_names[i]
+})
+sdf_poly_75 <- Reduce(rbind, ud_75)
+df_75 <- fortify(sdf_poly_75)
+df_75$bird_id <- df_75$id
+
+gg <- ggplot()  + theme_bw()
+gg <- gg + geom_sf(data =tikei_crop,aes(fill=habitat), colour=NA, size=0.2, alpha=.5)
+gg <- gg +   geom_polygon(data = df_95, aes(x = long, y = lat, color = bird_id, group = group),size=1.2,fill=NA,alpha = 1)
+gg <- gg +   geom_polygon(data = df_75, aes(x = long, y = lat, color = bird_id, group = group),size=1.2,fill=NA,alpha = 1)
+gg <- gg + geom_sf(data = dsf,aes(group=bird_id,colour= bird_id),size=0.8) + geom_path(data=dd,aes(x=X,y=Y,group=bird_id,colour= bird_id),alpha=0.2,size=0.5)
+gg <- gg + annotation_scale()
+gg <- gg + labs(x="",y="",colour="birds",title="Kernel 75% and 95%")
+gg <- gg + coord_sf(xlim = c(7284148,7288089), ylim = c( -1673693, -1671352))
+gg <- gg + scale_fill_manual(values=vec_colour)
+gg
+ggsave("output/tikei_tattler_kernel.png",width=10,height=8)
+
+
+
+
+
+gg <- ggplot()  + theme_bw() + facet_wrap(~bird_id)
+gg <- gg + geom_sf(data =tikei_crop,aes(fill=habitat), colour=NA, size=0.2, alpha=.5)
+gg <- gg +   geom_polygon(data = df_95, aes(x = long, y = lat, color = bird_id, group = group),size=1.2,fill=NA,alpha = 1)
+gg <- gg +   geom_polygon(data = df_75, aes(x = long, y = lat, color = bird_id, group = group),size=1.2,fill=NA,alpha = 1)
+gg <- gg + geom_sf(data = dsf,aes(group=bird_id,colour= bird_id),size=0.8) + geom_path(data=dd,aes(x=X,y=Y,group=bird_id,colour= bird_id),alpha=0.2,size=0.5)
+gg <- gg + labs(x="",y="",colour="birds")
+gg <- gg + coord_sf(xlim = c(7284148,7288089), ylim = c( -1673693, -1671352))
+gg <- gg + scale_fill_manual(values=vec_colour)
+gg
+ggsave("output/tikei_tattler_bird_kernel.png",gg)
+
+
+sf_poly_75 <- st_as_sf(sdf_poly_75)
+    intersect_75 <- st_intersects(sf_poly_75)
+    print(intersect_75)
+
+    unlist(intersect_75)
+    n <- sapply(intersect_75, length)
+    unlist(lapply(n, seq_len))
+    id <- rep(1:length(intersect_75), times = n)
+
+
+    sf_intersect_75 <- st_intersection(sf_poly_75)
+
+
+
+
+
+gg <- ggplot()  + theme_bw()
+gg <- gg + geom_sf(data =tikei_crop, colour=NA, size=0.2, alpha=.5)
+gg <- gg +   geom_sf(data = sf_intersect_75, aes(fill = n.overlaps),size=1.2,colour=NA,alpha = 1)
+gg
+
+
+    sf_poly_95 <- st_as_sf(sdf_poly_95)
+    intersect_95 <- st_intersects(sf_poly_95)
+    options(digits = 20)
+    sf_poly_95 <- st_make_valid(st_buffer(st_set_precision(sf_poly_95,1e10), 0.0000001))
+    sf_intersect_95 <- st_intersection(sf_poly_95)
+
+
+gg <- ggplot()  + theme_bw()
+gg <- gg + geom_sf(data =tikei_crop, colour=NA, size=0.2, alpha=.5)
+gg <- gg +   geom_sf(data = sf_poly_99, ,size=1.2,colour=NA,alpha = 1)
+gg
+
+
+
+
+```
