@@ -1,0 +1,546 @@
+\documentclass[10pt,compress]{beamer}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+% \usepackage{natbib}
+%\usepackage{hyperref}
+% \usepackage{animate}
+%\usepackage{graphicx}
+%\usepackage{color}
+
+\pdfminorversion=5 
+\pdfcompresslevel=9
+\pdfobjcompresslevel=3
+
+%% Theme
+% \useinnertheme[shadow=true]{rounded}
+% \useoutertheme{shadow}
+% \usecolortheme{orchid}
+% \usecolortheme{whale}%\usetheme{progressbar}
+%\usetheme[]{Berlin}
+
+\useoutertheme[footline=authortitle,subsection=false]{miniframes}
+%\useoutertheme{smoothtree}
+\useinnertheme[shadow=true]{rounded}
+\usecolortheme{orchid}
+\usecolortheme{whale}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\slideentry}{\advance\beamer@tempdim by -.05cm}{\advance\beamer@tempdim by\beamer@vboxoffset\advance\beamer@tempdim by\beamer@boxsize\advance\beamer@tempdim by 1.2\pgflinewidth}{}{}
+\patchcmd{\slideentry}{\kern\beamer@tempdim}{\advance\beamer@tempdim by 2pt\advance\beamer@tempdim by\wd\beamer@sectionbox\kern\beamer@tempdim}{}{}
+\makeatother
+
+\graphicspath{{./image/}} 
+
+% \usecolortheme{progressbar}
+ %\usefonttheme{progressbar}
+ %\useinnertheme{progressbar}
+ %\useoutertheme{progressbar}
+%% Logo
+% \logo{\includegraphics[height=0.5cm]{./images/Logo.png}}
+%% Fond de la page
+ %\setbeamercolor{background canvas}{bg=couleur}
+
+\title[Wandering tattlers of Tikei]{Overlapping territories in a small wintering population of wandering tattler \\in French Polynesia}  
+
+\author[Lorrillière \& Jiguet]{Romain Lorrillière
+  \footnotesize{\textit{romain.lorrilliere@mnhn.fr}} \&  Frédéric Jiguet}
+\institute{MNHN - CESCO}
+\date{SFE$^2$-GfÖ-EEF Metz 2022-11-23}
+
+\titlegraphic{
+\includegraphics[width=\textwidth]{title-tattler}
+}
+
+%\AtBeginSection[]{
+%  \begin{frame}
+%   \frametitle{\insertsectionhead}
+%    \scriptsize \tableofcontents[currentsection,hideothersubsections]
+%  \end{frame}
+%}
+
+
+
+%\AtBeginSubsection[]{
+%  \begin{frame}
+%    \frametitle{\insertsubsectionhead}
+%    \scriptsize \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide ]
+%  \end{frame}
+%}
+%\addtobeamertemplate{footline}{\insertframenumber/\inserttotalframenumber}
+
+\begin{document}
+\maketitle
+
+
+
+% \section{Sommaire}
+%% =====================
+%\begin{frame}
+%   \frametitle{Sommaire}
+%   \tableofcontents[hideallsubsections]
+% \end{frame}
+
+
+
+
+% ===============================================
+\section{Introduction}
+% ===============================================
+
+
+\begin{frame}
+  \frametitle{The shorebirds}
+  \begin{columns}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{center}
+        \includegraphics<1->[width=\textwidth]{shorebird_murmuring_2}
+      \end{center}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{center}
+        \includegraphics<2>[width=\textwidth]{shorebird_foraging_2}     
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{The shorebirds: a threatened taxon}
+ \begin{columns}
+    \begin{column}[c]{0.55\textwidth}
+      \begin{itemize}[<+->]
+      \item about $40 \%$ decline in species {\tiny \cite{Zoeckler2003,Studds2017}}
+      \item many threats {\tiny \cite{Sutherland2012}}
+        \begin{itemize}
+        \item human threats \\{\footnotesize ex: climatic change,
+            degradation and destruction of stopover shore habitat}
+        \item next threats \\{\footnotesize ex:agricultural intensification, pollution and disease, eutrophication}
+        \item natural threats \\{\footnotesize ex: tsunami,
+            storm, volcanism, earthquake}
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+      \begin{center}
+       \includegraphics[width=\textwidth]{limi}     
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Stopover and wintering are crucial times for conservation}
+  \begin{columns}
+    \begin{column}[c]{0.60\textwidth}
+      \begin{itemize}[<+->]
+      \item The shorebird are long-distance migratory species
+      \item The nutritional quality of stopover sites {\tiny
+          \cite{Morrison2007,Studds2017}} and wintering areas {\tiny
+          \cite{Piersma1993,Tulp2009}}  are major drivers to productivity
+      \item In tropical area the avalaibles ressources could be limited
+      \item These limitations drive competition that is the major
+        driver to the shorebird survival during the winter {\tiny \cite{Baker1973}}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.4\textwidth}
+      \begin{center}
+        \includegraphics<1>[width=\textwidth]{migration_godwit}
+        \includegraphics<2>[width=\textwidth]{feeding}
+        \includegraphics<3->[width=\textwidth]{tropic}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Interactions}
+  \begin{columns}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{itemize}[<+->]
+      \item Territorial behaviours on the wintering areas
+      \item Especially for species that visual feeders detected prey over large areas\\ {\footnotesize
+          plovers, sandpipers and tattlers} {\tiny \cite{Colwell2000}}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.4\textwidth}
+      \includegraphics<1>[width=\textwidth]{fight}
+      \includegraphics<2>[width=0.7\textwidth]{plover-sandpiper-tattler}     
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Many studies about wintering on mudflat and wetland }
+  \begin{columns}
+    \begin{column}[c]{0.55\textwidth}
+      \begin{itemize}[<+->]
+      \item Many studies about wintering on mudflat and wetland \\
+        {\footnotesize Europe, Asia, South America, Australia,
+          New-Zeland}
+        \begin{itemize}
+        \item tidal effects on habitat using
+        \item polution effects on feed productivity
+        \item interaction effects between many species in one place
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{KiviKuaka_3_RL_20140912_071004_P9120201}
+      \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Many studies about wintering on mudflat and wetland }
+  \begin{columns}
+    \begin{column}[c]{0.55\textwidth}
+      \begin{itemize}[<+->]
+      \item In the Pacific Ocean, despite the absence of these productive habitats on the many reef islands, there are wintering birds
+      \item For conservation issue it seems to be important to
+        understand how the birds interact on these reef island for food
+       \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{KiviKuaka_3_RL_20210127_124920_P1270001}
+     \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Our main questions}
+  What is the spatial structure of a territorial shorebird population on a reef island?  
+  \begin{itemize}
+  \item Probably important overlap of bird home ranges 
+  \item But despite the overlap, the birds should stay away from each other..
+ \end{itemize}
+\end{frame}
+
+
+
+
+% ===============================================
+\section{Material et methods}
+% ===============================================
+
+
+
+\begin{frame}{The wandering tattler (\textit{Tringa incana}, Gmelin, 1789) }
+  \begin{columns}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{itemize}
+      \item Little shorebird about 110 g
+      \item Breeding in the montain valley in North America {\tiny \cite{Gill2015}}
+      \item Broadly distributed in the pacific area for wintering {\tiny \cite{GillJr.2002}}
+      \item Seems to be territorial even during the wintering {\tiny
+          \cite{Beichle2001}}\\
+        {\footnotesize On Samoan islands Beichle records two birds share $700 m$ of coral
+          beach ($350 m$ for each)}
+        
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.4\textwidth}
+       \includegraphics[width=\textwidth]{KiviKuaka_3_RL_20220306_155702_RL3_4503}     
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+     \includegraphics<3>[width=0.8\textwidth]{KiviKuaka_3_RL_20220303_153324_RL3_4470}
+
+     \item Tikei is a little reef island in French polynesia
+      \item Wandering tattler population prensent at least during wintering  \\ {\footnotesize
+          about 25 birds}
+ 
+\begin{frame}{Tikei une petite ile isolée}
+  \begin{center}
+     \includegraphics<1>[width=0.6\textwidth]{polynesie_sites_1}   
+     \includegraphics<2-4>[width=0.6\textwidth]{Tikei_3}
+     \includegraphics<5->[width=0.6\textwidth]{KiviKuaka_3_RL_20210128_032720_DJI_0559-1} 
+  \end{center}
+  \begin{itemize}[<+->]
+  \item à $70 km$ de la plus proche ile
+  \item $3.9 km$ de long sur $1.6 km$ de large
+  \item $4.5 km^2$  
+  \item altitude max $3 m$
+  \item $9 km$ de côte
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tikei une petite ile isolée}
+  \begin{center}
+     \includegraphics[width=0.6\textwidth]{PLEO0483}       
+  \end{center}
+  \begin{itemize}
+  \item forêt : $3.2 km^2$
+  \item brousaille : $0.3 km^2$
+  \item plage : $0.3 km^2$ 
+  \item paltier : $0.7 km^2$
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Les balises : la contrainte du poids}
+  \begin{columns}
+    \begin{column}[c]{0.55\textwidth}
+      \begin{itemize}
+      \item effet des balises sur la survie et la productivité dès
+        $1\%$ du poids de l'oiseau {\tiny \cite{Bodey2018}}
+      \item règle éthique : pas plus de $5\%$ \\au USA $3\%$ {\tiny \cite{Bridge2011}}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+          \includegraphics[width=\textwidth]{Bridge_et_al_2011_logger}       
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Les balises Icarus}
+  \begin{columns}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}[<+->]
+      \item initiative du Max Plank {\tiny \cite{Jetz2022}} 
+      \item petite balise GPS de 5g
+      \item communique via ISS par VHF
+        \begin{itemize}
+        \item basse altitude
+        \item contrainte sur les aquisitions
+        \end{itemize}
+      \item objectif de réseau de surveillance {\tiny \cite{Jetz2022}}
+      \end{itemize}
+         \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=0.5\textwidth]{icarus}
+        \vspace{12pt}
+        \includegraphics<3-5>[width=\textwidth]{Icarus_AutoE}
+        \includegraphics<6->[width=\textwidth]{jetz_et_al_2022_icarus}
+       \end{center}
+     \end{column}
+  \end{columns}
+ \end{frame}
+
+
+ \begin{frame} {Déployment des balises}
+   \begin{itemize}
+   \item  17 chevaliers ont été équipés du 27 au 28 janvier 2021
+   \end{itemize}
+   \begin{center}
+     \includegraphics<1>[width=.5\textwidth]{KiviKuaka_3_RL_20220307_062331_RL3_4511}
+     \includegraphics<2>[width=.5\textwidth]{KiviKuaka_3_RL_20210128_082356_RL3_2007}
+   \end{center}
+\end{frame}
+
+
+ \begin{frame} {Déployment des balises}
+   \begin{itemize}
+   \item  17 chevaliers ont été équipés du 27 au 28 janvier 2021
+   \item  13 balises ont envoyées des données
+   \end{itemize}
+   \begin{center}
+     \includegraphics<1>[width=0.8\textwidth]{Chevalier-errant-Tikei-Polynesie-francaise-scaled-e1618956657967-1536x1021}
+     \includegraphics<2>[width=0.8\textwidth]{tikei_tattler}
+   \end{center}
+\end{frame}
+
+\begin{frame}{L'utilisation des habitats}
+   \begin{columns}
+    \begin{column}[c]{0.4\textwidth}
+      à l'exception de T06 les chevaliers n'utilisent pas la forêt et utilise que :
+      \begin{itemize}
+      \item le platier
+      \item la plage
+      \item les broussailles
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{gg_bird_habitat-1}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{L'aquisition des données}
+  \begin{columns}
+    \begin{column}[c]{0.4\textwidth}
+      Une aquisition irrégulière et qui s'arrète assez vite :-/
+    \end{column}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{Chevalier_errant_loc_per_day}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{L'aquisition des données}
+  Une aquisition irrégulière et qui s'arrète assez vite :-/
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{tikei_tattler_week}    
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{L'aquisition des données}
+  \begin{columns}
+    \begin{column}[c]{0.4\textwidth}
+      Une aquisition qui semble dépendre des passages de l'ISS
+    \end{column}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{Tringa_incana_loc_per_day}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{L'aquisition des données}
+  Mais des données relativement synchrones :-)\\
+  \begin{center}
+    \includegraphics[width=\textwidth]{tikei_tattler_nb_data_week_day_hour}
+  \end{center}
+\end{frame}
+
+\begin{frame}{L'aquisition des données}
+  Mais des données relativement synchrones :-)\\
+  \begin{center}
+    \includegraphics[width=\textwidth]{tikei_tattler_nb_data_week_day_hour}
+  \end{center}
+    {\footnotesize 4647 couple de données séparé de moins de 15 minutes}
+\end{frame}
+
+
+\begin{frame} {Domainee vitaux}
+  \begin{itemize}
+  \item Données de localisation sont adaptées à l'estimation des
+    domaines vitaux (ou zones utilisées par les indivudus) {\tiny \cite{Kie2010}}
+  \item on les calcule avec le package adehabitat {\tiny \cite{Calenge2015,Calenge2006} }
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Kernel paramétrage : h ?}
+  \begin{itemize}
+  \item La fonction de kernel \textit{kernelUD} a un paramètre d'ajustement
+    $h$. Par defaut sa valeur \textit{h-ref} est adapté au jeux de
+    données qui ont beaucoup de localisations distribuées de manière unimodale. Mais dans le cas
+    d'échantillonnage petit ce paramètre va surestimé la taille du domaine
+    vital {\tiny \cite{Schuler2014}}.
+  \item dans les cas de faible échantillonnage il est suggéré de
+    réaliser une recherche d'un \textit{h ad hoc } {\tiny \cite{Schuler2014}}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Kernel paramétrage : h ?}
+  Algorithme simple
+  \begin{itemize}
+  \item pour chaque oiseau
+  \item recherche de l'\textit{extent} et du plus petit $h$ pour lequel l'isoligne
+    $95\%$ forme un seul polygon simple
+  \item algorithme de recherche est un processus simple  essai / erreur
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Kernel paramétrage : h ?}
+  \begin{center}
+     \includegraphics<1>[width=\textwidth]{get_h_accumulation_all}
+     \includegraphics<2>[width=\textwidth]{get_h_kernel_T09_red}
+     \includegraphics<3>[width=\textwidth]{get_h_kernel_T19_red}
+     \includegraphics<4>[width=\textwidth]{get_h_kernel_T22_red}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{Domaine vital et coeur d'air}
+  \begin{itemize}[<+->]
+  \item   L'isoline $95\%$ représente le domaine vital des oiseaux 
+  \item L'isoline $50\%$ correspond au couer de leur domaine vital
+    c'est à dire où ils passent plus de la moitier de leur temps
+    \tiny{\cite{Benhamou2013,Jourdan2021}} 
+  \item intersections avec les habitats utilisés
+    \begin{itemize}
+    \item le platier
+    \item la plage
+    \item les brousaille
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Domaines vitaux et coeur d'air}
+  \begin{center}
+     \includegraphics<1>[width=\textwidth]{tikei_tattler_kernel_T09_red}
+     \includegraphics<2>[width=\textwidth]{tikei_tattler_kernel_T19_red}
+     \includegraphics<3>[width=\textwidth]{tikei_tattler_kernel_T22_red}
+  \end{center}
+\end{frame}
+
+
+
+% ===============================================
+\section{Résultats}
+% ===============================================
+
+\begin{frame}{Domaine vital et coeur d'air}
+  \begin{center}
+     \includegraphics<1>[width=0.7\textwidth]{kernel_95_all}
+     \includegraphics<2>[width=\textwidth]{intersect_95_50}
+   \end{center}
+\end{frame}
+
+
+\begin{frame}{Distances entre individus}
+  \begin{center}
+     \includegraphics<1>[width=0.8\textwidth]{dis_violin_jour_nuit_kernel}
+     \includegraphics<2>[width=0.8\textwidth]{dis_time_jour_nuit_kernel}
+      \includegraphics<3>[width=0.9\textwidth]{glm}
+   \end{center}
+\end{frame}
+
+
+% ===============================================
+\section{Conclusion}
+% ===============================================
+
+\begin{frame}{Conclusions}
+  \begin{itemize}
+  \item les oiseaux semblent territoriaux
+  \item les intéraction semblent limitées malgré le recouvrement des
+    domaines vitaux
+  \end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}[plain]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{KiviKuaka_3_RL_20210209_172324_WhatsApp} \\
+   % \vspace{12pt}
+    \begin{Large}
+      Merci à l'équipe Kivikuaka   
+    \end{Large}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \begin{tiny}
+    \frametitle{Réferences}
+    \bibliographystyle{apalike}
+    \bibliography{bib_files/biblio}
+  \end{tiny}
+\end{frame}
+
+
+
+
+\end{document}
