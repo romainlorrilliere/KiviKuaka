@@ -70,3 +70,5 @@ analysis/movebank_ind.csv
 *.nav
 *.out
 *.snm
+*.tex~
+*.toc

@@ -1,0 +1,513 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+% \usepackage{natbib}
+%\usepackage{hyperref}
+% \usepackage{animate}
+%\usepackage{graphicx}
+%\usepackage{color}
+
+\pdfminorversion=5 
+\pdfcompresslevel=9
+\pdfobjcompresslevel=3
+
+%% Theme
+% \useinnertheme[shadow=true]{rounded}
+% \useoutertheme{shadow}
+% \usecolortheme{orchid}
+% \usecolortheme{whale}%\usetheme{progressbar}
+%\usetheme[]{Berlin}
+
+\useoutertheme[footline=authorinstitutetitle]{miniframes}
+\useoutertheme{smoothtree}
+\useinnertheme[shadow=true]{rounded}
+\usecolortheme{orchid}
+\usecolortheme{whale}
+
+
+\graphicspath{{./image/}} 
+
+% \usecolortheme{progressbar}
+% \usefonttheme{progressbar}
+% \useinnertheme{progressbar}
+% \useoutertheme{progressbar}
+%% Logo
+% \logo{\includegraphics[height=0.5cm]{./images/Logo.png}}
+%% Fond de la page
+% \setbeamercolor{background canvas}{bg=couleur}
+
+\title[Chevaliers errants de Tikei]{Organisation spatiale d'une population de chevalier errant hivernante sur une petite ile polynésienne \\
+  \textit{\footnotesize{Tribulation d'analyse d'un jeux de données}}}
+
+\author{Romain Lorrilliere, Frédéric Jiguet | Projet Kivi Kuaka}
+\date{YMCA 23 juin 2022}
+
+\AtBeginSection[]{
+  \begin{frame}
+   \frametitle{\insertsectionhead}
+    \scriptsize \tableofcontents[currentsection,hideothersubsections]
+  \end{frame}
+}
+
+
+
+%\AtBeginSubsection[]{
+%  \begin{frame}
+%    \frametitle{\insertsubsectionhead}
+%    \scriptsize \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide ]
+%  \end{frame}
+%}
+%\addtobeamertemplate{footline}{\insertframenumber/\inserttotalframenumber}
+
+\begin{document}
+\maketitle
+
+
+
+% \section{Sommaire}
+%% =====================
+\begin{frame}
+   \frametitle{Sommaire}
+   \tableofcontents[hideallsubsections]
+ \end{frame}
+
+
+
+
+% ===============================================
+\section{Introduction}
+% ===============================================
+
+\begin{frame}{Les limicoles taxon en surcis}
+ \begin{columns}
+    \begin{column}[c]{0.55\textwidth}
+      \begin{itemize}[<+->]
+      \item env. $40 \%$ des espèces en déclins {\tiny \cite{Zoeckler2003,Studds2017}}
+      \item nombreuses causes de déclins {\tiny \cite{Sutherland2012}}
+        \begin{itemize}
+        \item risques naturels \\{\footnotesize ex: tsunami,
+          tempète, volcanisme, tremblement de terre}
+        \item risques anthropogéniques \\{\footnotesize ex: changement climatique,
+          modification des vasières de halte migratoire, dégradation
+          des habitat}
+        \item risques futurs \\{\footnotesize ex:intensification agricole, polutions et
+          maladies, eutrophisation}
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+      \begin{center}
+       \includegraphics[width=\textwidth]{limi}     
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Haltes migratoires et hivernage importants pour la conservation}
+  \begin{columns}
+    \begin{column}[c]{0.60\textwidth}
+      \begin{itemize}[<+->]
+      \item espèces migratrices 
+      \item qualités nutritive des haltes migratoires {\tiny
+          \cite{Morrison2007,Studds2017}} et de l'hivernage {\tiny
+          \cite{Piersma1993,Tulp2009}}  affectent la qualité de la
+        reproduction
+      \item les ressources peuvent être limitées sur certains sites
+        (tropicaux) 
+      \item cette limitation entraine de la compétition qui est le
+        principale moteur de mortalité des limicoles en hiver {\tiny \cite{Baker1973}}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.4\textwidth}
+      \begin{center}
+         \includegraphics[width=\textwidth]{feeding}     
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}{Interactions}
+  \begin{columns}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{itemize}
+      \item comportement territorial sont observés sur les site
+        d'hivernage
+      \item surtout chez espèces qui chasse à la vue \\ {\footnotesize
+          pluvier, chevalier et bécasseau} {\tiny \cite{Colwell2000}}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.4\textwidth}
+       \includegraphics[width=\textwidth]{fight}     
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Le chevalier errant (\textit{Tringa incana}, Gmelin, 1789) }
+  \begin{columns}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{itemize}
+      \item petit limicole d'env. 110 g
+      \item reproduction dans les vallées montagnardes d'amérique du
+        nord {\tiny \cite{Gill2015}}
+      \item largement distribué dans la zone pacifique pour son
+        hivernage {\tiny \cite{GillJr.2002}}
+      \item semble territorial même en hiver {\tiny
+          \cite{Beichle2001}}\\
+        {\footnotesize 2 oiseaux se partagent 700 m de côte (350 m chacun)}
+        
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.4\textwidth}
+       \includegraphics[width=\textwidth]{KiviKuaka_3_RL_20220306_155702_RL3_4503}     
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Un cas original : Tikei}
+  \begin{columns}
+    \begin{column}[c]{0.55\textwidth}
+      \begin{itemize}[<+->]
+      \item beaucoup d'études sur les vasières \\ {\footnotesize Europe, Asie, Amérique
+        du sud, Australie, Nouvelle-Zélande}
+      \item Tikei est une petite ile de Polynésie française
+      \item Population de Chevalier errant \\ {\footnotesize
+          Env. 25 individus}
+        
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+      \includegraphics<1>[width=\textwidth]{KiviKuaka_3_RL_20140912_071004_P9120201}
+      \includegraphics<2>[width=\textwidth]{KiviKuaka_3_RL_20210127_124920_P1270001}
+      \includegraphics<3>[width=0.8\textwidth]{KiviKuaka_3_RL_20220303_153324_RL3_4470}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Hypothèses}
+  une espèce territoriale mais une densité importante \\ (env. 25
+  chevalier sur l'ile)
+ 
+           \begin{itemize}
+ \item Recouvrement des domaines vitaux mais peu des coeurs d'aires
+ \item Distances entre oiseaux devraient rester grandes même
+   pour les individus proches. 
+ \end{itemize}
+
+  
+  
+
+\end{frame}
+
+
+
+
+% ===============================================
+\section{Materiel et méthodes}
+% ===============================================
+
+
+
+
+
+\begin{frame}{Tikei une petite ile isolée}
+  \begin{center}
+     \includegraphics<1>[width=0.6\textwidth]{polynesie_sites_1}   
+     \includegraphics<2-4>[width=0.6\textwidth]{Tikei_3}
+     \includegraphics<5->[width=0.6\textwidth]{KiviKuaka_3_RL_20210128_032720_DJI_0559-1} 
+  \end{center}
+  \begin{itemize}[<+->]
+  \item à $70 km$ de la plus proche ile
+  \item $3.9 km$ de long sur $1.6 km$ de large
+  \item $4.5 km^2$  
+  \item $9 km$ de côte
+  \item altitude max $3 m$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tikei une petite ile isolée}
+  \begin{center}
+     \includegraphics[width=0.6\textwidth]{PLEO0483}       
+  \end{center}
+  \begin{itemize}
+  \item forêt : $3.2 km^2$
+  \item brousaille : $0.3 km^2$
+  \item plage : $0.3 km^2$ 
+  \item paltier : $0.7 km^2$
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Les balises : la contrainte du poids}
+  \begin{columns}
+    \begin{column}[c]{0.55\textwidth}
+      \begin{itemize}
+      \item effet des balises sur la survie et la productivité dès
+        $1\%$ du poids de l'oiseau {\tiny \cite{Bodey2018}}
+      \item règle éthique : pas plus de $5\%$ \\au USA $3\%$ {\tiny \cite{Bridge2011}}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+          \includegraphics[width=\textwidth]{Bridge_et_al_2011_logger}       
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Les balises Icarus}
+  \begin{columns}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}[<+->]
+      \item initiative du Max Plank {\tiny \cite{Jetz2022}} 
+      \item petite balise GPS de 5g
+      \item communique via ISS par VHF
+        \begin{itemize}
+        \item basse altitude
+        \item contrainte sur les aquisitions
+        \end{itemize}
+      \item objectif de réseau de surveillance {\tiny \cite{Jetz2022}}
+      \end{itemize}
+         \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=0.5\textwidth]{icarus}
+        \vspace{12pt}
+        \includegraphics<3-5>[width=\textwidth]{Icarus_AutoE}
+        \includegraphics<6->[width=\textwidth]{jetz_et_al_2022_icarus}
+       \end{center}
+     \end{column}
+  \end{columns}
+ \end{frame}
+
+
+ \begin{frame} {Déployment des balises}
+   \begin{itemize}
+   \item  17 chevaliers ont été équipés du 27 au 28 janvier 2021
+   \end{itemize}
+   \begin{center}
+     \includegraphics<1>[width=.5\textwidth]{KiviKuaka_3_RL_20220307_062331_RL3_4511}
+     \includegraphics<2>[width=.5\textwidth]{KiviKuaka_3_RL_20210128_082356_RL3_2007}
+   \end{center}
+\end{frame}
+
+
+ \begin{frame} {Déployment des balises}
+   \begin{itemize}
+   \item  17 chevaliers ont été équipés du 27 au 28 janvier 2021
+   \item  13 balises ont envoyées des données
+   \end{itemize}
+   \begin{center}
+     \includegraphics<1>[width=0.8\textwidth]{Chevalier-errant-Tikei-Polynesie-francaise-scaled-e1618956657967-1536x1021}
+     \includegraphics<2>[width=0.8\textwidth]{tikei_tattler}
+   \end{center}
+\end{frame}
+
+\begin{frame}{L'utilisation des habitats}
+   \begin{columns}
+    \begin{column}[c]{0.4\textwidth}
+      à l'exception de T06 les chevaliers n'utilisent pas la forêt et utilise que :
+      \begin{itemize}
+      \item le platier
+      \item la plage
+      \item les broussailles
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{gg_bird_habitat-1}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{L'aquisition des données}
+  \begin{columns}
+    \begin{column}[c]{0.4\textwidth}
+      Une aquisition irrégulière et qui s'arrète assez vite :-/
+    \end{column}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{Chevalier_errant_loc_per_day}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{L'aquisition des données}
+  Une aquisition irrégulière et qui s'arrète assez vite :-/
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{tikei_tattler_week}    
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{L'aquisition des données}
+  \begin{columns}
+    \begin{column}[c]{0.4\textwidth}
+      Une aquisition qui semble dépendre des passages de l'ISS
+    \end{column}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{Tringa_incana_loc_per_day}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{L'aquisition des données}
+  Mais des données relativement synchrones :-)\\
+  \begin{center}
+    \includegraphics[width=\textwidth]{tikei_tattler_nb_data_week_day_hour}
+  \end{center}
+\end{frame}
+
+\begin{frame}{L'aquisition des données}
+  Mais des données relativement synchrones :-)\\
+  \begin{center}
+    \includegraphics[width=\textwidth]{tikei_tattler_nb_data_week_day_hour}
+  \end{center}
+    {\footnotesize 4647 couple de données séparé de moins de 15 minutes}
+\end{frame}
+
+
+\begin{frame} {Domainee vitaux}
+  \begin{itemize}
+  \item Données de localisation sont adaptées à l'estimation des
+    domaines vitaux (ou zones utilisées par les indivudus) {\tiny \cite{Kie2010}}
+  \item on les calcule avec le package adehabitat {\tiny \cite{Calenge2015,Calenge2006} }
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Kernel paramétrage : h ?}
+  \begin{itemize}
+  \item La fonction de kernel \textit{kernelUD} a un paramètre d'ajustement
+    $h$. Par defaut sa valeur \textit{h-ref} est adapté au jeux de
+    données qui ont beaucoup de localisations distribuées de manière unimodale. Mais dans le cas
+    d'échantillonnage petit ce paramètre va surestimé la taille du domaine
+    vital {\tiny \cite{Schuler2014}}.
+  \item dans les cas de faible échantillonnage il est suggéré de
+    réaliser une recherche d'un \textit{h ad hoc } {\tiny \cite{Schuler2014}}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Kernel paramétrage : h ?}
+  Algorithme simple
+  \begin{itemize}
+  \item pour chaque oiseau
+  \item recherche de l'\textit{extent} et du plus petit $h$ pour lequel l'isoligne
+    $95\%$ forme un seul polygon simple
+  \item algorithme de recherche est un processus simple  essai / erreur
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Kernel paramétrage : h ?}
+  \begin{center}
+     \includegraphics<1>[width=\textwidth]{get_h_accumulation_all}
+     \includegraphics<2>[width=\textwidth]{get_h_kernel_T09_red}
+     \includegraphics<3>[width=\textwidth]{get_h_kernel_T19_red}
+     \includegraphics<4>[width=\textwidth]{get_h_kernel_T22_red}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{Domaine vital et coeur d'air}
+  \begin{itemize}[<+->]
+  \item   L'isoline $95\%$ représente le domaine vital des oiseaux 
+  \item L'isoline $50\%$ correspond au couer de leur domaine vital
+    c'est à dire où ils passent plus de la moitier de leur temps
+    \tiny{\cite{Benhamou2013,Jourdan2021}} 
+  \item intersections avec les habitats utilisés
+    \begin{itemize}
+    \item le platier
+    \item la plage
+    \item les brousaille
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Domaines vitaux et coeur d'air}
+  \begin{center}
+     \includegraphics<1>[width=\textwidth]{tikei_tattler_kernel_T09_red}
+     \includegraphics<2>[width=\textwidth]{tikei_tattler_kernel_T19_red}
+     \includegraphics<3>[width=\textwidth]{tikei_tattler_kernel_T22_red}
+  \end{center}
+\end{frame}
+
+
+
+% ===============================================
+\section{Résultats}
+% ===============================================
+
+\begin{frame}{Domaine vital et coeur d'air}
+  \begin{center}
+     \includegraphics<1>[width=0.7\textwidth]{kernel_95_all}
+     \includegraphics<2>[width=\textwidth]{intersect_95_50}
+   \end{center}
+\end{frame}
+
+
+\begin{frame}{Distances entre individus}
+  \begin{center}
+     \includegraphics<1>[width=0.8\textwidth]{dis_violin_jour_nuit_kernel}
+     \includegraphics<2>[width=0.8\textwidth]{dis_time_jour_nuit_kernel}
+      \includegraphics<3>[width=0.9\textwidth]{glm}
+   \end{center}
+\end{frame}
+
+
+% ===============================================
+\section{Conclusion}
+% ===============================================
+
+\begin{frame}{Conclusions}
+  \begin{itemize}
+  \item les oiseaux semblent territoriaux
+  \item les intéraction semblent limitées malgré le recouvrement des
+    domaines vitaux
+  \end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}[plain]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{KiviKuaka_3_RL_20210209_172324_WhatsApp} \\
+   % \vspace{12pt}
+    \begin{Large}
+      Merci à l'équipe Kivikuaka   
+    \end{Large}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \begin{tiny}
+    \frametitle{Réferences}
+    \bibliographystyle{apalike}
+    \bibliography{bib_files/biblio}
+  \end{tiny}
+\end{frame}
+
+
+
+
+\end{document}
