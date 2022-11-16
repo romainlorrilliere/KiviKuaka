@@ -33,7 +33,7 @@ setDT(ind)
 
 vecRing <- ind[taxon_canonical_name == "Numenius tahitiensis",ring_id]
 
-vecRing <- c("[FRP-EC110534]","[FRP-EC110531]","[FRP-EC110533]","[FRP-EC110536]")
+#vecRing <- c("[FRP-EC110534]","[FRP-EC110531]","[FRP-EC110533]","[FRP-EC110536]")
 the_names <- unique(ind[ring_id %in% vecRing,individual_id])
 
 d <- getMovebankData(study=study_id, login=log,removeDuplicatedTimestamps=TRUE,animalName=the_names,timestamp_start="20210425000000000")
