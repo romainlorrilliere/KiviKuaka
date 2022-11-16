@@ -1,8 +1,8 @@
 ---
-title: "Overlaping territories in a small wintering population of wandering tattler in French polinesia"
+title: "Overlaping territories and interaction in a small wintering population of wandering tattler in French polinesia"
 author: "Romain Lorrilliere"
-date: "2022-01-07"
-output: html_document
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -12,45 +12,23 @@ Sys.setlocale("LC_ALL", "English")
 
 # Introduction
 
-## individual interaction and territoriality
-## shorebird and wandering tattler
-## miniaturization of GPS technology and innovative Icarus initiative. 
+The competition for resources in populations is one of the major drivers of population dynamics, especially through survival and reproduction (REF). Understanding the strategies of species about this competition seems to be important in the conservation of biodiversity (REF). The long-distance migratory species completely change, leaving sites between the breeding and the wintering season to add constraints yearly on all the sites they visit. Many species of shorebirds are perfect examples (Schuster et al. 2019). They often fly several thousand kilometres between their breeding sites and their wintering sites. Furthermore, the habitats used during these seasons are also often different. 
+
+Hence, shorebirds have many challenges in the face of global change, and they are a taxon in which many species have a declining population (80% over 200 species in 2003, see Fernández and Lank, 2008). They face many threats related to the changing availability of sites they use during their annual cycles (Sutherland et al. 2012). It is broadly known that the quality of the stop over during the spring migration (migration to fly to the breeding sites) has a significant effect on the trend of the populations (Studds et al. 2017; Morrison, Davidson, and Wilson 2007). Also, the feeding place's qualities during the wintering, such as the intertidal area, directly affect their winter survival, subsequent migration, and breeding success (Piersma, de Goeij, and Tulp 1993; Tómas Grétar Gunnarsson et al. 2005; Santos et al. 2005; Tómas G. Gunnarsson et al. 2006; Morrison, Davidson, and Wilson 2007; Tulp et al. 2009; Jourdan et al. 2021). Furthermore, for example, for the semipalmated sandpiper (Calidris pusilla), poor environmental conditions at wintering sites far from Arctic breeding areas may be detrimental to the reproductive performance of a species with declining populations (Boldenow 2018).
+For conservation matters, it seems important to understand better the consequence of the competition between birds and the foraging strategies on the shapes of the spatial organization of the population (Fernández and Lank, 2008). Shorebirds are long-distant migrants. They often breed to the North of the polar boreal circle in the tundra to benefit from the huge amount of food indispensable to raising their offspring. After the breeding season, birds flight to reach their wintering sites. The flight for these species could be incredibly long (Piersma et al. 2022, 2008). During the wintering, the birds could stay several months in the same place where they could forage enough food to survive and prepare for their next journey. According to the principle of optimal foraging, they tend to maximize their net energy intake per unit of time (Jourdan et al., 2021).
+
+Furthermore, as the time budget for foraging during wintering suggests, the prey densities on the wintering sites seem to be lower than in breeding sites (REF). Moreover, although some results suggest that in tropical wintering grounds, there are no population limitations (Duffy and Schneider 1981), the reduction of prey densities increases the competitive process that drives the mortality of shorebirds on their wintering ground that distally regulates the population by the adult mortality (Baker and Miller Baker 1973). These resource constraints strongly suggest territorial behaviour (Colwell 2000), and for example, Ashmole (1970) mentioned that spotted sandpipers (*Actitis macularia*) "were solitary feeders and were hostile to members of their own and other species". However, in the shorebird taxon (Charadriiformes), the territoriality behaviour is not equally distributed and is most prevalent in plovers, tringine sandpipers, calidridine sandpipers, and curlews (Colwell 2000).
+
+Many studies about the wittering foraging are from surveys done on mudflat and wetland habitats (Fonseca et al. 2017; Santos et al. 2005; Fernández and Lank 2008; Duffy and Schneider 1981; Myers and Myers 1979; Gabbard, Sprandel, and Cobb 2001; Colwell 2000; Norazlimi, Ramli, and Hasmi 2020; Piersma, de Goeij, and Tulp 1993; Jourdan et al. 2021). However, some birds do not use mudflats during wintering. It is especially the case for the birds wintering in the Polynesian archipelago, where mudflats are absent. The Wandering tattler (*Tringa incana*) case is wintering in eastern Polynesia's coastal and the birds use rocky intertidal, coral reef, and basalt platforms habitats on atolls and islands, where they find some invertebrates and little fishes. During the breeding season, they use another habitat. They are widely distributed, mainly in dwarf shrub upland and mountain tundra of Alaska. Despite their small size (around 120 grams), they realise a migration along the west coast of North America and then across the pacific ocean to the Hawaii archipelago and finally reach Polynesia (Gill Jr., McCaffery, and Tomkovich 2002).
+
+As this species uses many uninhabited atolls and islets, little is known about this species's habitat use and foraging habits during wintering. Only Beichle (2001) notes that two birds used 350m of the 700m of the coral beach on Samoan Island. Moreover, during high tide, when the corals were covered by water, birds defended their territories vigorously (Beichle 2001). 
+
+Populations of these species that winter on small, isolated islands are good candidates for observing the strategies of birds in the spatial organisation of their home ranges, in response to conspecific competition, especially in the case of species that visual feeders detected prey over large areas, as the Wandering tattler (Colwell 2000).
+By following a substantial part of the wandering tattler population of Tikei by GPS beacons, we could observe bird home ranges' complexity and non-temporal stability. 
 
 
 # Material and methods
 
-## The site 
-Tikei is a tiny island (coordinates -14.95, -144.55) with a coral reef in the Tuamotu archipelago in French Polynesia. This island is 3.9 km long and 1.6 km wide, with a maximum altitude of 3m and the nearest atoll more than 70 km away.
-
-On Tikei, there are four primary habitats distributed concentrically from the center to the periphery, forest (3.2 ha), scrubland (0.3 ha), beach (0.28 ha), and reef (0.73 ha).
-
-![Tikei habitats](C:/git/KiviKuaka/GIS/Tikei_3.png)
-
-## The species
-The Wandering tattler (Tringa incana) is a small coastal shorebird (around 110g) that frequents the rocks along the coastline throughout the year. It breeds in western North America and winters broadly on the Pacific Islands. It appears to be territorial even in winter. 
-
-## Bird capture 
-
-During the night of 27-28 January, we captured and fitted 17 wandering tattlers with GPS beacons. To catch birds, we used two methods. First, several mist nets (Bonardi 12 meters and Ecotone 18 meters) were set up for the night and checked every hour. Then, we prospected all around the tiny island, and we tried to catch all the birds we could get close enough to when we shone a strong torch on them did not fly away. Thus, we could catch them quietly with a bell-shaped net. We estimated the tattler population to be 25 birds during our journey on the island.  
-
-![Tikei capture sites](C:/git/KiviKuaka/GIS/Tikei.png)
-
-## GPS beacons
-We installed a GPS Icarus 5g beacon on the bird's synsacrum using the leg-loop harness (Thaxter et al., 2014) method with surgical silicone tubes of 1.6mm diameter and a surgical knot. 
-The leg-loop method allows to leave the wings free, and the GPS modifies less the aerodynamic of the birds. Furthermore, the silicone tubes are very resistant, particularly elastic, thus adapting to the birds' morphology when they accumulate fat reserves to migrate or lose these reserves and lose weight, as recommended by Barron et al. (2010).
-   
-The 5g transmitter's combined mass, attachment silicone tube,  and the colored flag were approximately 5.2 g. 
-
-This ICARUS tag is a miniaturized data logger with terrestrial and satellite communication capabilities. It weighs less than 5 grams for a dimension of 26 x 15 x 9 mm³, with an external antenna of 15cm. It can record position and velocity, 3D acceleration, magnetic field vector, temperature, and humidity. A solar panel recharges the battery, and the beacon has a 512 MB internal memory for data storage. This tag is light because it communicates the location recorded through the international spatial station that orbits at a low altitude.
-
-All the equipped birds' location data will be automatically uploaded on the specialized internet platform Movebank (https://www.movebank.org/), accessible in open access.
-
-# Data exploration 
-
-## Importation 
-
-Data are in open access on the Movebank web platform. 
-We get them directly from R thanks "move" package version 4.1.6. (Kranstauber et al. 2021).
 
 ```{r packages,  include=FALSE}
 
@@ -66,7 +44,7 @@ for(p in vecPackage){
 
 
 saveData <- TRUE
-get_data <- TRUE
+get_data <- FALSE
 shp_processing <- FALSE
 get_tide <- FALSE
 make_fig_simple <- FALSE
@@ -82,8 +60,67 @@ source("../functions/fun_rmd_generic.r")
 vec_colour <- c("ocean"="#1f78b4","reef"="#a6cee3","beach"="#fdbf6f","scrub"="#b2df8a","forest"="#33a02c")
           
 
+```
+
+## The study area
+
+```{r get_tikei_crop, include=FALSE}
+tikei_crop <- f_shp_tikei(shp_processing)
+
+tikei_beach <- st_union(subset(tikei_crop,habitat %in% c("beach","scrub","forest")))
+tikei_beach_line <- st_cast(tikei_beach,"LINESTRING")
+area_beach <- round(as.numeric(st_area(tikei_beach)/1000000),1)
+perimeter_beach <- round(as.numeric(st_length(tikei_beach_line))/1000,1)
+
+
+
+tikei_reef <- st_union(subset(tikei_crop,habitat %in% c("beach","scrub","forest","reef")))
+tikei_reef_line <- st_cast(tikei_reef,"LINESTRING")
+area_reef <- round(as.numeric(st_area(tikei_reef)/1000000),1)
+perimeter_reef <- round(as.numeric(st_length(tikei_reef_line))/1000,1)
+
+
+vec_area_habitat <- round(as.numeric(st_area(tikei_crop)/1000000),1)
+names(vec_area_habitat) <- tikei_crop$habitat
+
 
 ```
+
+
+Tikeï is a tiny island (coordinates -14.95, -144.55) with a coral reef in the Tuamotu archipelago in French Polynesia. This island is 3.9 km long and 1.6 km wide, with a maximum altitude of 3m and the nearest atoll more than 70 km away. 
+
+According to our fieldwork and the google map satellite pix, we realised the habitat mapping of Tikeï with QGIS (QGIS 3.10.14). On this island, the habitat structuration of the habitats is relatively simple. There are four main habitats distributed concentrically from the centre to the periphery, forest (`r vec_area_habitat[names(vec_area_habitat) == "forest"]` km²), scrubland (`r vec_area_habitat[names(vec_area_habitat) == "scrub"]` km²), beach (`r vec_area_habitat[names(vec_area_habitat) == "beach"]` km²), and reef (`r vec_area_habitat[names(vec_area_habitat) == "reef"]` km²). Hence the island area is equal to `r area_reef` km² with the reef and `r area_beach` without. The perimeter of the part always emerged is `r perimeter_beach` km, and the perimeter of the coastal reef is `r perimeter_reef` km. 
+
+
+
+
+
+![Tikeï habitats](C:/git/KiviKuaka/GIS/Tikei_3.png)
+
+## The species
+The Wandering tattler (*Tringa incana*, Gmelin, 1789) is a medium-sized (around 110g), long-lived, monogamous coastal sandpiper that frequents the rocks along the coastline throughout the year. It breeds in western North America (Gill, Tomkovich, and Dementyev 2015) and winters broadly on the Pacific Islands, where it appears to be also territorial (Beichle 2001).
+
+## Bird capture 
+
+During the night of 27-28 January, we captured and fitted 17 wandering tattlers with GPS beacons. To catch birds, we used two methods. First, several mist nets (Bonardi 12 meters and Ecotone 18 meters) were set up across the shrub entry in the forest at the North-East face of the island. They set up for the night and checked every hour. We also prospected around the small island and tried to catch all the tattlers we could get close enough to when we shone a powerful light on them. These birds could be caught quietly with a bell-shaped net. We estimated the tattler population at 25 birds during our stay on the island.
+
+
+![Tikei capture sites](C:/git/KiviKuaka/GIS/Tikei.png)
+
+## GPS beacons
+
+We installed a GPS Icarus 5g beacon on the bird's synsacrum using the leg-loop harness (Mallory and Gilbert 2008; Thaxter et al. 2014) method with surgical silicone tubes of 1.6mm diameter and a surgical knot. The leg-loop method allows to leave the wings free, and the GPS modifies less the aerodynamics of the birds. Furthermore, the silicone tubes are very resistant, particularly elastic, thus adapting to the birds' morphology when they accumulate fat reserves to migrate or lose these reserves and lose weight, as recommended by (Barron, Brawn, and Weatherhead 2010). The PTT beacon, attachment silicone tube, and the coloured flag were approximately 5.2 g and did not exceed 5% of the bird masses (Barron, Brawn, and Weatherhead 2010). 
+This ICARUS tag is a miniaturized data logger with terrestrial and satellite communication capabilities. It weighs less than 5 grams for a dimension of 26 x 15 x 9 mm³, with an external antenna of 15cm. It can record position and velocity, 3D acceleration, magnetic field vector, temperature, and humidity. A solar panel recharges the battery, and the beacon has a 512 MB internal memory for data storage. This tag is light because it communicates the location recorded through the international spatial station that orbits at a low altitude (Bridge et al. 2011; Jetz et al. 2022).
+All the equipped birds' location data will be automatically uploaded on the specialized internet platform Movebank (Kays et al. 2021), accessible in open access (https://www.movebank.org/).
+
+
+# Data exploration 
+
+## Importation 
+
+Data are in open access on the Movebank web platform. 
+We get them directly from R thanks "move" package version 4.1.6. (Kranstauber et al. 2021).
+
 
 
 
@@ -95,12 +132,11 @@ vec_colour <- c("ocean"="#1f78b4","reef"="#a6cee3","beach"="#fdbf6f","scrub"="#b
     dsf <- st_set_crs(dsf, 4326)
     st_crs(dsf)
     dsf <- st_transform(dsf,crs=3832)
+    
+    dsf <- st_intersection(dsf,tikei_reef)
+    
 ```
 
-```{r get_tikei_crop, include=FALSE}
-  tikei_crop <- f_shp_tikei(shp_processing)
-
-```
 
 
 ## Exploration
@@ -168,7 +204,7 @@ t_bird_habitat[, prop := round(Freq/tot,3)]
 
 t_bird_habitat[,habitat := factor(habitat,levels = c("forest", "scrub", "beach", "reef", "ocean"))]
 
- my_kable_print(t_bird_habitat,caption="The distribution of location in each habitat")
+ my_kable_print(head(t_bird_habitat),caption="The distribution of location in each habitat")
 
 
 ``` 
@@ -187,8 +223,7 @@ Furthermore, a comparison of the relative distribution of bird locations within 
 
 ### Circadian distribution of locations of birds
 
-It does not appear to have a circadian distribution pattern in the habitat using. I will not dig this question. 
-
+It does not appear to have a circadian distribution pattern in habitat use. We will not dig this question.
 
 ```{r fig_tikei_tattler_day_night}
 gg <- ggplot() + theme_bw() + facet_wrap(day~.,nrow=2)
@@ -319,7 +354,7 @@ dsf2 <- subset(dsf, valide  ==TRUE)
 
 ### Temporal distribution of locations of birds
 
-Here are the bird locations per week. White dots for the location during days and black ones for those during the nights. 
+Here are the bird locations per week(White dots for the location during days and black ones for those during the nights). 
 
 
 
@@ -337,35 +372,30 @@ gg
 ##ggsave("output/tikei_tattler_week.png",gg)
 ```
 
-### Kernel and intercation
+### Homerange 
+
+
 
 
 ```{r kernel}
 
 
+
 library(adehabitatHR)
 dsf_ud  <- dsf[,c("bird_id")]
 dsf_ud <- st_crop(dsf_ud,st_bbox(tikei_crop))
-
 dsf_ud <- as(dsf_ud,'Spatial')
-
-
-
-
 shp_file <- "../GIS/tikei_platier.shp"
 habitat <- "reef"
 shp_reef <- st_read(shp_file)
 shp_reef$habitat <- habitat
 shp_reef <- st_transform(shp_reef,crs=3832)
-
 border <- st_cast(st_crop(shp_reef,st_bbox(tikei_crop)),"MULTILINESTRING")
 plot(border)
-
 border_sp <- as(border,'Spatial')
 
-
-kd <- kernelUD(dsf_ud,h=50, grid=500,extent=2)
-image(kd)
+kd <- kernelUD(subset(dsf_ud,bird_id == "T06_red"),h=50, grid=500,extent=2)
+ image(kd)
 
                                         # creating SpatialPolygonsDataFrame
 kd_names <- names(kd)
@@ -378,20 +408,100 @@ sdf_poly_95 <- Reduce(rbind, ud_95)
 df_95 <- fortify(sdf_poly_95)
 df_95$bird_id <- df_95$id
 
-ud_75 <- lapply(kd, function(x) try(getverticeshr(x, 75)))
+ud_50 <- lapply(kd, function(x) try(getverticeshr(x, 50)))
                                         # changing each polygons id to the species name for rbind call
-sapply(1:length(ud_75), function(i) {
-    row.names(ud_75[[i]]) <<- kd_names[i]
+sapply(1:length(ud_50), function(i) {
+    row.names(ud_50[[i]]) <<- kd_names[i]
 })
-sdf_poly_75 <- Reduce(rbind, ud_75)
-df_75 <- fortify(sdf_poly_75)
-df_75$bird_id <- df_75$id
+sdf_poly_50 <- Reduce(rbind, ud_50)
+df_50 <- fortify(sdf_poly_50)
+df_50$bird_id <- df_50$id
+
+gg <- ggplot()  + theme_bw()
+gg <- gg + geom_sf(data =tikei_crop,aes(fill=habitat), colour=NA, size=0.2, alpha=.5)
+gg <- gg +   geom_polygon(data = df_95, aes(x = long, y = lat, color = bird_id, group = group),size=1.2,fill=NA,alpha = 1)
+gg <- gg +   geom_polygon(data = df_50, aes(x = long, y = lat, color = bird_id, group = group),size=1.2,fill=NA,alpha = 1)
+gg <- gg + geom_sf(data = dsf,aes(group=bird_id,colour= bird_id),size=0.8) #+ geom_path(data=dd,aes(x=X,y=Y,group=bird_id,colour= bird_id),alpha=0.2,size=0.5)
+gg <- gg + annotation_scale()
+gg <- gg + labs(x="",y="",colour="birds",title="Kernel 75% and 95%")
+gg <- gg + coord_sf(xlim = c(7284148,7288089), ylim = c( -1673693, -1671352))
+gg <- gg + scale_fill_manual(values=vec_colour)
+gg
+
+```
+
+
+
+```{r kernel_bootstrap}
+
+library(adehabitatHR)
+dsf_ud  <- dsf[,c("bird_id")]
+dsf_ud <- st_crop(dsf_ud,st_bbox(tikei_reef))
+
+vecBird <- unique(dsf$bird_id)
+
+b <- vecBird[1]
+dsf_ud_b <- subset(dsf_ud,bird_id == b)
+
+dsf_ud_b <- as(dsf_ud_b,'Spatial')
+
+
+sdf_poly_95_all <- NULL
+df_95_all <- NULL
+
+for(h in seq(5,50,by=5)) {
+kd <- kernelUD(dsf_ud_b,h=h, grid=min(500,h*100),extent=4)
+# image(kd)
+
+                                        # creating SpatialPolygonsDataFrame
+kd_names <- names(kd)
+ud_95 <- lapply(kd, function(x) try(getverticeshr(x, 95)))
+                                        # changing each polygons id to the species name for rbind call
+
+if(class(ud_95[[1]]) != "try-error") {
+sapply(1:length(ud_95), function(i) {
+    row.names(ud_95[[i]]) <<- kd_names[i]
+})
+sdf_poly_95 <- Reduce(rbind, ud_95)
+df_95 <- fortify(sdf_poly_95)
+
+cat(h,length(sdf_poly_95),"\n")
+sdf_poly_95$h <- h
+df_95$h <- h
+
+if(is.null(sdf_poly_95_all)) sdf_poly_95_all <- sdf_poly_95 else sdf_poly_95_all <- rbind(sdf_poly_95_all,sdf_poly_95)
+if(is.null(df_95_all)) df_95_all <- df_95 else df_95_all <- rbind(df_95_all,df_95)
+
+}
+
+
+
+dsf_b <- subset(dsf,bird_id == b)
+}
+
+
+gg <- ggplot()  + theme_bw()
+gg <- gg + geom_sf(data =tikei_crop, size=0.2, alpha=.5)
+gg <- gg +   geom_polygon(data = subset(df_95_all,h==50), aes(x = long, y = lat, group = group,fill=h),colour=NA,size=.2,alpha = 0.3)
+gg <- gg + geom_sf(data = dsf_b,size=0.8) #+ geom_path(data=dd,aes(x=X,y=Y,group=bird_id,colour= bird_id),alpha=0.2,size=0.5)
+gg <- gg + annotation_scale()
+gg <- gg + labs(x="",y="",colour="h",title="Kernel 95%")
+gg <- gg + coord_sf(xlim = c(7284148,7288089), ylim = c( -1673693, -1671352))
+#gg <- gg + scale_fill_manual(values=vec_colour)
+gg
+```
+
+
+
+
+```{r, fig_kernel1}
+
 
 gg <- ggplot()  + theme_bw()
 gg <- gg + geom_sf(data =tikei_crop,aes(fill=habitat), colour=NA, size=0.2, alpha=.5)
 gg <- gg +   geom_polygon(data = df_95, aes(x = long, y = lat, color = bird_id, group = group),size=1.2,fill=NA,alpha = 1)
 gg <- gg +   geom_polygon(data = df_75, aes(x = long, y = lat, color = bird_id, group = group),size=1.2,fill=NA,alpha = 1)
-gg <- gg + geom_sf(data = dsf,aes(group=bird_id,colour= bird_id),size=0.8) + geom_path(data=dd,aes(x=X,y=Y,group=bird_id,colour= bird_id),alpha=0.2,size=0.5)
+gg <- gg + geom_sf(data = dsf,aes(group=bird_id,colour= bird_id),size=0.8) #+ geom_path(data=dd,aes(x=X,y=Y,group=bird_id,colour= bird_id),alpha=0.2,size=0.5)
 gg <- gg + annotation_scale()
 gg <- gg + labs(x="",y="",colour="birds",title="Kernel 75% and 95%")
 gg <- gg + coord_sf(xlim = c(7284148,7288089), ylim = c( -1673693, -1671352))
@@ -400,6 +510,11 @@ gg
 ggsave("output/tikei_tattler_kernel.png",width=10,height=8)
 
 
+
+```
+
+
+```{r, fig_kernel2}
 
 
 
@@ -415,41 +530,109 @@ gg
 ggsave("output/tikei_tattler_bird_kernel.png",gg)
 
 
+
+```
+
+
+
+### Intercations
+
+Here I define two bird that could interact as birds those could use some same places. I do not know all the places used by the bird. 
+To define these places I asses the home-range of each bird with kernel polygons with two treshold 95% and 75% (package adehabitatHR see Calenge 2006). 
+
+```{r, interaction_kernel1}
+
+
 sf_poly_75 <- st_as_sf(sdf_poly_75)
     intersect_75 <- st_intersects(sf_poly_75)
-    print(intersect_75)
+    ## print(intersect_75)
 
     unlist(intersect_75)
     n <- sapply(intersect_75, length)
     unlist(lapply(n, seq_len))
     id <- rep(1:length(intersect_75), times = n)
 
+    t_intersect_75 <- data.frame(intersect_75)
+colnames(t_intersect_75) <- c("id1","id2")
+    setDT(t_intersect_75)
 
+    nb_intersect_75 <- t_intersect_75[,.(nb_intersection = .N),by=id1]
+    nb_intersect_75[,kernel := "kernel 75%"]
+    
+t_intersect_75 <- t_intersect_75[id1 < id2,]
+    
     sf_intersect_75 <- st_intersection(sf_poly_75)
 
 
 
-
-
-gg <- ggplot()  + theme_bw()
-gg <- gg + geom_sf(data =tikei_crop, colour=NA, size=0.2, alpha=.5)
-gg <- gg +   geom_sf(data = sf_intersect_75, aes(fill = n.overlaps),size=1.2,colour=NA,alpha = 1)
-gg
-
-
     sf_poly_95 <- st_as_sf(sdf_poly_95)
     intersect_95 <- st_intersects(sf_poly_95)
-    options(digits = 20)
-    sf_poly_95 <- st_make_valid(st_buffer(st_set_precision(sf_poly_95,1e10), 0.0000001))
-    sf_intersect_95 <- st_intersection(sf_poly_95)
+   
+        t_intersect_95 <- data.frame(intersect_95)
+colnames(t_intersect_95) <- c("id1","id2")
+    setDT(t_intersect_95)
 
-
-gg <- ggplot()  + theme_bw()
-gg <- gg + geom_sf(data =tikei_crop, colour=NA, size=0.2, alpha=.5)
-gg <- gg +   geom_sf(data = sf_poly_99, ,size=1.2,colour=NA,alpha = 1)
-gg
-
-
-
+      nb_intersect_95 <- t_intersect_95[,.(nb_intersection = .N),by=id1]
+    nb_intersect_95[,kernel := "kernel 95%"]
+    
+         t_intersect_95 <- t_intersect_95[id1 < id2,]
+      t_intersect_95[,bird_id1 := rownames(sf_poly_95)[t_intersect_95[,id1]]]
+      t_intersect_95[,bird_id2 := rownames(sf_poly_95)[t_intersect_95[,id2]]]
+     
+ nb_intersect <- rbind(nb_intersect_75,nb_intersect_95)
+ 
+ gg <- ggplot(data = nb_intersect, aes(x = nb_intersection)) + facet_grid(kernel~.)
+ gg <- gg + geom_histogram()
+ gg <- gg + labs(x = "number of interaction for each birds", y="") + scale_x_continuous(breaks = 1:12)
+ gg
 
 ```
+
+
+The figures show that the bird distribution on island is spatially structured. More specifically, when the kernel at 95% show many intersection between birds with 11 birds among the 13 those have an home-range that intersect with 11 others, at the 75% threshold no birds have more than six overlapping home-ranges 
+
+
+## Distance between birds
+
+To assess whether birds interact positvely or negativeley with assess the effect between the distancethe centroids of the 4 days location of each bird 
+
+
+# References 
+
+
+
+Ashmole, Myrtle J. 1970. “Feeding of Western and Semipalmated Sandpipers in Peruvian Winter Quarters.” The Auk 87 (1): 131–35. https://doi.org/10.2307/4083664.
+Baker, Myron Charles, and Ann Eileen Miller Baker. 1973. “Niche Relationships among Six Species of Shorebirds on Their Wintering and Breeding Ranges.” Ecological Monographs1 43 (2): 193–212.
+Barron, Douglas G., Jeffrey D. Brawn, and Patrick J. Weatherhead. 2010. “Meta-Analysis of Transmitter Effects on Avian Behaviour and Ecology.” Methods in Ecology and Evolution 1 (2): 180–87. https://doi.org/10.1111/j.2041-210x.2010.00013.x.
+Beichle, Ulf. 2001. “Pacific Golden Plovers Pluvialis Fulva and Other Waders on the Samoan Islands: Wintering in a Changing Polynesian Landscape.” Wader Study Group Bulletin 96: 40–46.
+Boldenow, Megan L. 2018. “Do Wintering Conditions Drive Population Trends in Semipalmated Sandpipers (Calidris Pusilla)? Evidence from a Corticosterone Biomarker.” University of Alaska Fairbanks. https://doi.org/10.13140/RG.2.2.19654.83523.
+Bridge, Eli S., Kasper Thorup, Melissa S. Bowlin, Phillip B. Chilson, Robert H. Diehl, René W. Fléron, Phillip Hartl, et al. 2011. “Technology on the Move: Recent and Forthcoming Innovations for Tracking Migratory Birds.” BioScience 61 (9): 689–98. https://doi.org/10.1525/bio.2011.61.9.7.
+Calenge, C. 2006. “The Package Adehabitat for the R Software: Tool for the Analysis of Space and Habitat Use by Animals.” Ecological Modelling 197: 1035.
+Colwell, Mark a. 2000. “A Review of Territoriality in Non-Breeding Shorebirds (Charadrii).” Wader Study Group Bulletin 93 (December): 58–66.
+Duffy, David Cameron, and David C Schneider. 1981. “Do Shorebirds Compete on Their Wintering Grounds?” Deep Sea Research Part B. Oceanographic Literature Review 28 (12): 887. https://doi.org/10.1016/0198-0254(81)91593-4.
+Fernández, Guillermo, and David B. Lank. 2008. “Effects of Habitat Loss on Shorebirds during the Non-Breeding Season: Current Knowledge and Suggestions for Action.” Ornitologia Neotropical 19 (SUPPL.): 633–40.
+Fonseca, Juanita, Enzo Basso, David Serrano, and Juan G. Navedo. 2017. “Effects of Tidal Cycles on Shorebird Distribution and Foraging Behaviour in a Coastal Tropical Wetland: Insights for Carrying Capacity Assessment.” Estuarine, Coastal and Shelf Science 198: 279–87. https://doi.org/10.1016/j.ecss.2017.09.016.
+Gabbard, Christine, Gary Sprandel, and David Cobb. 2001. “Home Range Analyses of Shorebirds Wintering along the Gulf of Mexico, Florida, USA.” Wader Study Group Bulletin 96 (December): 79–85. http://scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:Home+range+analyses+of+shorebirds+wintering+along+the+Gulf+of+Mexico,+Florida,+USA#0.
+Gill, Robert E., Pavel S. Tomkovich, and Maksim N. Dementyev. 2015. “Breeding Ecology of Wandering Tattlers Tringa Incana: A Study from South-Central Alaska.” Wader Study 122 (2): 99–114. https://doi.org/10.18194/ws.00016.
+Gunnarsson, Tómas G., Jennifer A. Gill, Philip W. Atkinson, Guillaume Gélinaud, Peter M. Potts, Ruth E. Croger, Gudmundur A. Gudmundsson, Graham F. Appleton, and William J. Sutherland. 2006. “Population-Scale Drivers of Individual Arrival Times in Migratory Birds.” Journal of Animal Ecology 75 (5): 1119–27. https://doi.org/10.1111/j.1365-2656.2006.01131.x.
+Gunnarsson, Tómas Grétar, Jennifer A. Gill, Jason Newton, Peter M. Potts, and William J. Sutherland. 2005. “Seasonal Matching of Habitat Quality and Fitness in a Migratory Bird.” Proceedings of the Royal Society B: Biological Sciences 272 (1578): 2319–23. https://doi.org/: 10. 1098/rspb.2005.3214.
+Jetz, Walter, Grigori Tertitski, Roland Kays, Uschi Mueller, Martin Wikelski, Susanne Åkesson, Yury Anisimov, et al. 2022. “Biological Earth Observation with Animal Sensors.” Trends in Ecology and Evolution 37 (4): 293–98. https://doi.org/10.1016/j.tree.2021.11.011.
+Jourdan, C., J. Fort, D. Pinaud, P. Delaporte, J. Gernigon, N. Lachaussée, J. C. Lemesle, et al. 2021. “Nycthemeral Movements of Wintering Shorebirds Reveal Important Differences in Habitat Uses of Feeding Areas and Roosts.” Estuaries and Coasts 44 (5): 1454–68. https://doi.org/10.1007/s12237-020-00871-5.
+Kays, Roland, Sarah C. Davidson, Matthias Berger, Gil Bohrer, Wolfgang Fiedler, Andrea Flack, Julian Hirt, et al. 2021. “The Movebank System for Studying Global Animal Movement and Demography.” Methods in Ecology and Evolution 2021 (October): 1–13. https://doi.org/10.1111/2041-210X.13767.
+Kranstauber, Bart, Marco Smolla, and Anne K Scharf. 2021. “Move: Visualizing and Analyzing Animal Track Data.” https://cran.r-project.org/package=move.
+Mallory, Mark L., and Cynthia D. Gilbert. 2008. “Leg-Loop Harness Design for Attaching External Transmitters to Seabirds.” Marine Ornithology 36 (2): 183–88.
+Morrison, Guy R.I., Nick C. Davidson, and Jim R. Wilson. 2007. “Survival of the Fattest: Body Stores on Migration and Survival in Red Knots Calidris Canutus Islandica.” Journal of Avian Biology 38 (4): 479–87. https://doi.org/10.1111/j.2007.0908-8857.03934.x.
+Myers, J. P., and L. P. Myers. 1979. “Shorebirds of Coastal Buenos Aires Province, Argentina.” Ibis 121 (2): 186–200. https://doi.org/10.1111/j.1474-919X.1979.tb04961.x.
+Norazlimi, Nor Atiqah, Rosli Ramli, and Nur Atirah Hasmi. 2020. “Feeding Rate and Success Rate of Foraging Waders in Tropical Intertidal Areas.” Journal of Sustainable Natural Resources 1 (1). https://doi.org/10.30880/jsunr.2020.01.01.005.
+Piersma, Theunis, Robert E Gill, Daniel R Ruthrauff, Christopher G Guglielmo, Jesse R Conklin, and Colleen M Handel. 2022. “The Pacific as the World’s Greatest Theater of Bird Migration: Extreme Flights Spark Questions about Physiological Capabilities, Behavior, and the Evolution of Migratory Pathways.” Ornithology 139 (2): 1–29. https://doi.org/10.1093/ornithology/ukab086.
+Piersma, Theunis, Petra de Goeij, and Ingrid Tulp. 1993. “An Evaluation of Intertidal Feeding Habitats from a Shorebird Perspective: Towards Relevant Comparisons between Temperate and Tropical Mudflats.” Netherlands Journal of Sea Research 31 (4): 503–12. https://doi.org/10.1016/0077-7579(93)90062-W.
+Piersma, Theunis, Nils Warnock, Philip F Battley, T. Lee Tibbitts, Daniel M Mulcahy, Colleen M Handel, Brian J McCaffery, David C Douglas, Robert E Gill, and Jon C Gottschalck. 2008. “Extreme Endurance Flights by Landbirds Crossing the Pacific Ocean: Ecological Corridor Rather than Barrier?” Proceedings of the Royal Society B: Biological Sciences 276 (1656): 447–57. https://doi.org/10.1098/rspb.2008.1142.
+Santos, Tiago Múrias, João Alexandre Cabral, Ricardo Jorge Lopes, Miguel Pardal, João Carlos Marques, and John Goss-Custard. 2005. “Competition for Feeding in Waders: A Case Study in an Estuary of South Temperate Europe (Mondego, Portugal).” Hydrobiologia 544 (1): 155–66. https://doi.org/10.1007/s10750-005-0541-6.
+Schuster, Richard, Scott Wilson, Amanda D. Rodewald, Peter Arcese, Daniel Fink, Tom Auer, and Joseph R. Bennett. 2019. “Optimizing the Conservation of Migratory Species over Their Full Annual Cycle.” Nature Communications 10 (1): 1–8. https://doi.org/10.1038/s41467-019-09723-8.
+Studds, Colin E., Bruce E. Kendall, Nicholas J. Murray, Howard B. Wilson, Danny I. Rogers, Robert S. Clemens, Ken Gosbell, et al. 2017. “Rapid Population Decline in Migratory Shorebirds Relying on Yellow Sea Tidal Mudflats as Stopover Sites.” Nature Communications 8: 1–7. https://doi.org/10.1038/ncomms14895.
+Sutherland, William J., Jose A. Alves, Tatsuya Amano, Charlotte H. Chang, Nicholas C. Davidson, C. Max Finlayson, Jennifer A. Gill, et al. 2012. “A Horizon Scanning Assessment of Current and Potential Future Threats to Migratory Shorebirds.” Ibis 154 (4): 663–79. https://doi.org/10.1111/j.1474-919X.2012.01261.x.
+Thaxter, Chris B., Viola H. Ross-Smith, Jacquie A. Clark, Nigel A. Clark, Greg J. Conway, Mike Marsh, Eliza H.K. Leat, and Niall H.K. Burton. 2014. “A Trial of Three Harness Attachment Methods and Their Suitability for Long-Term Use on Lesser Black-Backed Gulls and Great Skuas.” Ringing and Migration 29 (2): 65–76. https://doi.org/10.1080/03078698.2014.995546.
+Tulp, Ingrid, Hans Schekkerman, Raymond H.G. Klaassen, Bruno J. Ens, and G. Henk Visser. 2009. “Body Condition of Shorebirds upon Arrival at Their Siberian Breeding Grounds.” Polar Biology 32 (3): 481–91. https://doi.org/10.1007/s00300-008-0543-8.
+
+
+
