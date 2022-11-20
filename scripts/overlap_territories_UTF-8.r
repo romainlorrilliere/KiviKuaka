@@ -23,7 +23,7 @@ make_fig_simple <- FALSE
 do_temporal_ditribution <- FALSE
 do_get_h_kernel <- FALSE
 do_kernel <- FALSE
-do_intersect_kernel <- TRUE
+do_intersect_kernel <- FALSE
 do_proximity_moving_windows <- FALSE
 do_distance_time <- FALSE
 do_rmd_script <- FALSE
@@ -516,116 +516,212 @@ sf_kernel <- sf_kernel[!duplicated(sf_kernel),]
    ##  gg
 
     #### OK #####
-    vec_k <- c(30,40,50,60,70,80,90,95)
-    vec_id <- unique(sf_kernel$id)
-    tab_id <- expand.grid(id_1 = vec_id, id_2 = vec_id)
-    setDT(tab_id)
-    tab_id[,`:=`(id_1 = as.character(id_1), id_2 = as.character(id_2))]
-    tab_id <- tab_id[id_1 < id_2,]
+    vec_K <- c(30,40,50,60,70,80,90,95)
 
-
-
-    sf_overlap_kernel_border  <- NULL
-
-    for(K in vec_k[1:6]) {
-        cat("\n\n## ",K,"\n")
+    for(K in vec_K) {
         for(H in vec_h) {
-            cat("\n  -",H,"\n")
-            for(i in 1:nrow(tab_id)){
-                cat(i,"")
-                the_id <- c(tab_id[[1]][i],tab_id[[2]][i])
-                sf_k <- subset(sf_intersect_kernel_border,k==K & habitat == H & id %in% the_id)
-                sf_k <- st_cast(st_cast(sf_k,"MULTIPOLYGON"),"POLYGON")
+        sf_K <- subset(sf_intersect_kernel_border,k==K & habitat == H )
+        intersect_K <- st_intersects(sf_K)
+        ## print(intersect_K)
 
-             ##   ggplot() + geom_sf(data=tikei)+ geom_sf(data=sf_k,aes(fill=bird_id),alpha=0.6)
+        unlist(intersect_K)
+        n <- sapply(intersect_K, length)
+        unlist(lapply(n, seq_len))
+        id <- rep(1:length(intersect_K), times = n)
+
+        t_intersect_K <- data.frame(intersect_K)
+         setDT(t_intersect_K)
+        t_intersect_K[,id1 := sf_K$id[t_intersect_K[,row.id]]]
+        t_intersect_K[,id2 := sf_K$id[t_intersect_K[,col.id]]]
+        t_intersect_K <- t_intersect_K[id1 < id2,]
+        t_intersect_K[,kernel := K]
+        t_intersect_K[,habitat := H]
+
+        nb_intersect_K <- t_intersect_K[,.(nb_intersection = .N),by=id1]
+        nb_intersect_K[,kernel := K]
+         nb_intersect_K[,habitat := H]
 
 
-                sf_k <- st_make_valid(sf_k)
-                sf_k$area_m2 <- as.numeric(st_area(sf_k))
 
-                sf_k <- subset(sf_k,area_m2 > 500)
-if(nrow(sf_k)> 1){
-                sf_k <- st_set_precision(sf_k,1)
-
-        sf_overlap_kernel_border <- rbind(sf_overlap_kernel_border,st_make_valid(st_intersection(sf_k)))
-## ggplot() + geom_sf(data=tikei)+ geom_sf(data=sf_k,aes(fill=bird_id)) + facet_wrap(.~bird_id)
-}
-
-            }
-
+        if(K == vec_K[1] & H == vec_h[1]) t_intersect <- t_intersect_K else t_intersect <- rbind(t_intersect,t_intersect_K)
+        if(K == vec_K[1]& H == vec_h[1]) nb_intersect <- nb_intersect_K else nb_intersect <- rbind(nb_intersect,nb_intersect_K)
         }
-        saveRDS(sf_overlap_kernel_border,"output/overlap_kernel.rds")
     }
 
-    sf_intersect_kernel <- st_cast(sf_intersect_kernel,"POLYGON")
-    gg <- ggplot() + facet_wrap(.~bird_id)
-    gg <- gg + geom_sf(data=tikei)
-    gg <- gg + geom_sf(data=sf_intersect_kernel,aes(fill=k),alpha=0.5)
-    gg
+    t_intersect[,id := paste(id1,id2,sep="_")]
+    t_intersect_min <- t_intersect[,.(min_kernel = min(kernel)), by = .(id,id1,id2)]
+    setorder(t_intersect_min,id1,id2)
 
 
+    print(t_intersect_min)
 
-    gg <- ggplot() + facet_wrap(.~bird_id)
-    gg <- gg + geom_sf(data=tikei)
-    gg <- gg + geom_sf(data=sf_intersect_kernel,aes(fill=k),alpha=0.5)
-    gg
+    fwrite(t_intersect,"output/t_intersect.csv")
+    fwrite(t_intersect_min,"output/t_intersect_min.csv")
+        fwrite(nb_intersect,"output/nb_intersect.csv")
 
-    setDT(intersect_kernel_50)
-
-    sf_kernel_50$area_m2 <- as.numeric(st_area(sf_kernel_50))
-    kernel_50 <- as.data.frame(sf_kernel_50)
-    setDT(kernel_50)
-    kernel_50[,i := 1:.N]
-    kernel_50 <- kernel_50[,.(i,bird_id)]
-
-    intersect_kernel_50 <- merge(intersect_kernel_50,kernel_50,by.x="row.id",by.y="i")
-    intersect_kernel_50 <- merge(intersect_kernel_50,kernel_50,by.x="col.id",by.y="i")
-
-    intersect_kernel_50 <- intersect_kernel_50[,3:4]
-    colnames(intersect_kernel_50) <- c("bird_id_1","bird_id_2")
-
-    intersect_kernel_50 <- unique(intersect_kernel_50)
-
-    nb_intersect_50 <- intersect_kernel_50[,.(nb_intersect_50 = (.N)-1),by=bird_id_1]
-
-
-    intersect_kernel_90 <- as.data.frame(st_intersects(sf_kernel_90))
-    setDT(intersect_kernel_90)
-
-    sf_kernel_90$area_m2 <- as.numeric(st_area(sf_kernel_90))
-    kernel_90 <- as.data.frame(sf_kernel_90)
-    setDT(kernel_90)
-    kernel_90[,i := 1:.N]
-    kernel_90 <- kernel_90[,.(i,bird_id)]
-
-    intersect_kernel_90 <- merge(intersect_kernel_90,kernel_90,by.x="row.id",by.y="i")
-    intersect_kernel_90 <- merge(intersect_kernel_90,kernel_90,by.x="col.id",by.y="i")
-
-    intersect_kernel_90 <- intersect_kernel_90[,3:4]
-    colnames(intersect_kernel_90) <- c("bird_id_1","bird_id_2")
-
-    intersect_kernel_90 <- unique(intersect_kernel_90)
-
-    nb_intersect_90 <- intersect_kernel_90[,.(nb_intersect_90 = (.N)-1),by=bird_id_1]
-
-    nb_intersect <- merge(nb_intersect_90,nb_intersect_50,by="bird_id_1")
-
-    setnames(nb_intersect,"bird_id_1","bird_id")
-
-    print(nb_intersect)
-    fwrite(nb_intersect,"output/intersect.csv")
-
-
-
-    gg_nb_intersect <- melt(nb_intersect, id.vars = c("bird_id"))
-    gg <- ggplot(gg_nb_intersect, aes(x=variable,y=value)) + geom_violin(draw_quantiles=.5,alpha=0.8,colour=NA)
-    gg <- gg + geom_line(aes(group=bird_id,colour=bird_id),size=2,alpha=.5)+geom_jitter(aes(colour=bird_id),height=0.1,width=0.05)
-    gg <- gg + scale_y_continuous(name="Nombre d'interactions", breaks = seq(0,12,2)) + labs(x="Kernel",colour="") + theme(legend.position="none")
-    gg
-    ggsave("output/intersect_90_50.png",gg)
-
+##   vec_id <- unique(sf_kernel$id)
+##   tab_id <- expand.grid(id_1 = vec_id, id_2 = vec_id)
+##   setDT(tab_id)
+##   tab_id[,`:=`(id_1 = as.character(id_1), id_2 = as.character(id_2))]
+##   tab_id <- tab_id[id_1 < id_2,]
+##
+##
+##
+##   sf_overlap_kernel_border  <- NULL
+##
+##   for(K in vec_k[1:6]) {
+##       cat("\n\n## ",K,"\n")
+##       for(H in vec_h) {
+##           cat("\n  -",H,"\n")
+##           for(i in 1:nrow(tab_id)){
+##               cat(i,"")
+##               the_id <- c(tab_id[[1]][i],tab_id[[2]][i])
+##               sf_k <- subset(sf_intersect_kernel_border,k==K & habitat == H & id %in% the_id)
+##               sf_k <- st_cast(st_cast(sf_k,"MULTIPOLYGON"),"POLYGON")
+##
+##            ##   ggplot() + geom_sf(data=tikei)+ geom_sf(data=sf_k,aes(fill=bird_id),alpha=0.6)
+##
+##
+##               sf_k <- st_make_valid(sf_k)
+##               sf_k$area_m2 <- as.numeric(st_area(sf_k))
+##
+##               sf_k <- subset(sf_k,area_m2 > 500)
+##f(nrow(sf_k)> 1){
+##               sf_k <- st_set_precision(sf_k,1)
+##
+##       sf_overlap_kernel_border <- rbind(sf_overlap_kernel_border,st_make_valid(st_intersection(sf_k)))
+### ggplot() + geom_sf(data=tikei)+ geom_sf(data=sf_k,aes(fill=bird_id)) + facet_wrap(.~bird_id)
+##
+##
+##           }
+##
+##       }
+##       saveRDS(sf_overlap_kernel_border,"output/overlap_kernel.rds")
+##   }
+##
+##   sf_intersect_kernel <- st_cast(sf_intersect_kernel,"POLYGON")
+##   gg <- ggplot() + facet_wrap(.~bird_id)
+##   gg <- gg + geom_sf(data=tikei)
+##   gg <- gg + geom_sf(data=sf_intersect_kernel,aes(fill=k),alpha=0.5)
+##   gg
+##
+##
+##
+##   gg <- ggplot() + facet_wrap(.~bird_id)
+##   gg <- gg + geom_sf(data=tikei)
+##   gg <- gg + geom_sf(data=sf_intersect_kernel,aes(fill=k),alpha=0.5)
+##   gg
+##
+##   setDT(intersect_kernel_50)
+##
+##   sf_kernel_50$area_m2 <- as.numeric(st_area(sf_kernel_50))
+##   kernel_50 <- as.data.frame(sf_kernel_50)
+##   setDT(kernel_50)
+##   kernel_50[,i := 1:.N]
+##   kernel_50 <- kernel_50[,.(i,bird_id)]
+##
+##   intersect_kernel_50 <- merge(intersect_kernel_50,kernel_50,by.x="row.id",by.y="i")
+##   intersect_kernel_50 <- merge(intersect_kernel_50,kernel_50,by.x="col.id",by.y="i")
+##
+##   intersect_kernel_50 <- intersect_kernel_50[,3:4]
+##   colnames(intersect_kernel_50) <- c("bird_id_1","bird_id_2")
+##
+##   intersect_kernel_50 <- unique(intersect_kernel_50)
+##
+##   nb_intersect_50 <- intersect_kernel_50[,.(nb_intersect_50 = (.N)-1),by=bird_id_1]
+##
+##
+##   intersect_kernel_90 <- as.data.frame(st_intersects(sf_kernel_90))
+##   setDT(intersect_kernel_90)
+##
+##   sf_kernel_90$area_m2 <- as.numeric(st_area(sf_kernel_90))
+##   kernel_90 <- as.data.frame(sf_kernel_90)
+##   setDT(kernel_90)
+##   kernel_90[,i := 1:.N]
+##   kernel_90 <- kernel_90[,.(i,bird_id)]
+##
+##   intersect_kernel_90 <- merge(intersect_kernel_90,kernel_90,by.x="row.id",by.y="i")
+##   intersect_kernel_90 <- merge(intersect_kernel_90,kernel_90,by.x="col.id",by.y="i")
+##
+##   intersect_kernel_90 <- intersect_kernel_90[,3:4]
+##   colnames(intersect_kernel_90) <- c("bird_id_1","bird_id_2")
+##
+##   intersect_kernel_90 <- unique(intersect_kernel_90)
+##
+##   nb_intersect_90 <- intersect_kernel_90[,.(nb_intersect_90 = (.N)-1),by=bird_id_1]
+##
+##   nb_intersect <- merge(nb_intersect_90,nb_intersect_50,by="bird_id_1")
+##
+##   setnames(nb_intersect,"bird_id_1","bird_id")
+##
+##   print(nb_intersect)
+##   fwrite(nb_intersect,"output/intersect.csv")
+##
+##
+##
+##   gg_nb_intersect <- melt(nb_intersect, id.vars = c("bird_id"))
+##   gg <- ggplot(gg_nb_intersect, aes(x=variable,y=value)) + geom_violin(draw_quantiles=.5,alpha=0.8,colour=NA)
+##   gg <- gg + geom_line(aes(group=bird_id,colour=bird_id),size=2,alpha=.5)+geom_jitter(aes(colour=bird_id),height=0.1,width=0.05)
+##   gg <- gg + scale_y_continuous(name="Nombre d'interactions", breaks = seq(0,12,2)) + labs(x="Kernel",colour="") + theme(legend.position="none")
+##   gg
+##   ggsave("output/intersect_90_50.png",gg)
+##
 }
 
+if(do_distance) {
+
+    for (i in 1:nrow(t_intersect_min)) {
+
+        id1 <- t_intersect_min[i,id1]
+        dd_id1 <- subset(dd,bird_id == id1)
+        dd_id1 <- dd_id1[,.(bird_id,local_timestamp,day,X,Y)]
+        setnames(dd_id1,colnames(dd_id1),paste0(colnames(dd_id1),"_1"))
+          ## 2m
+        dd_id1[,start_close := local_timestamp_1 - 120]
+        dd_id1[,end_close := local_timestamp_1 + 120]
+        ## 2h -> 2j same day/night
+        dd_id1[,start_far_1 := local_timestamp_1 - (3600*24*2)]
+        dd_id1[,end_far_1 := local_timestamp_1 - 7200]
+        dd_id1[,start_far_2 := local_timestamp_1 + 7200]
+        dd_id1[,end_far_2 := local_timestamp_1 + (3600*24*2)]
+
+        id2 <- t_intersect_min[i,id2]
+        dd_id2 <- subset(dd,bird_id == id2)
+        dd_id2 <- dd_id2[,.(bird_id,local_timestamp,day,X,Y)]
+         setnames(dd_id2,colnames(dd_id2),paste0(colnames(dd_id2),"_2"))
+
+        d_dist_close <- dd_id1[dd_id2,on=.(start_close <= local_timestamp_2,end_close >= local_timestamp_2 ,day_1 == day_2),.(bird_id_1,bird_id_2,time = abs(as.numeric(difftime(local_timestamp_1,local_timestamp_2,units="hours"))),local_timestamp_1,local_timestamp_2,day_1,day_2,X_1,Y_1,X_2,Y_2)][!is.na(bird_id_1)& bird_id_1 != bird_id_2]
+        d_dist_close[,dist := round(sqrt((X_1 - X_2)^2 + (Y_1 - Y_2)^2 ))]
+
+        d_dist_close[,cat_time := "close"]
+
+
+        d_dist_far_1 <- dd_id1[dd_id2,on=.(start_far_1 <= local_timestamp_2,end_far_1 >= local_timestamp_2 ,day_1 == day_2),.(bird_id_1,bird_id_2,time = abs(as.numeric(difftime(local_timestamp_1,local_timestamp_2,units="hours"))),local_timestamp_1,local_timestamp_2,day_1,day_2,X_1,Y_1,X_2,Y_2)][!is.na(bird_id_1)& bird_id_1 != bird_id_2]
+        d_dist_far_2 <- dd_id1[dd_id2,on=.(start_far_2 <= local_timestamp_2,end_far_2 >= local_timestamp_2 ,day_1 == day_2),.(bird_id_1,bird_id_2,time = abs(as.numeric(difftime(local_timestamp_1,local_timestamp_2,units="hours"))),local_timestamp_1,local_timestamp_2,day_1,day_2,X_1,Y_1,X_2,Y_2)][!is.na(bird_id_1)& bird_id_1 != bird_id_2]
+        d_dist_far <- rbind(d_dist_far_1,d_dist_far_2)
+        d_dist_far[,dist := round(sqrt((X_1 - X_2)^2 + (Y_1 - Y_2)^2 ))]
+
+        d_dist_far[,cat_time := "far"]
+
+        d_dist_i <- rbind(d_dist_close,d_dist_far)
+
+        d_dist_i[,`:=`(id=t_intersect_min[i,id],kernel_min = t_intersect_min[i,min_kernel])]
+
+        if(i == 1) d_dist  <- d_dist_i else d_dist  <-  rbind(d_dist,d_dist_i)
+
+    }
+    d_dist <- d_dist[dist<5000,]
+
+    fwrite(d_dist,"output/distance_time_intersect.csv")
+
+    gg <- ggplot(d_dist,aes(x=kernel_min ,y=dist)) + facet_grid(day_1~cat_time)
+    gg <- gg + geom_point() + geom_smooth(method = "lm")
+    gg
+    ggsave("output/distance_time_intersect.png",gg)
+
+
+
+}
 
 if(do_distance_time) {
 
@@ -647,6 +743,8 @@ if(do_distance_time) {
     d_dist <- d_dist[dist < 5000,]
     d_dist[,day := ifelse(day_1=="day" & day_2 =="day","day",ifelse(day_1=="night"& day_2 =="night","night","diff"))]
 
+
+    d_dist[,class_time := ifelse(time < 0.17,"inf_min",ifelse(time > 1,"sup_h","min-h"))]
 
     intersect_kernel_50[,kernel_50 := TRUE]
     d_dist <- merge(d_dist,intersect_kernel_50,by=c("bird_id_1","bird_id_2"),all.x=TRUE)
