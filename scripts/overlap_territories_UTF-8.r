@@ -3,7 +3,7 @@
 
 #### 2021-06-08 spatial occupency of the tikei's tatler
 
-vecPackage=c("move","lubridate","ggplot2","ggmap","ggspatial","moveVis","data.table","suncalc","ggspatial","HelpersMG","adehabitatHR","rtide")
+vecPackage=c("move","lubridate","ggplot2","ggmap","ggspatial","moveVis","data.table","suncalc","ggspatial","HelpersMG","adehabitatHR","rtide","glmmTMB","DHARMa","ggeffects")
 ip <- installed.packages()[,1]
 
 for(p in vecPackage){
@@ -25,6 +25,7 @@ do_get_h_kernel <- FALSE
 do_kernel <- FALSE
 do_intersect_kernel <- FALSE
 do_proximity_moving_windows <- FALSE
+do_distance <- FALSE
 do_distance_time <- FALSE
 do_rmd_script <- FALSE
 
@@ -719,6 +720,76 @@ if(do_distance) {
     gg
     ggsave("output/distance_time_intersect.png",gg)
 
+
+    d_dist <- fread("output/distance_time_intersect.csv")
+hist(d_dist$dist)
+    glmm <- glmmTMB(dist ~ kernel_min * cat_time + day_1 + (1|id),data=d_dist,family="nbinom2")
+sglmm <- summary(glmm)
+print(sglmm)
+simulationOutput <- simulateResiduals(fittedModel = glmm, plot = F)
+testZeroInflation(simulationOutput)
+plot(simulationOutput)
+
+library(ggeffects)
+ggpred <- ggpredict(glmm,terms = c("kernel_min","cat_time","day_1"))
+print(ggpred)
+plot(ggpred)
+
+    glmm <- glmmTMB(dist ~  cat_time * day_1 + (1|id) + (1|kernel_min),data=d_dist,family="nbinom2")
+sglmm <- summary(glmm)
+print(sglmm)
+simulationOutput <- simulateResiduals(fittedModel = glmm, plot = F)
+testZeroInflation(simulationOutput)
+plot(simulationOutput)
+
+library(ggeffects)
+ggpred <- ggpredict(glmm,terms = c("cat_time","day_1"))
+print(ggpred)
+plot(ggpred)
+
+
+
+     glmm <- glmmTMB(dist ~ kernel_min * cat_time +(1|day_1) + (1|id),data=d_dist,family="nbinom2")
+sglmm <- summary(glmm)
+print(sglmm)
+simulationOutput <- simulateResiduals(fittedModel = glmm, plot = F)
+testZeroInflation(simulationOutput)
+plot(simulationOutput)
+
+library(ggeffects)
+ggpred <- ggpredict(glmm,terms = c("kernel_min","cat_time"))
+print(ggpred)
+plot(ggpred)
+
+    d_dist[,kernel_min_txt := as.character(kernel_min)]
+
+
+
+
+      glmm <- glmmTMB(dist ~ kernel_min_txt * cat_time + day_1 + (1|id),data=d_dist,family="nbinom2")
+sglmm <- summary(glmm)
+print(sglmm)
+simulationOutput <- simulateResiduals(fittedModel = glmm, plot = F)
+testZeroInflation(simulationOutput)
+plot(simulationOutput)
+
+ggpred <- ggpredict(glmm,terms = c("kernel_min_txt","cat_time","day_1"))
+print(ggpred)
+plot(ggpred)
+
+
+
+
+     glmm <- glmmTMB(dist ~ kernel_min_txt * cat_time +(1|day_1) + (1|id),data=d_dist,family="nbinom2")
+sglmm <- summary(glmm)
+print(sglmm)
+simulationOutput <- simulateResiduals(fittedModel = glmm, plot = F)
+testZeroInflation(simulationOutput)
+plot(simulationOutput)
+
+ggpred <- ggpredict(glmm,terms = c("kernel_min_txt","cat_time"))
+print(ggpred)
+plot(ggpred)
 
 
 }
