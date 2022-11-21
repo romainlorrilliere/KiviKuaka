@@ -76,3 +76,5 @@ analysis/movebank_ind.csv
 *.tmp
 *.synctex(busy)
 *.svg
+*.txt#
+*.txt~
