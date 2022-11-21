@@ -722,7 +722,19 @@ if(do_distance) {
 
 
     d_dist <- fread("output/distance_time_intersect.csv")
-hist(d_dist$dist)
+
+    d_dist[,date := as.Date(local_timestamp_1)]
+
+
+    d_dist_day <- d_dist[,.(nb = .N), by = .(date,cat_time,day_1)]
+
+    gg <- ggplot(data = d_dist_day, aes(x=as.Date(date),y=nb,colour=day_1))
+    gg <- gg + geom_point() + geom_line(alpha = .5)
+    gg <- gg + labs(x="Date",y = "Number of synchronous pair data (< 2 min)", colour="")
+    ggNumber
+    ggsave("output/synchronous_data.png",gg)
+
+    hist(d_dist$dist)
     glmm <- glmmTMB(dist ~ kernel_min * cat_time + day_1 + (1|id),data=d_dist,family="nbinom2")
 sglmm <- summary(glmm)
 print(sglmm)
