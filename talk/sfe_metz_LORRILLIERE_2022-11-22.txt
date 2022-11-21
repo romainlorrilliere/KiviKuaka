@@ -1,0 +1,57 @@
+Hi everyone, 
+Thank you for being there. 
+I will take about the interaction of a small shorebird, the wandering tattler, on a tiny Polynesian island. 
+---
+The shorebirds are the species you can easily see and recognize during the winter when large flocks fly together and frenetically forage in the mud. 
+---
+Among the birds, the shorebirds are a taxon, particularly on the threat, with about 40 % of species in decline. They face many human-induced threats, such as  climatic change, degradation and destruction of stopover shore habitat, agricultural intensification, pollution and disease, and eutrophication, and some natural threat, such as tsunamis, storms, volcanism, and earthquake.
+---
+The shorebirds are long-distance migratory species, especially in the pacific basin where the ocean is a huge barrier. 
+Consequently, the nutritional quality of stopover sites and wintering areas are significant drivers of breeding productivity. 
+In tropical areas, the available resources are known to be limited. 
+And these limitation drive competition, which is the major driver of shorebird survival during the winter. 
+---
+Hence, some species have territorial behaviour even during the winter. It is especially the case for the species that are visual feeders and detect their prey over a large area, such as the plovers, some sandpipers and the tattlers. 
+---
+This knowledge is often from studies about wintering on mudflats and wetlands in Europe, Asia, South America, Australia, and New Zealand.
+Hence the tidal effects on habitat used, the pollution effects on feed resources productivity and the interaction effect between the many species that feed on the same mudflat are broadly documented. 
+---
+Despite the absence of these productive habitats on the many reef islands in the pacific ocean, there are wintering shorebirds. 
+So, for conservation issues, it seems essential to understand how the birds interact on these reefed islands for feed.
+---
+Here we have the main question: What is the spatial structuration of a territorial shorebird population o a reefed island? 
+We expect a significant overlap of bird home ranges, but the birds should stay away from each other. 
+---
+The study site is a tiny island named Tikei of the Tuamotu archipelago in French Polynesia. 
+This island is far for 70 km from the closest island. Its dimension is 3.9 km in length and 1.6 km in width for an area of 4.5 square km and 9 km of coast. 
+---
+We found on it 4 habitats, from the centre to the ocean, the tallest the forest, then the bush, the beach and finally the reef. 
+---
+On Tikei, there is a wintering population of wandering tattlers. It is a small shorebird, about 110 grammes. 
+It breeds in rocky places in the mountain valley of North America and is broadly distributed in the pacific area for wintering. There is not much information about its wintering, but some observations suggest that they are territorial, as this observation of two birds which share equally 700m of the coast. 
+---
+We stayed on Tikei for 24 hours in January 2021. 
+During the day, we estimated that 25 wandering tattlers lived on Tikei
+(that corresponds to one bird for 350m coast too)
+During the night, We traped 17 birds, mainly with bell-shaped nets and powerful light and someone with mist nets, 
+We equipped them with a 5g Icarus PPT tag with a leg-loop harness.
+---
+Icarus is a Max Plank intiative. 
+The beacons sent data by a VHF signal via a Russian antenna on the ISS that flights at low altitudes, but they were some constraints on
+communication (such as the time windows) 
+The initial purpose of this project is to create a network for monitoring the movement of animals.
+---
+Unfortunately, since march 2022, the system no longer functions due to the cessation of collaboration between Max Planck and the Russian space agency in response to the military invasion.
+---
+So, we fitted 17 wandering tattler
+with GPS tags. 
+But only 13 have sent data. We can discuss the reasons for these problems later.  
+Furthermore, the data acquisition
+was irregular and,
+unfortunately, stopped
+pretty quickly. 
+---
+Here are all the locations that we gathered. But if we break data by week, we observe that they are very fragmented. Despite that, and thank the constraints of the ISS time windows, we get many synchronous data. 
+We get more than 3000 pairs of synchronous data, with less than 2
+minutes between the two locations.
+---
