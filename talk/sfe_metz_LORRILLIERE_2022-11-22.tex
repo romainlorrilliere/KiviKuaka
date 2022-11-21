@@ -220,7 +220,7 @@
 
 
 % ===============================================
-\section{Material et methods}
+\section{Material}
 % ===============================================
 
 
@@ -278,90 +278,155 @@
 \end{frame}
 
     
-\begin{frame} {Déployment des balises}
+\begin{frame} {Deployment of 17 PTT beacons}
    \begin{columns}
     \begin{column}[c]{0.6\textwidth}
-   \begin{itemize}
-   \item Among about 25 wandering tattlers living on Tikei \\
-     \footnotesize{(about one bird for 350m cost too)}
-   \item During one night in January 2021, we equiped 17 birds with a
-     Icarus PPT tag. 
+      \begin{itemize}[<+->]
+      \item We stayed on Tikei for 24h in January 2021
+      \item During the day we estimated that 25 wandering tattlers lived on Tikei \\
+        \footnotesize{(that corresponds to one bird for 350m coast too)}
+      \item During the night,
+        \begin{itemize}[<+->]
+        \item we traped 17 birds mainly with bell-shaped net and powerfull ligth and some
+          one with mistnet,
+        \item we equipped them with a 5g Icarus PPT tag with a leg-loop harness.
+        \end{itemize}
    \end{itemize}
      \end{column}
     \begin{column}[c]{0.4\textwidth}
-   \begin{center}
-     \includegraphics<1>[width=.8\textwidth]{KiviKuaka_3_RL_20220307_062331_RL3_4511}
-     \includegraphics<2>[width=.8\textwidth]{KiviKuaka_3_RL_20210128_082356_RL3_2007}
-   \end{center}
+      \begin{center}
+        % \includegraphics<1-2>[width=.8\textwidth]{}
+        % \includegraphics<3>[width=.8\textwidth]{bell-shaped_mistnet_mistnet}
+        \includegraphics<5>[width=.8\textwidth]{KiviKuaka_3_RL_20210128_082356_RL3_2007}
+         \end{center}
     \end{column}
   \end{columns}
 \end{frame}
 
 
 
-\begin{frame}{Les balises : la contrainte du poids}
-  \begin{columns}
-    \begin{column}[c]{0.55\textwidth}
-      \begin{itemize}
-      \item effet des balises sur la survie et la productivité dès
-        $1\%$ du poids de l'oiseau {\tiny \cite{Bodey2018}}
-      \item règle éthique : pas plus de $5\%$ \\au USA $3\%$ {\tiny \cite{Bridge2011}}
-      \end{itemize}
-    \end{column}
-    \begin{column}[c]{0.45\textwidth}
-          \includegraphics[width=\textwidth]{Bridge_et_al_2011_logger}       
-    \end{column}
-  \end{columns}
-\end{frame}
-
-
-\begin{frame}{Les balises Icarus}
+\begin{frame}{Icarus PTT beacon}
   \begin{columns}
     \begin{column}[c]{0.5\textwidth}
       \begin{itemize}[<+->]
-      \item initiative du Max Plank {\tiny \cite{Jetz2022}} 
-      \item petite balise GPS de 5g
-      \item communique via ISS par VHF
+      \item Max Plank initiative{\tiny \cite{Jetz2022}} 
+      \item Little 5g GPS beacon with two antennas
+      \item The beacons sent data by a VHF signal via a Russian antenna on the ISS
         \begin{itemize}
-        \item basse altitude
-        \item contrainte sur les aquisitions
+        \item ISS flights at low altitudes
+        \item but they were some constraints on communication (such as
+          the time windows)
         \end{itemize}
-      \item objectif de réseau de surveillance {\tiny \cite{Jetz2022}}
+      \item The initial purpose of this project is to create a network for monitoring the movement of animals.   {\tiny \cite{Jetz2022}}
       \end{itemize}
          \end{column}
     \begin{column}[c]{0.5\textwidth}
       \begin{center}
-        \includegraphics[width=0.5\textwidth]{icarus}
+        \includegraphics[width=0.7\textwidth]{icarus}
         \vspace{12pt}
+        \includegraphics<1-2>[width=.8\textwidth]{KiviKuaka_3_RL_20220307_062331_RL3_4511}
         \includegraphics<3-5>[width=\textwidth]{Icarus_AutoE}
         \includegraphics<6->[width=\textwidth]{jetz_et_al_2022_icarus}
-       \end{center}
+        \end{center}
      \end{column}
-  \end{columns}
+   \end{columns}
+ \end{frame}
+
+\begin{frame}{Icarus PTT beacon}
+  \begin{center}
+   \begin{alertblock}{}
+     Unfortunately, since march 2022, the system no longer functions due to the cessation of collaboration between Max Planck and the Russian space agency in response to the military invasion. 
+   \end{alertblock}
+  \end{center}
  \end{frame}
 
 
 
-
- \begin{frame} {Déployment des balises}
-   \begin{itemize}
-   \item  17 chevaliers ont été équipés du 27 au 28 janvier 2021
-   \item  13 balises ont envoyées des données
+\begin{frame}{Data gathering}
+  \begin{columns}
+    \begin{column}[c]{0.4\textwidth}
+      \begin{itemize}[<+->]
+   \item  17 wandering tattler fitted with GPS tags 
+   \item  Only 13 have sent data
+   \item  The data  acquisition was irregular and, unfortunately, stopped pretty quickly 
    \end{itemize}
-   \begin{center}
-     \includegraphics<1>[width=0.8\textwidth]{Chevalier-errant-Tikei-Polynesie-francaise-scaled-e1618956657967-1536x1021}
-     \includegraphics<2>[width=0.8\textwidth]{tikei_tattler}
-   \end{center}
+    \end{column}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{center}
+        \includegraphics<1-2>[width=\textwidth]{Chevalier-errant-Tikei-Polynesie-francaise-scaled-e1618956657967-1536x1021}
+        \includegraphics<3>[width=\textwidth]{Chevalier_errant_loc_per_day}
+      \end{center}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\begin{frame}{L'utilisation des habitats}
-   \begin{columns}
+
+\begin{frame}{Data gathering}
+  \begin{center}
+    \includegraphics<1>[width=\textwidth]{tikei_tattler}
+    \includegraphics<2>[width=0.9\textwidth]{tikei_tattler_week}    
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{Data gathering}
+  The data are fragmented but often synchronous thanks to the
+  constraints of ISS time windows.
+ \begin{center}
+    \includegraphics[width=.7\textwidth]{synchronous_data}
+  \end{center}
+ \begin{block}<2>{}
+       {\footnotesize 3310 pairs of synchronous data, with less than 2 minutes between the two locations}
+ \end{block}
+\end{frame}
+
+
+% ===============================================
+\section{Methods \& results}
+% ===============================================
+
+
+
+\begin{frame} {Bird home ranges}
+  \begin{itemize}
+  \item Location data are suitable for estimating home ranges (or areas used by individuals) {\tiny \cite{Kie2010}}
+  \item To assess them we used the adehabitat R package {\tiny
+      \cite{Calenge2015,Calenge2006} }
+  \item As recommended for the small sample, we assess an individual 
+    \textit{ad-hoc parameter H} for which the $95\%$ isoline forms a single simple polygon {\tiny \cite{Schuler2014}} 
+  \end{itemize}
+\end{frame}
+
+ 
+
+\begin{frame}{Bird home ranges: trial-and-error agorithm}
+    \begin{center}
+     \includegraphics<1>[width=\textwidth]{get_h_accumulation_all}
+     \includegraphics<2>[width=\textwidth]{get_h_kernel_T09_red}
+      \end{center}
+\end{frame}
+
+
+\begin{frame}{Home range and core area}
+  \begin{itemize}[<+->]
+  \item  Isoline $95\%$ represents the home range of birds L'isoline $95\%$ représente le domaine vital des oiseaux 
+  \item  Isoline $50\%$ isoline corresponds to their core of their home range, i.e. where they spend more than half of their time
+    \tiny{\cite{Benhamou2013,Jourdan2021}}
+  \end{itemize}
+ \end{frame}
+
+
+\begin{frame}{Home range and core area}
+    \begin{columns}
     \begin{column}[c]{0.4\textwidth}
-      à l'exception de T06 les chevaliers n'utilisent pas la forêt et utilise que :
-      \begin{itemize}
-      \item le platier
-      \item la plage
-      \item les broussailles
+      \begin{itemize}[<+->]
+      \item Except T06 the wanderind tattlers do not use the forest.
+        \begin{itemize}[<+->]
+        \item the reef
+        \item the beach
+        \item the bush
+        \end{itemize}
+      \item We intersect the home ranges with the used habitats
       \end{itemize}
     \end{column}
     \begin{column}[c]{0.6\textwidth}
@@ -373,144 +438,41 @@
 \end{frame}
 
 
-\begin{frame}{L'aquisition des données}
-  \begin{columns}
-    \begin{column}[c]{0.4\textwidth}
-      Une aquisition irrégulière et qui s'arrète assez vite :-/
-    \end{column}
-    \begin{column}[c]{0.6\textwidth}
-      \begin{center}
-        \includegraphics[width=\textwidth]{Chevalier_errant_loc_per_day}
-      \end{center}
-    \end{column}
-  \end{columns}
-\end{frame}
 
-
-\begin{frame}{L'aquisition des données}
-  Une aquisition irrégulière et qui s'arrète assez vite :-/
-  \begin{center}
-    \includegraphics[width=0.8\textwidth]{tikei_tattler_week}    
-  \end{center}
-\end{frame}
-
-
-\begin{frame}{L'aquisition des données}
-  \begin{columns}
-    \begin{column}[c]{0.4\textwidth}
-      Une aquisition qui semble dépendre des passages de l'ISS
-    \end{column}
-    \begin{column}[c]{0.6\textwidth}
-      \begin{center}
-        \includegraphics[width=\textwidth]{Tringa_incana_loc_per_day}
-      \end{center}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-
-\begin{frame}{L'aquisition des données}
-  Mais des données relativement synchrones :-)\\
-  \begin{center}
-    \includegraphics[width=\textwidth]{tikei_tattler_nb_data_week_day_hour}
-  \end{center}
-\end{frame}
-
-\begin{frame}{L'aquisition des données}
-  Mais des données relativement synchrones :-)\\
-  \begin{center}
-    \includegraphics[width=\textwidth]{tikei_tattler_nb_data_week_day_hour}
-  \end{center}
-    {\footnotesize 4647 couple de données séparé de moins de 15 minutes}
-\end{frame}
-
-
-\begin{frame} {Domainee vitaux}
-  \begin{itemize}
-  \item Données de localisation sont adaptées à l'estimation des
-    domaines vitaux (ou zones utilisées par les indivudus) {\tiny \cite{Kie2010}}
-  \item on les calcule avec le package adehabitat {\tiny \cite{Calenge2015,Calenge2006} }
-  \end{itemize}
-\end{frame}
-
-
-\begin{frame}{Kernel paramétrage : h ?}
-  \begin{itemize}
-  \item La fonction de kernel \textit{kernelUD} a un paramètre d'ajustement
-    $h$. Par defaut sa valeur \textit{h-ref} est adapté au jeux de
-    données qui ont beaucoup de localisations distribuées de manière unimodale. Mais dans le cas
-    d'échantillonnage petit ce paramètre va surestimé la taille du domaine
-    vital {\tiny \cite{Schuler2014}}.
-  \item dans les cas de faible échantillonnage il est suggéré de
-    réaliser une recherche d'un \textit{h ad hoc } {\tiny \cite{Schuler2014}}
-  \end{itemize}
-\end{frame}
-
-
-\begin{frame}{Kernel paramétrage : h ?}
-  Algorithme simple
-  \begin{itemize}
-  \item pour chaque oiseau
-  \item recherche de l'\textit{extent} et du plus petit $h$ pour lequel l'isoligne
-    $95\%$ forme un seul polygon simple
-  \item algorithme de recherche est un processus simple  essai / erreur
-  \end{itemize}
-\end{frame}
-
-
-\begin{frame}{Kernel paramétrage : h ?}
-  \begin{center}
-     \includegraphics<1>[width=\textwidth]{get_h_accumulation_all}
-     \includegraphics<2>[width=\textwidth]{get_h_kernel_T09_red}
-     \includegraphics<3>[width=\textwidth]{get_h_kernel_T19_red}
-     \includegraphics<4>[width=\textwidth]{get_h_kernel_T22_red}
-  \end{center}
-\end{frame}
-
-
-\begin{frame}{Domaine vital et coeur d'air}
-  \begin{itemize}[<+->]
-  \item   L'isoline $95\%$ représente le domaine vital des oiseaux 
-  \item L'isoline $50\%$ correspond au couer de leur domaine vital
-    c'est à dire où ils passent plus de la moitier de leur temps
-    \tiny{\cite{Benhamou2013,Jourdan2021}} 
-  \item intersections avec les habitats utilisés
-    \begin{itemize}
-    \item le platier
-    \item la plage
-    \item les brousaille
-    \end{itemize}
-  \end{itemize}
-\end{frame}
-
-
-\begin{frame}{Domaines vitaux et coeur d'air}
-  \begin{center}
-     \includegraphics<1>[width=\textwidth]{tikei_tattler_kernel_T09_red}
-     \includegraphics<2>[width=\textwidth]{tikei_tattler_kernel_T19_red}
-     \includegraphics<3>[width=\textwidth]{tikei_tattler_kernel_T22_red}
-  \end{center}
-\end{frame}
-
-
-
-% ===============================================
-\section{Résultats}
-% ===============================================
-
-\begin{frame}{Domaine vital et coeur d'air}
+\begin{frame}{Home range}
   \begin{center}
      \includegraphics<1>[width=0.7\textwidth]{kernel_95_all}
-     \includegraphics<2>[width=\textwidth]{intersect_95_50}
    \end{center}
 \end{frame}
 
 
-\begin{frame}{Distances entre individus}
+\begin{frame}{Distances between birds}
+  \begin{itemize}[<+->]
+  \item we assess the distance between bird when the lag between the
+    to location is less than 2 minutes
+  \item we compare this distance with a control group with a lag
+    comprise between 2 hours and 2 day. 
+  \item To observe the effect of interaction levels between birds on these distances, we classify the pairs according to the minimum kernel at which the birds overlap. 
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Distances between birds}
   \begin{center}
-     \includegraphics<1>[width=0.8\textwidth]{dis_violin_jour_nuit_kernel}
-     \includegraphics<2>[width=0.8\textwidth]{dis_time_jour_nuit_kernel}
-      \includegraphics<3>[width=0.9\textwidth]{glm}
+     \includegraphics[width=0.7\textwidth]{glmm_dist_kernel-time_explain}
+   \end{center}
+\end{frame}
+
+\begin{frame}{Distances between birds}
+  \begin{center}
+     \includegraphics[width=0.7\textwidth]{glmm_dist_kernelTXT-time_day}
+   \end{center}
+\end{frame}
+
+\begin{frame}{Distances between birds}
+  \begin{center}
+    \includegraphics<1>[width=0.7\textwidth]{glmm_dist_kernel-time}
+    \includegraphics<2>[width=0.7\textwidth]{glmm_dist_kernel-time_cost}
    \end{center}
 \end{frame}
 
@@ -532,10 +494,11 @@
 
 \begin{frame}[plain]
   \begin{center}
-    \includegraphics[width=0.8\textwidth]{KiviKuaka_3_RL_20210209_172324_WhatsApp} \\
+    \includegraphics[width=0.7\textwidth]{KiviKuaka_3_RL_20210209_172324_WhatsApp} \\
    % \vspace{12pt}
     \begin{Large}
-      Merci à l'équipe Kivikuaka   
+      Thank you to the Kivikuaka team \\and the French navy
+      for the field work, \\and thank you for your attention.
     \end{Large}
   \end{center}
 \end{frame}
