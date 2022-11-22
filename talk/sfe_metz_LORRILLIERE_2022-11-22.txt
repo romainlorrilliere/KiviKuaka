@@ -19,7 +19,7 @@ Hence the tidal effects on habitat used, the pollution effects on feed resources
 Despite the absence of these productive habitats on the many reef islands in the pacific ocean, there are wintering shorebirds. 
 So, for conservation issues, it seems essential to understand how the birds interact on these reefed islands for feed.
 ---
-Here we have the main question: What is the spatial structuration of a territorial shorebird population o a reefed island? 
+Here we have the main question: What is the spatial structuration of a territorial shorebird population on a reefed island? 
 We expect a significant overlap of bird home ranges, but the birds should stay away from each other. 
 ---
 The study site is a tiny island named Tikei of the Tuamotu archipelago in French Polynesia. 
@@ -55,3 +55,51 @@ Here are all the locations that we gathered. But if we break data by week, we ob
 We get more than 3000 pairs of synchronous data, with less than 2
 minutes between the two locations.
 ---
+The location data are suitable for estimating home ranges (or areas used by individuals). 
+To assess them, we used the adehabitat R package. 
+And as recommended for the small sample, we assess an individual
+ad-hoc H parameter for which the 95% isoline forms a single simple
+polygon. 
+---
+For each bird, we search the H parameter by a trial-and-error algorithm to get a 95% isoline that forms a single simple polygon. 
+For example, here is the result of the process for a bird. 
+---
+Traditionally in the framework of home range, the 95% isoline represents the home range of birds
+and the 50% isoline corresponds to the core of their home range, i.e.
+where they spend more than half of their time. 
+---
+The kernels are only smooth on location. However, we could improve the home range according to the habitats used. Indeed except for the tattler T06, which uses the habitat in the same proporition of their area (last line), all other birds avoid forest. 
+Consequently, we intersect the home ranges with the used habitats (the reef, the beach, and the bush). 
+---
+Finally, we get this kind of home ranges for the isoline 50% and 95%. You can observe that the overlaps are large with the isoline 95%.
+---
+To study if the bird interacts, we assess the distance between birds when the lag between the locations is less than 2 minutes.
+We compare this distance with a control group with a lag from 2 hours to 2 days.
+To observe the effect of interaction levels between birds on these
+distances, we classify the pairs according to the minimum isoline at
+which the birds overlap.
+---
+The results that I will show you as organised like that. Vertically you have the distance between the bird, and horizontally an indicator of the overlap of the home range of the bird pairs, at the left bird pairs, whose home range overlap is large and at the right birds, with almost no overlap in their home ranges. 
+Finally, we compare the distance for synchronous location, less than 2 minutes between the location with the control distances. 
+---
+First, if we consider isoline as a factor, we observe that there is no circadian effect on the distance and the difference between the synchronous distance and the control is not huge. 
+---
+Second, if we consider the isoline as a continuous variable with the circadian time as a random variable. 
+---
+We could observe that birds are, in mean, not so close.
+Even when their home range overlap is large, birds are not close
+So, birds seem to be not social 
+But when the birds' overlap increases, they seem closer when
+locations are synchronous rather than randomised locations.
+This difference could be the result of the behaviour of territoriality,
+vigilance and aggressivity among the other bird.
+Interestingly, this difference seems to be an indicator of the cost of the competition.
+---
+Despite a large overlap in home range, the Tikei wandering tattler
+appears to be territorial.
+But this overlap of home ranges seems to come at a cost to the
+birds, probably through the time spent watching and defending their
+territory.
+---
+Despite fragmented data on the location of the birds
+we show an interesting example of birds interacting on a small isolated island.
