@@ -722,8 +722,26 @@ if(do_distance) {
 
 
     d_dist <- fread("output/distance_time_intersect.csv")
+    d_bird <- fread("data/data_JIGUET_2021.csv",encoding="Latin-1",dec=",")
+    setnames(d_bird,colnames(d_bird),gsub(" ","_",colnames(d_bird)))
+    d_bird <- d_bird[,.(INSCRIPTION_GAUCHE,BAGUE,ESPECE,MA,LOCALITE,MA,LT,LP)]
+    setnames(d_bird,"INSCRIPTION_GAUCHE","bird_id")
+    d_bird <- d_bird[!is.na(bird_id) & bird_id != "" & !is.null(bird_id) & ESPECE == "TRIINC" & LOCALITE == "TAKAROA", ]
+    d_bird[,bird_id := paste(bird_id,"red",sep="_")]
+    d_bird <- d_bird[,.(bird_id,MA,LT,LP)]
+    d_bird[,`:=`(MA = as.numeric(MA), LT = as.numeric(LT), LP = as.numeric(LP))]
+
+
+    d_dist[,`:=`(bird_id_1 = substr(id,1,7),bird_id_2 = substr(id,9,15))]
+    setnames(d_bird,colnames(d_bird),paste(colnames(d_bird),"1",sep="_"))
+    d_dist <- merge(d_dist,d_bird,by="bird_id_1",all.x=TRUE)
+    setnames(d_bird,colnames(d_bird),gsub("1","2",colnames(d_bird)))
+    d_dist <- merge(d_dist,d_bird,by="bird_id_2",all.x=TRUE)
 
     d_dist[,date := as.Date(local_timestamp_1)]
+
+    d_dist[,`:=`(diff_MA = abs(MA_1 - MA_2), diff_LT = abs(LT_1 - LT_2), diff_LP = abs(LP_1 - LP_2))]
+    d_dist[,`:=`(diff_MA_sc = scale(diff_MA), diff_LT_sc = scale(diff_LT), diff_LP_sc = scale(diff_LP))]
 
 
     d_dist_day <- d_dist[,.(nb = .N), by = .(date,cat_time,day_1)]
@@ -731,7 +749,7 @@ if(do_distance) {
     gg <- ggplot(data = d_dist_day, aes(x=as.Date(date),y=nb,colour=day_1))
     gg <- gg + geom_point() + geom_line(alpha = .5)
     gg <- gg + labs(x="Date",y = "Number of synchronous pair data (< 2 min)", colour="")
-    ggNumber
+    gg
     ggsave("output/synchronous_data.png",gg)
 
     hist(d_dist$dist)
@@ -761,7 +779,7 @@ plot(ggpred)
 
 
 
-     glmm <- glmmTMB(dist ~ kernel_min * cat_time +(1|day_1) + (1|id),data=d_dist,family="nbinom2")
+     glmm <- glmmTMB(dist ~ kernel_min * cat_time + diff_MA * cat_time + diff_LT * cat_time + diff_LP * cat_time + (1|day_1) + (1|id),data=d_dist,family="nbinom2")
 sglmm <- summary(glmm)
 print(sglmm)
 simulationOutput <- simulateResiduals(fittedModel = glmm, plot = F)
