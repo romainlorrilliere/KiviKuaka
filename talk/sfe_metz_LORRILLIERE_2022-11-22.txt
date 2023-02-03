@@ -64,10 +64,6 @@ polygon.
 For each bird, we search the H parameter by a trial-and-error algorithm to get a 95% isoline that forms a single simple polygon. 
 For example, here is the result of the process for a bird. 
 ---
-Traditionally in the framework of home range, the 95% isoline represents the home range of birds
-and the 50% isoline corresponds to the core of their home range, i.e.
-where they spend more than half of their time. 
----
 The kernels are only smooth on location. However, we could improve the home range according to the habitats used. Indeed except for the tattler T06, which uses the habitat in the same proporition of their area (last line), all other birds avoid forest. 
 Consequently, we intersect the home ranges with the used habitats (the reef, the beach, and the bush). 
 ---
@@ -79,12 +75,10 @@ To observe the effect of interaction levels between birds on these
 distances, we classify the pairs according to the minimum isoline at
 which the birds overlap.
 ---
-The results that I will show you as organised like that. Vertically you have the distance between the bird, and horizontally an indicator of the overlap of the home range of the bird pairs, at the left bird pairs, whose home range overlap is large and at the right birds, with almost no overlap in their home ranges. 
+The result that I will show you as organised like that. Vertically you have the distance between the bird, and horizontally an indicator of the overlap of the home range of the bird pairs, at the left bird pairs, whose home range overlap is large and at the right birds, with almost no overlap in their home ranges. 
 Finally, we compare the distance for synchronous location, less than 2 minutes between the location with the control distances. 
 ---
-First, if we consider isoline as a factor, we observe that there is no circadian effect on the distance and the difference between the synchronous distance and the control is not huge. 
----
-Second, if we consider the isoline as a continuous variable with the circadian time as a random variable. 
+If we consider the isoline as a continuous variable with the circadian time as a random variable. 
 ---
 We could observe that birds are, in mean, not so close.
 Even when their home range overlap is large, birds are not close
